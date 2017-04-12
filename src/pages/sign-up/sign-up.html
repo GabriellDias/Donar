@@ -1,0 +1,230 @@
+<ion-content padding>
+
+    <form id="formulario">
+      <ul id="progress">
+        <li class="active"> Pessoais </li>
+        <li> Saúde </li>
+        <li> Conta </li>
+      </ul>
+
+      <fieldset>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-label>
+                <ion-input type="text" placeholder=" Nome Completo"></ion-input>
+              </ion-label>
+            </ion-col>
+          </ion-row>
+
+
+
+            <ion-label> Genêro:
+              <ul class="containers">
+                <li class="container masculino">
+                  <input name="sexos" type="radio" id="masculino" checked>
+                  <label for="masculino"> Masculino </label>
+                </li>
+
+                <li class="container feminino">
+                  <input name="sexos" type="radio" id="feminino">
+                  <label for="feminino"> Feminino </label>
+                </li>
+              </ul>
+            </ion-label>
+
+          <ion-label> Estado:
+            <select name="estados-brasil">
+              <option value="selecione" selected>Selecione</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+            </select>
+          </ion-label>
+
+          <ion-label> Cidade:
+            <select name="cidades">
+              <option value="selecione" selected>Selecione</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+            </select>
+          </ion-label>
+        </ion-grid>
+
+        <button ion-button type="submit" name="next" class="next btn action" (click)="function()"> Próximo </button>
+
+      </fieldset>
+
+      <fieldset>
+
+        <ion-grid>
+
+          <ion-row>
+            <ion-col>
+              <ion-label>
+                Já é doador:
+                <ul>
+                  <li>
+                    <input name="doador" type="radio" id="yes" checked/>
+                    <label for="yes"> Sim </label>
+                  </li>
+
+                  <li>
+                    <input name="doador" type="radio" id="nao"/>
+                    <label for="nao"> Não </label>
+                  </li>
+                </ul>
+              </ion-label>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-label>
+                Grupo Sanguíno:
+                <ul>
+                  <li>
+                    <input name="grupo" type="radio" id="N" checked/>
+                    <label for="N"> N/S </label>
+                  </li>
+
+                  <li>
+                    <input name="grupo" type="radio" id="A"/>
+                    <label for="A"> A </label>
+                  </li>
+
+                  <li>
+                    <input name="grupo" type="radio" id="B"/>
+                    <label for="B"> B </label>
+                  </li>
+
+                  <li>
+                    <input name="grupo" type="radio" id="Ab"/>
+                    <label for="Ab"> AB </label>
+                  </li>
+
+                  <li>
+                    <input name="grupo" type="radio" id="O"/>
+                    <label for="O"> O </label>
+                  </li>
+                </ul>
+              </ion-label>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-label>
+                Fator RH:
+                <ul>
+                  <li>
+                    <input name="fator" type="radio" id="n/s" checked/>
+                    <label for="n/s"> N/S </label>
+                  </li>
+
+                  <li>
+                    <input name="fator" type="radio" id="positivo"/>
+                    <label for="positivo"> + </label>
+                  </li>
+
+                  <li>
+                    <input name="fator" type="radio" id="negativo"/>
+                    <label for="negativo"> - </label>
+                  </li>
+                </ul>
+              </ion-label>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-label>
+                <ion-input type="text" placeholder="Ultima Doação"></ion-input>
+              </ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <button ion-button type="submit" name="prev" class="prev btn action" value="Anterior"> Anterior </button>
+        <button ion-button type="submit" name="next" class="next btn action" value="Próximo"> Próximo </button>
+
+      </fieldset>
+
+      <fieldset>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-label>
+                <ion-input type="email" placeholder="E-mail@provedor.com.br"></ion-input>
+              </ion-label>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-label>
+                <ion-input type="text" placeholder="Confirme seu Email"></ion-input>
+              </ion-label>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-label>
+                <ion-input type="password" placeholder="Senha"></ion-input>
+              </ion-label>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-label>
+                <ion-input type="text" placeholder="Confirme sua Senha"></ion-input>
+              </ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <button ion-button type="submit" name="prev" class="prev btn action" value="Anterior"> Anterior </button>
+        <button ion-button type="submit" name="next" class="btn action" value="Próximo" (click)="signup()"> Cadastrar </button>
+
+      </fieldset>
+
+    </form>
+
+</ion-content>

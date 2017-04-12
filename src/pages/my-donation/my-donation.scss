@@ -1,0 +1,28 @@
+page-my-donation {
+  .title{
+    text-align: center;
+    padding: 10px
+  }
+
+  .btn-menu{
+    float: left;
+  }
+
+  .btn-search{
+    float: right;
+  }
+
+  ion-card{
+    text-align: center;
+  }
+
+  .btn-add-donate{
+    border-radius: 20px;
+    font-size: 12px
+  }
+  .footer-my-donate ion-icon{
+    padding: 0px 30px 0px 30px;
+  }
+
+
+}

@@ -1,0 +1,33 @@
+<ion-header style="background-color: #ff0a2f;">
+  <ion-title class="title">
+    <ion-icon md="md-menu" class="btn-menu" style="color: #fff;"></ion-icon>
+
+    <b style="color: #fff; padding-right: 9px">Donar</b>
+    <ion-icon md="md-search" class="btn-search" style="color: #fff;"></ion-icon>
+  </ion-title>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-content>
+      <h2>Minhas Doações</h2>
+      <p><b>Você Esta apto para fazer uma doação!</b></p>
+      <p>Vá até um centro de doações depois cadastre sua doação aqui</p>
+      <button ion-button class="btn-add-donate" (click)="confirmMyDonate()">
+        Inserir nova doação
+      </button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title class="footer-my-donate">
+      <ion-icon md="md-home">
+      </ion-icon>
+      <ion-icon md="md-map"></ion-icon>
+      <ion-icon md="md-volume-up"></ion-icon>
+      <ion-icon md="md-information-circle"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

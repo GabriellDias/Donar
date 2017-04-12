@@ -1,0 +1,28 @@
+page-home {
+
+  .slider{
+    height: 75%;
+    padding: 0px;
+    background-color: #ffffff;
+  }
+
+  .swiper-pagination-bullet{
+    background-color: #ffffff;
+    border: 2px solid #ff0a2f;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+  }
+
+  .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background-color: #ff0a2f;
+  }
+
+  .facebook:hover{
+    color: #3b5998;
+    background-color: #ffffff;
+    border: 1px solid #3b5998;
+  }
+
+}
+
