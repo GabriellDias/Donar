@@ -9,10 +9,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  */
 @IonicPage()
 @Component({
-  selector: 'page-myhealth',
-  templateUrl: 'myhealth.html',
+  selector: 'page-health',
+  templateUrl: 'health.html',
 })
-export class Myhealth {
+export class Health {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

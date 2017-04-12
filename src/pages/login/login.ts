@@ -10,8 +10,14 @@ import { Credencial } from "../../models/credencial";
 export class Login {
 
   credencial: Credencial;
-  //credencial2: {email:{},password:{}};
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loginProvider: LoginProvider) {}
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loginProvider: LoginProvider) {
+    this.initialize();
+  }
+
+  private initialize(){
+    this.credencial = new Credencial();
+  }
 
   btnDonarLogin(){
     this.loginProvider.loginWithCredencial(this.credencial);

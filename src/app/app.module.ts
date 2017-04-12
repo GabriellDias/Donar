@@ -12,7 +12,7 @@ import {Login} from "../pages/login/login";
 import { SignUp } from "../pages/sign-up/sign-up"
 import {LoginProvider} from "../providers/login-provider";
 import {MyHealth} from "../pages/my-health/my-health";
-import {MyDonation} from "../pages/my-donation/my-donation";
+import {Donation} from "../pages/donation/donation";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAaV8rJnn-CISeGW8qcUGzRLfcrsSaOkJc",
@@ -30,7 +30,7 @@ const firebaseConfig = {
     Login,
     SignUp,
     MyHealth,
-    MyDonation
+    Donation
   ],
   imports: [
     BrowserModule,
@@ -44,7 +44,7 @@ const firebaseConfig = {
     Login,
     SignUp,
     MyHealth,
-    MyDonation
+    Donation
   ],
   providers: [
     StatusBar,

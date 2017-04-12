@@ -3,10 +3,10 @@ import { NavController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'mydonation.html'
+  selector: 'page-donation',
+  templateUrl: 'donation.html'
 })
-export class HomePage {
+export class Donation {
 
   constructor(public alertCtrl: AlertController) {
 
