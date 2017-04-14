@@ -21,9 +21,8 @@ export class SignUp {
   }
 
   ionViewDidLoad(){
-    state => this.navCtrl.setRoot(Perfil);
     this.loginProvider.loginSucessEventEmitter.subscribe(
-      state => console.log(state)
+      state => this.navCtrl.setRoot(Perfil)
     )
     this.loginProvider.loginErrorEventEmitter.subscribe(
       error => console.log(error)
