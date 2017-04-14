@@ -36,7 +36,7 @@ export class LoginProvider {
   }
 
   private callbackSucessLogin(response){
-    this.loginSucessEventEmitter.emit(response.user);
+    this.loginSucessEventEmitter.emit(response.state);
   }
 
   private callbackErrorLogin(error){

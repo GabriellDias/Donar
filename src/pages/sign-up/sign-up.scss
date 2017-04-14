@@ -1,50 +1,10 @@
 page-sign-up {
 
+  /* Css Reset */
+
   *{
     margin: 0px;
     padding: 0px;
-  }
-
-  ion-input{
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 25px;
-    padding-left: 10px;
-  }
-
-  .containers{
-    list-style: none;
-    display: inline-block;
-    padding: 5px 0px;
-    margin-left: 13px;
-    border: 1px solid #ff0a2f;
-    border-radius: 25px;
-  }
-
-  .containers:after{
-    content: " ";
-  }
-
-  .containers .container{
-    display: inline-block;
-  }
-
-  .containers .container label {
-    cursor: pointer;
-    color: rgba(0, 0, 0, .7);
-    font-size: 15px;
-    border-radius: 25px;
-    padding-left: 5px;
-  }
-
-  .containers .container input[type="radio"] {
-    display: none;
-  }
-
-  .containers .container input[type="radio"]:checked + label {
-    padding: 5px 18px 5px 18px;
-    background: #ff0a2f;
-    border-radius: 25px;
-    color: #fff;
   }
 
   #formulario{
@@ -122,4 +82,73 @@ page-sign-up {
     color: #ff0a2f;
   }
 
+  ion-input{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+    padding: 0px 0px 0px 10px;
+  }
+
+  .containers{
+    list-style: none;
+    display: inline-block;
+    padding: 5px 0px;
+    margin-left: 15px;
+    border: 1px solid #ff0a2f;
+    border-radius: 25px;
+  }
+
+  .containers:after{
+    content: " ";
+  }
+
+  .containers .container{
+    display: inline-block;
+  }
+
+  .containers .container label {
+    cursor: pointer;
+    color: rgba(0, 0, 0, .7);
+    font-size: 15px;
+    border-radius: 25px;
+    padding-left: 5px;
+  }
+
+  .containers .container input[type="radio"] {
+    display: none;
+  }
+
+  .containers .container input[type="radio"] + label{
+    padding-right: 5px;
+  }
+
+  .containers .container input[type="radio"]:checked + label {
+    padding: 5px 18px 5px 18px;
+    background: #ff0a2f;
+    border-radius: 25px;
+    color: #fff;
+  }
+
+  .containers .container input[type="radio"]:checked + label.opcao{
+    border-bottom-right-radius: 0%;
+    border-top-right-radius: 0%;
+  }
+
+  .containers .container input[type="radio"]:checked + label.opcao2{
+    border-bottom-left-radius: 0%;
+    border-top-left-radius: 0%;
+  }
+
+  .containers .container input[type="radio"]:checked + label.opcaoM{
+    border-radius: 0px;
+  }
+
+  select{
+    width: 60%;
+    float: right;
+    user-select: none;
+    border: none;
+    color: #ff0a2f;
+    overflow: hidden;
+    padding: 2px 8px;
+  }
 }

@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import * as $ from 'jquery';
+
 import {Credencial} from "../../models/credencial";
 import {LoginProvider} from "../../providers/login-provider";
+import {HomePage} from "../home/home";
+import {Perfil} from "../perfil/perfil";
 
 @Component({
   selector: 'page-sign-up',
   templateUrl: 'sign-up.html',
 })
+
 export class SignUp {
 
   credencial: Credencial;
@@ -16,16 +20,32 @@ export class SignUp {
     this.credencial = new Credencial();
   }
 
-  signup(){
+  ionViewDidLoad(){
+    state => this.navCtrl.setRoot(Perfil);
+    this.loginProvider.loginSucessEventEmitter.subscribe(
+      state => console.log(state)
+    )
+    this.loginProvider.loginErrorEventEmitter.subscribe(
+      error => console.log(error)
+    )
+  }
+
+  SignUp(){
     this.loginProvider.signup(this.credencial);
+  }
+
+  btnBack(){
+    this.navCtrl.push(HomePage);
   }
 
   function() {
     var atual_fs, next_fs, prev_fs;
 
     $('.next').click(function () {
+
       atual_fs = $(this).parent();
-      next_fs = $(this).parent.next();
+      next_fs = $(this).parent().next();
+
 
       $('#progress li').eq($('fieldset').index(next_fs)).addClass('active');
       atual_fs.hide(800);
@@ -34,7 +54,7 @@ export class SignUp {
 
     $('.prev').click(function () {
       atual_fs = $(this).parent();
-      prev_fs = $(this).parent.prev();
+      prev_fs = $(this).parent().prev();
 
       $('#progress li').eq($('fieldset').index(atual_fs)).removeClass('active');
       atual_fs.hide(800);
@@ -45,5 +65,4 @@ export class SignUp {
       return false;
     });
   }
-
 }

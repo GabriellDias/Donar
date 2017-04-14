@@ -13,29 +13,31 @@
           <ion-row>
             <ion-col>
               <ion-label>
-                <ion-input type="text" placeholder=" Nome Completo"></ion-input>
+                <ion-input type="text" placeholder="Nome Completo"></ion-input>
               </ion-label>
             </ion-col>
           </ion-row>
 
+          <ion-row>
+            <ion-col>
+              <ion-label> Genêro:
+                <ul class="containers">
+                  <li class="container">
+                    <input name="sexos" type="radio" id="masculino" checked>
+                    <label for="masculino" class="opcao"> Masculino </label>
+                  </li>
 
-
-            <ion-label> Genêro:
-              <ul class="containers">
-                <li class="container masculino">
-                  <input name="sexos" type="radio" id="masculino" checked>
-                  <label for="masculino"> Masculino </label>
-                </li>
-
-                <li class="container feminino">
-                  <input name="sexos" type="radio" id="feminino">
-                  <label for="feminino"> Feminino </label>
-                </li>
-              </ul>
-            </ion-label>
+                  <li class="container">
+                    <input name="sexos" type="radio" id="feminino">
+                    <label for="feminino" class="opcao2"> Feminino </label>
+                  </li>
+                </ul>
+              </ion-label>
+            </ion-col>
+          </ion-row>
 
           <ion-label> Estado:
-            <select name="estados-brasil">
+            <select name="estados">
               <option value="selecione" selected>Selecione</option>
               <option value="AC">Acre</option>
               <option value="AL">Alagoas</option>
@@ -68,7 +70,7 @@
           </ion-label>
 
           <ion-label> Cidade:
-            <select name="cidades">
+            <select name="cidades" class="cidades">
               <option value="selecione" selected>Selecione</option>
               <option value="AC">Acre</option>
               <option value="AL">Alagoas</option>
@@ -80,7 +82,7 @@
               <option value="ES">Espírito Santo</option>
               <option value="GO">Goiás</option>
               <option value="MA">Maranhão</option>
-              <option value="MT">Mato Grosso</option>
+              <option value="MT">Vila Bela da Santíssima Trindade</option>
               <option value="MS">Mato Grosso do Sul</option>
             </select>
           </ion-label>
@@ -98,15 +100,15 @@
             <ion-col>
               <ion-label>
                 Já é doador:
-                <ul>
-                  <li>
+                <ul class="containers">
+                  <li class="container">
                     <input name="doador" type="radio" id="yes" checked/>
-                    <label for="yes"> Sim </label>
+                    <label for="yes" class="opcao"> Sim </label>
                   </li>
 
-                  <li>
+                  <li class="container">
                     <input name="doador" type="radio" id="nao"/>
-                    <label for="nao"> Não </label>
+                    <label for="nao" class="opcao2"> Não </label>
                   </li>
                 </ul>
               </ion-label>
@@ -117,30 +119,30 @@
             <ion-col>
               <ion-label>
                 Grupo Sanguíno:
-                <ul>
-                  <li>
+                <ul class="containers">
+                  <li class="container">
                     <input name="grupo" type="radio" id="N" checked/>
-                    <label for="N"> N/S </label>
+                    <label for="N" class="opcao"> N/S </label>
                   </li>
 
-                  <li>
+                  <li class="container">
                     <input name="grupo" type="radio" id="A"/>
-                    <label for="A"> A </label>
+                    <label for="A" class="opcaoM"> A </label>
                   </li>
 
-                  <li>
+                  <li class="container">
                     <input name="grupo" type="radio" id="B"/>
-                    <label for="B"> B </label>
+                    <label for="B" class="opcaoM"> B </label>
                   </li>
 
-                  <li>
+                  <li class="container">
                     <input name="grupo" type="radio" id="Ab"/>
-                    <label for="Ab"> AB </label>
+                    <label for="Ab" class="opcaoM"> AB </label>
                   </li>
 
-                  <li>
+                  <li class="container">
                     <input name="grupo" type="radio" id="O"/>
-                    <label for="O"> O </label>
+                    <label for="O" class="opcao2"> O </label>
                   </li>
                 </ul>
               </ion-label>
@@ -151,20 +153,20 @@
             <ion-col>
               <ion-label>
                 Fator RH:
-                <ul>
-                  <li>
+                <ul class="containers">
+                  <li class="container">
                     <input name="fator" type="radio" id="n/s" checked/>
-                    <label for="n/s"> N/S </label>
+                    <label for="n/s" class="opcao"> N/S </label>
                   </li>
 
-                  <li>
+                  <li class="container">
                     <input name="fator" type="radio" id="positivo"/>
-                    <label for="positivo"> + </label>
+                    <label for="positivo" class="opcaoM"> + </label>
                   </li>
 
-                  <li>
+                  <li class="container">
                     <input name="fator" type="radio" id="negativo"/>
-                    <label for="negativo"> - </label>
+                    <label for="negativo" class="opcao2"> - </label>
                   </li>
                 </ul>
               </ion-label>
@@ -173,9 +175,6 @@
 
           <ion-row>
             <ion-col>
-              <ion-label>
-                <ion-input type="text" placeholder="Ultima Doação"></ion-input>
-              </ion-label>
             </ion-col>
           </ion-row>
         </ion-grid>
@@ -221,7 +220,7 @@
         </ion-grid>
 
         <button ion-button type="submit" name="prev" class="prev btn action" value="Anterior"> Anterior </button>
-        <button ion-button type="submit" name="next" class="btn action" value="Próximo" (click)="signup()"> Cadastrar </button>
+        <button ion-button (click)="SignUp()"> Cadastrar </button>
 
       </fieldset>
 

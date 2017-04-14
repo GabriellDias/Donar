@@ -6,9 +6,10 @@ import { AlertController } from 'ionic-angular';
   selector: 'page-donation',
   templateUrl: 'donation.html'
 })
+
 export class Donation {
 
-  constructor(public alertCtrl: AlertController) {
+  constructor(public alertCtrl: AlertController, navController: NavController) {
 
   }
 
