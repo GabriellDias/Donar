@@ -14,6 +14,7 @@ import {LoginProvider} from "../providers/login-provider";
 import {Health} from "../pages/health/health";
 import {Donation} from "../pages/donation/donation";
 import {Perfil} from "../pages/perfil/perfil";
+import {Caddonate} from "../pages/caddonate/caddonate";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAaV8rJnn-CISeGW8qcUGzRLfcrsSaOkJc",
@@ -32,7 +33,8 @@ const firebaseConfig = {
     SignUp,
     Health,
     Donation,
-    Perfil
+    Perfil,
+    Caddonate
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ const firebaseConfig = {
     SignUp,
     Health,
     Donation,
-    Perfil
+    Perfil,
+    Caddonate
   ],
   providers: [
     StatusBar,

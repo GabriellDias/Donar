@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import {NavController} from 'ionic-angular';
-import {Information} from "../information/information";
+import { NavController} from 'ionic-angular';
+import {Perfil} from "../perfil/perfil";
+import { Information } from "../information/information"
 
 @Component({
   selector: 'page-health',
@@ -13,6 +14,10 @@ export class Health {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Health');
+  }
+
+  home(){
+    this.navCtrl.push(Perfil);
   }
 
   information(){

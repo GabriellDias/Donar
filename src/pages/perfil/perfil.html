@@ -1,11 +1,33 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="buttons">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Perfil</ion-title>
+    <ion-title class="title">
+      <img src="assets/img/logo_branca.png">
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon ios="ios-search" md="md-search"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <p>Login Realizado com Sucesso!</p>
+  <ion-card>
+    <ion-card-header>
+      <img class="img-donation" src="assets/img/doacoes.png">
+    </ion-card-header>
+    <ion-card-content>
+      <button ion-button class="btn"(click)="donation()"> Minhas Doações </button>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <img class="img-donation" src="assets/img/saude.png">
+    </ion-card-header>
+    <ion-card-content>
+      <button ion-button class="btn" (click)="health()"> Meus Exames </button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {LoginProvider} from "../../providers/login-provider";
 import {HomePage} from "../home/home";
+import {Donation} from "../donation/donation";
+import {Health} from "../health/health";
 
 @Component({
   selector: 'page-perfil',
@@ -24,4 +26,12 @@ export class Perfil {
   logout(){
     this.loginProvider.logout();
   }
+
+  donation(){
+    this.navCtrl.push(Donation);
+  }
+
+  health(){
+    this.navCtrl.push(Health);
+}
 }
