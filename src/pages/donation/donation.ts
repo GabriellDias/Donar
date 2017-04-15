@@ -1,38 +1,24 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { AlertController } from 'ionic-angular';
+import {NavController} from 'ionic-angular';
+import {Caddonate} from "../caddonate/caddonate";
+import {Information} from "../information/information";
 
 @Component({
   selector: 'page-donation',
-  templateUrl: 'donation.html'
+  templateUrl: 'donation.html',
 })
-
 export class Donation {
 
-  constructor(public alertCtrl: AlertController, navController: NavController) {
-
+  constructor(public navCtrl: NavController) {
   }
 
-  confirmMyDonate() {
-    let confirm = this.alertCtrl.create({
-      title: 'Donar',
-      subTitle: 'Você ingeriu bebida alcolica nos ultimos 3 dias?',
-      buttons: [
-        {
-          text: 'Não',
-          handler: () => {
-            console.log('Não');
-          }
-        },
-        {
-          text: 'Sim',
-          handler: () => {
-            console.log('Sim');
-          }
-        }
-      ]
-    });
-    confirm.present();
+  acessCad(){
+    console.log("teste");
+    this.navCtrl.push(Caddonate);
+  }
+
+  information(){
+    this.navCtrl.push(Information);
   }
 
 }

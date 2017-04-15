@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="buttons">
+    <ion-title class="title">
+      <img src="assets/img/logo_branca.png">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label><ion-icon name="home"></ion-icon> Unidade de doação:</ion-label>
+      <ion-select [(ngModel)]="unidade">
+        <ion-option value="ioha" floating>IOHA - Instituto Onco-Hematológico de Anápolis</ion-option>
+        <ion-option value="hua">HUA - Hospital de Urgências de Anápolis</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>      
+      <ion-label><ion-icon name="calendar"></ion-icon></ion-label>
+      <ion-input type="text" placeholder="Data da Doação"></ion-input>
+    </ion-item><br/>
+     <button class="btn-add-cad" ion-button type="submit">
+       Cadastrar
+     </button>
+  </ion-list>
+</ion-content>
