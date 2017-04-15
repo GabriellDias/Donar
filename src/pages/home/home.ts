@@ -3,7 +3,6 @@ import {NavController, NavParams} from 'ionic-angular';
 import {Login} from "../login/login";
 import {SignUp} from "../sign-up/sign-up";
 import {LoginProvider} from "../../providers/login-provider";
-import {Credencial} from "../../models/credencial";
 import {Perfil} from "../perfil/perfil";
 
 @Component({
@@ -11,8 +10,6 @@ import {Perfil} from "../perfil/perfil";
   templateUrl: 'home.html'
 })
 export class HomePage {
-
-  credencial: Credencial;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loginProvider: LoginProvider) {}
 

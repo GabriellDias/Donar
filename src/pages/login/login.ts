@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import {LoadingController, NavController, NavParams} from 'ionic-angular';
 import {LoginProvider} from "../../providers/login-provider";
 import { Credencial } from "../../models/credencial";
 import {Perfil} from "../perfil/perfil";
@@ -13,7 +13,8 @@ export class Login {
 
   credencial: Credencial;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loginProvider: LoginProvider){
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              public loginProvider: LoginProvider, public loadingCtrl: LoadingController){
     this.initialize();
   }
 
@@ -32,14 +33,19 @@ export class Login {
 
   btnDonarLogin(){
     this.loginProvider.loginWithCredencial(this.credencial);
-  }
-
-  logout(){
-    this.loginProvider.logout();
+    this.loading();
   }
 
   btnBack(){
     this.navCtrl.pop();
+  }
+
+  loading() {
+    let loader = this.loadingCtrl.create({
+      spinner: 'crescent',
+      duration: 500
+    });
+    loader.present();
   }
 
 }

@@ -13,7 +13,6 @@ import { SignUp } from "../pages/sign-up/sign-up"
 import {LoginProvider} from "../providers/login-provider";
 import {Health} from "../pages/health/health";
 import {Donation} from "../pages/donation/donation";
-import {ListPage} from "../pages/list/list";
 import {Perfil} from "../pages/perfil/perfil";
 
 const firebaseConfig = {
@@ -33,7 +32,6 @@ const firebaseConfig = {
     SignUp,
     Health,
     Donation,
-    ListPage,
     Perfil
   ],
   imports: [
@@ -49,7 +47,6 @@ const firebaseConfig = {
     SignUp,
     Health,
     Donation,
-    ListPage,
     Perfil
   ],
   providers: [

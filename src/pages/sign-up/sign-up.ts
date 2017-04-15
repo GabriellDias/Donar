@@ -37,7 +37,7 @@ export class SignUp {
     this.navCtrl.push(HomePage);
   }
 
-  function() {
+  moviment() {
     var atual_fs, next_fs, prev_fs;
 
     $('.next').click(function () {
@@ -65,3 +65,5 @@ export class SignUp {
     });
   }
 }
+
+

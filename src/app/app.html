@@ -1,16 +1,22 @@
 <ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
-    </ion-list>
+    <ion-avatar>
+      <img src="assets/img/saude.png"/>
+    </ion-avatar>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ul>
+
+          </ul>
+          <li><a (click)=""> - Alterar Dados </a></li>
+          <li><a (click)=""> - Ajuda </a></li>
+          <li><a (click)=""> Sair </a></li>
+          <li><a (click)=""> - Contato </a></li>
+          <li><a (click)=""> - Sobre </a></li>
+        </ion-list>
+      </ion-col>
+    </ion-row>
   </ion-content>
 
 </ion-menu>
