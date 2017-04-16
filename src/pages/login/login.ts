@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 import {LoadingController, NavController, NavParams} from 'ionic-angular';
 import {LoginProvider} from "../../providers/login-provider";
+
 import { Credencial } from "../../models/credencial";
+import {HomePage} from "../home/home";
 import {Perfil} from "../perfil/perfil";
+import {ResetPassword} from "../reset-password/reset-password";
 
 @Component({
   selector: 'page-login',
@@ -37,7 +40,7 @@ export class Login {
   }
 
   btnBack(){
-    this.navCtrl.pop();
+    this.navCtrl.push(HomePage);
   }
 
   loading() {
@@ -46,6 +49,10 @@ export class Login {
       duration: 500
     });
     loader.present();
+  }
+
+  resetPassword(){
+    this.navCtrl.push(ResetPassword);
   }
 
 }
