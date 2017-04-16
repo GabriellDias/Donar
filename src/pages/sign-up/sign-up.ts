@@ -37,7 +37,8 @@ export class SignUp {
     this.navCtrl.push(HomePage);
   }
 
-  moviment() {
+  movement() {
+
     var atual_fs, next_fs, prev_fs;
 
     $('.next').click(function () {
@@ -47,8 +48,8 @@ export class SignUp {
 
 
       $('#progress li').eq($('fieldset').index(next_fs)).addClass('active');
-      atual_fs.hide(800);
-      next_fs.show(800);
+      atual_fs.hide(400);
+      next_fs.show(400);
     });
 
     $('.prev').click(function () {
@@ -56,8 +57,8 @@ export class SignUp {
       prev_fs = $(this).parent().prev();
 
       $('#progress li').eq($('fieldset').index(atual_fs)).removeClass('active');
-      atual_fs.hide(800);
-      prev_fs.show(800);
+      atual_fs.hide(400);
+      prev_fs.show(400);
     });
 
     $('#formulario input[type=submit]').click(function () {

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController} from 'ionic-angular';
 import {Perfil} from "../perfil/perfil";
-import { Information } from "../information/information"
+import {Information} from "../information/information";
 
 @Component({
   selector: 'page-health',

@@ -1,15 +1,12 @@
 export class User{
+  bloodGroup: string;
+  city: string;
+  donor: boolean;
+  email: string;
   id: number;
   name: string;
-  sex: string;
-  estate: string;
-  city: string;
-  locationKey: string;
-  email: string;
   password: string;
-  bloodGroup: string;
-  isDonor: boolean;
   rhFactor: string;
-  lastDonation: string;
-  picture: string;
+  sex: string;
+  state: string;
 }

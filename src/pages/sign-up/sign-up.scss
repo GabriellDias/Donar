@@ -7,48 +7,14 @@ page-sign-up {
     padding: 0px;
   }
 
-  #formulario{
-    width: 100%;
-    position: relative;
-  }
-/*
-  #formulario fieldset{
-    border: none;
-    background-color: #ffffff;
-    box-sizing: border-box;
-    width: 100%;
-    margin: 5px;
-    position: absolute;
-  }
-
-  #formulario fieldset:not(:first-of-type){
-    display: none;
-  }
-
-  #formulario .action{
-    border-radius: 15px;
-  }
-
-  #formulario .prev, #formulario .left{
-    padding: 0px;
-    margin-left: 20px;
-    float: left;
-  }
-
-  #formulario .next, .right{
-    padding: 0px;
-    margin-right: 20px;
-    float: right;
-  }
-*/
-  #formulario #progress{
+  #progress{
     text-align: center;
     margin-bottom: 30px;
     overflow: hidden;
     counter-reset: step;
   }
 
-  #formulario #progress li{
+  #progress li{
     list-style: none;
     color: #ff0a2f;
     font-size: 14px;
@@ -57,19 +23,20 @@ page-sign-up {
     position: relative;
   }
 
-  #formulario #progress li:before{
+  #progress li:before{
     content: counter(step);
     counter-increment: step;
     width: 25px;
     display: block;
     line-height: 25px;
     background-color: #ffffff;
-    border: 5px solid rgba(255, 0, 0, 0.5);
+    border: 5px solid rgba(255, 0, 0, 0.3);
+    border-color: #ffffff rgba(255, 0, 0, 0.3);
     border-radius: 50%;
     margin: 0px auto 10px auto;
   }
 
-  #formulario #progress li:after{
+  #progress li:after{
     content: '';
     width: 100%;
     background-color: rgba(255, 0, 0, 0.4);
@@ -80,23 +47,44 @@ page-sign-up {
     z-index: -1;
   }
 
-  #formulario #progress li:first-child:after{
+  #progress li:first-child:after{
     content: none;
   }
 
-  #formulario #progress li.active:before{
-    width: 30px;
-    line-height: 30px;
-    border: 5px solid rgba(255, 0, 0, 0.3);
-    border-bottom-color: #ffffff;
-    border-top-color: #ffffff;
-    border-left-color: #ff0a2f;
-    border-right-color: #ff0a2f;
+  #progress li.active:before{
+    width: 24px;
+    line-height: 24px;
+    border: 5px solid #ff0a2f;
+    color: #ffffff;
+    background: #ff0a2f;
+    border-radius: 50%;
   }
 
-  #formulario #progress li.active:after{
+  #progress li.active:after{
     background-color: #ff0a2f;
     color: #ff0a2f;
+  }
+
+  #formulario{
+    width: 100%;
+    position: relative;
+  }
+
+  #formulario fieldset{
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    width: 100%;
+    height: 420px;
+    margin: 0px auto;
+    position: absolute;
+    padding: 30px 0px 0px 10px;
+  }
+
+  #formulario fieldset:not(:first-of-type){
+    display: none;
   }
 
   ion-input{
@@ -107,9 +95,9 @@ page-sign-up {
 
   .containers{
     list-style: none;
+    float: right;
     display: inline-block;
     padding: 5px 0px;
-    margin-left: 15px;
     border: 1px solid #ff0a2f;
     border-radius: 25px;
   }
@@ -125,9 +113,8 @@ page-sign-up {
   .containers .container label {
     cursor: pointer;
     color: rgba(0, 0, 0, .7);
-    font-size: 15px;
+    font-size: 14px;
     border-radius: 25px;
-    padding-left: 5px;
   }
 
   .containers .container input[type="radio"] {
@@ -135,11 +122,11 @@ page-sign-up {
   }
 
   .containers .container input[type="radio"] + label{
-    padding-right: 5px;
+    padding: 0px 3px;
   }
 
   .containers .container input[type="radio"]:checked + label {
-    padding: 5px 18px 5px 18px;
+    padding: 5px 12px;
     background: #ff0a2f;
     border-radius: 25px;
     color: #fff;
@@ -160,7 +147,7 @@ page-sign-up {
   }
 
   select{
-    width: 60%;
+    width: 70%;
     float: right;
     user-select: none;
     border: none;
@@ -168,4 +155,19 @@ page-sign-up {
     overflow: hidden;
     padding: 2px 8px;
   }
+
+  .left{
+    border-radius: 15px;
+    position: absolute;
+    top: 360px;
+    left: 75px;
+  }
+
+  .right{
+    border-radius: 15px;
+    position: absolute;
+    top: 360px;
+    left: 150px;
+  }
+
 }

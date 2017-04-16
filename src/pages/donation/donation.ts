@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Information } from "../information/information"
 import { Caddonate } from "../caddonate/caddonate";
 import { Perfil } from "../perfil/perfil";
+import { Information } from "../information/information";
 
 @Component({
   selector: 'page-donation',
@@ -25,4 +25,5 @@ export class Donation {
   information(){
     this.navCtrl.push(Information);
   }
+
 }

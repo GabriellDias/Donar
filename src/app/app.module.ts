@@ -15,6 +15,9 @@ import {Health} from "../pages/health/health";
 import {Donation} from "../pages/donation/donation";
 import {Perfil} from "../pages/perfil/perfil";
 import {Caddonate} from "../pages/caddonate/caddonate";
+import {ResetPassword} from "../pages/reset-password/reset-password";
+import {PasswordProvider} from "../providers/password-provider";
+import {Information} from "../pages/information/information";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAaV8rJnn-CISeGW8qcUGzRLfcrsSaOkJc",
@@ -34,7 +37,9 @@ const firebaseConfig = {
     Health,
     Donation,
     Perfil,
-    Caddonate
+    Caddonate,
+    Information,
+    ResetPassword
   ],
   imports: [
     BrowserModule,
@@ -50,12 +55,15 @@ const firebaseConfig = {
     Health,
     Donation,
     Perfil,
-    Caddonate
+    Caddonate,
+    Information,
+    ResetPassword
   ],
   providers: [
     StatusBar,
     SplashScreen,
     LoginProvider,
+    PasswordProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
