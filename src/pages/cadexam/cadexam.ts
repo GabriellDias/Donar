@@ -2,18 +2,16 @@ import { Component } from '@angular/core';
 import {NavController, NavParams } from 'ionic-angular';
 
 @Component({
-  selector: 'page-information',
-  templateUrl: 'information.html',
+  selector: 'page-cadexam',
+  templateUrl: 'cadexam.html',
 })
-export class Information {
+export class Cadexam {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Information');
+    console.log('ionViewDidLoad Cadexam');
   }
-
-  
 
 }

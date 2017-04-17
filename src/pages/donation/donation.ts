@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { Caddonate } from "../caddonate/caddonate";
-import { Perfil } from "../perfil/perfil";
-import { Information } from "../information/information";
+import {NavController} from 'ionic-angular';
+import {Information} from "../information/information";
+import {Perg1} from "../perg1/perg1";
+
 
 @Component({
   selector: 'page-donation',
@@ -15,11 +15,7 @@ export class Donation {
 
   acessCad(){
     console.log("teste");
-    this.navCtrl.push(Caddonate);
-  }
-
-  home(){
-    this.navCtrl.push(Perfil);
+    this.navCtrl.push(Perg1);
   }
 
   information(){

@@ -1,0 +1,85 @@
+<ion-header>
+
+  <ion-navbar color="buttons">
+    <ion-title>Cadastro de Exame</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+      <ion-item>
+        <ion-label>VHDL:</ion-label>
+        <ion-select [(ngModel)]="vhdl">
+          <ion-option value="reagente">Reagente</ion-option>
+          <ion-option value="nreagente">Não Reagente</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>HBSAG:</ion-label>
+          <ion-select [(ngModel)]="hbsab">
+            <ion-option value="reagente">Reagente</ion-option>
+            <ion-option value="nreagente">Não Reagente</ion-option>
+          </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Anti-HBC:</ion-label>
+        <ion-select [(ngModel)]="hbc">
+          <ion-option value="reagente">Reagente</ion-option>
+          <ion-option value="nreagente">Não Reagente</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Anti-HCV:</ion-label>
+        <ion-select [(ngModel)]="hcv">
+          <ion-option value="reagente">Reagente</ion-option>
+          <ion-option value="nreagente">Não Reagente</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Anti-HIV (Murex):</ion-label>
+        <ion-select [(ngModel)]="ahiv">
+          <ion-option value="reagente">Reagente</ion-option>
+          <ion-option value="nreagente">Não Reagente</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Anti-HLTV:</ion-label>
+        <ion-select [(ngModel)]="hltv">
+          <ion-option value="reagente">Reagente</ion-option>
+          <ion-option value="nreagente">Não Reagente</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>NAT-HIV:</ion-label>
+        <ion-select [(ngModel)]="hiv">
+          <ion-option value="reagente">Reagente</ion-option>
+          <ion-option value="nreagente">Não Reagente</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>NAT-HCV:</ion-label>
+        <ion-select [(ngModel)]="nhcv">
+          <ion-option value="reagente">Reagente</ion-option>
+          <ion-option value="nreagente">Não Reagente</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>NAT-HBV:</ion-label>
+        <ion-select [(ngModel)]="nhbv">
+          <ion-option value="reagente">Reagente</ion-option>
+          <ion-option value="nreagente">Não Reagente</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Anti-T.CRUZI:</ion-label>
+        <ion-select [(ngModel)]="cruzi">
+          <ion-option value="reagente">Reagente</ion-option>
+          <ion-option value="nreagente">Não Reagente</ion-option>
+        </ion-select>
+      </ion-item><br/>
+      <button class="btn-add-cad" ion-button type="submit">
+        Cadastrar
+      </button>
+    </ion-list>
+</ion-content>
