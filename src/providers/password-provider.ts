@@ -1,4 +1,4 @@
-import {EventEmitter, Injectable, NgZone} from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import firebase from "firebase";

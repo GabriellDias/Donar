@@ -4,20 +4,26 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { HttpModule } from '@angular/http';
-import firebase from "firebase";
+import { Facebook } from '@ionic-native/facebook';
 
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import {Login} from "../pages/login/login";
-import { SignUp } from "../pages/sign-up/sign-up"
+import firebase from "firebase";
 import {LoginProvider} from "../providers/login-provider";
-import {Health} from "../pages/health/health";
-import {Donation} from "../pages/donation/donation";
-import {Perfil} from "../pages/perfil/perfil";
-import {Caddonate} from "../pages/caddonate/caddonate";
-import {ResetPassword} from "../pages/reset-password/reset-password";
 import {PasswordProvider} from "../providers/password-provider";
-import {Information} from "../pages/information/information";
+
+import { Caddonate } from "../pages/caddonate/caddonate";
+import { Cadexam } from "../pages/cadexam/cadexam";
+import { Donation } from "../pages/donation/donation";
+import { Health } from "../pages/health/health";
+import { HomePage } from '../pages/home/home';
+import { Information } from "../pages/information/information";
+import { Login } from "../pages/login/login";
+import { MyApp } from './app.component';
+import { Perfil } from "../pages/perfil/perfil";
+import { Perg1 } from "../pages/perg1/perg1";
+import { Perg2 } from "../pages/perg2/perg2";
+import { Perg3 } from "../pages/perg3/perg3";
+import { ResetPassword } from "../pages/reset-password/reset-password";
+import { SignUp } from "../pages/sign-up/sign-up"
 
 const firebaseConfig = {
   apiKey: "AIzaSyAaV8rJnn-CISeGW8qcUGzRLfcrsSaOkJc",
@@ -30,16 +36,20 @@ const firebaseConfig = {
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage,
-    Login,
-    SignUp,
-    Health,
-    Donation,
-    Perfil,
     Caddonate,
+    Cadexam,
+    Donation,
+    Health,
+    HomePage,
     Information,
-    ResetPassword
+    Login,
+    MyApp,
+    Perfil,
+    Perg1,
+    Perg2,
+    Perg3,
+    ResetPassword,
+    SignUp
   ],
   imports: [
     BrowserModule,
@@ -48,25 +58,31 @@ const firebaseConfig = {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    HomePage,
-    Login,
-    SignUp,
-    Health,
-    Donation,
-    Perfil,
     Caddonate,
+    Cadexam,
+    Donation,
+    Health,
+    HomePage,
     Information,
-    ResetPassword
+    Login,
+    MyApp,
+    Perfil,
+    Perg1,
+    Perg2,
+    Perg3,
+    ResetPassword,
+    SignUp
   ],
   providers: [
-    StatusBar,
-    SplashScreen,
     LoginProvider,
     PasswordProvider,
+    SplashScreen,
+    StatusBar,
+    Facebook,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
+
 export class AppModule {
   constructor(){
     firebase.initializeApp(firebaseConfig);
