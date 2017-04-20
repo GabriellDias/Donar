@@ -23,7 +23,7 @@ import { Perg1 } from "../pages/perg1/perg1";
 import { Perg2 } from "../pages/perg2/perg2";
 import { Perg3 } from "../pages/perg3/perg3";
 import { ResetPassword } from "../pages/reset-password/reset-password";
-import { SignUp } from "../pages/sign-up/sign-up"
+import { SignUp } from "../pages/sign-up/sign-up";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAaV8rJnn-CISeGW8qcUGzRLfcrsSaOkJc",

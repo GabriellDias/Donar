@@ -1,51 +1,55 @@
-<ion-content padding>
-  <form method="post">
-    <ion-row>
-      <ion-col>
-        <img src="assets/img/logo.png"/>
-      </ion-col>
-    </ion-row>
+<ion-content>
+  <form #f="ngForm" novalidate>
 
-    <ion-row>
-      <ion-col>
-        <ion-label>
-          <img src="assets/img/user.png" class="icon"/> Login:
-        </ion-label>
-        <ion-input name="email" type="email" placeholder="Digite seu Email"  [(ngModel)]="credencial.email" required></ion-input>
-      </ion-col>
-    </ion-row>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <img src="assets/img/logo.png"/>
+        </ion-col>
+      </ion-row>
 
-    <ion-row>
-      <ion-col>
-        <ion-label for="password">
-          <img src="assets/img/key.png" class="icon"/> Senha:
-        </ion-label>
-        <ion-input name="password" type="password" placeholder="Digite sua Senha" [(ngModel)]="credencial.password" required></ion-input>
-      </ion-col>
-    </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <img src="assets/img/user.png" class="icon"/> Login:
+          </ion-label>
+          <input type="email" class="form-control" name="email" placeholder="Digite seu Email"  [(ngModel)]="credencial.email" required #email="ngModel"/>
+          <div *ngIf="!email.valid && email.touched" class="error">
+            E-mail é obrigatório!
+          </div>
+        </ion-col>
+      </ion-row>
 
-    <ion-row>
-      <ion-col>
-        <ion-label>
-          <a (click)="resetPassword()"> Esqueci a Senha </a>
-        </ion-label>
-      </ion-col>
-    </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label for="password">
+            <img src="assets/img/key.png" class="icon"/> Senha:
+          </ion-label>
+          <input name="password" type="password" placeholder="Digite sua Senha" [(ngModel)]="credencial.password" required  minlength="6" #password="ngModel"/>
+          <div *ngIf="!password.valid && password.touched" class="error">
+            Senha é obrigatória!
+          </div>
+        </ion-col>
+      </ion-row>
 
-    <ion-row>
-      <ion-col>
-        <ion-label>
-          <button ion-button full class="btn" (click)="btnDonarLogin()"> Entrar no Donar </button>
-        </ion-label>
-      </ion-col>
-    </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <a (click)="resetPassword()"> Esqueci a Senha </a>
+          </ion-label>
+        </ion-col>
+      </ion-row>
 
-    <ion-row>
-      <ion-col>
-        <a (click)="btnBack()" class="back">
-          <ion-icon ios="ios-arrow-round-back" md="md-arrow-round-back"></ion-icon> Voltar
-        </a>
-      </ion-col>
-    </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>
+            <button ion-button full type="submit" class="btn" (click)="btnDonarLogin()">
+              Entrar no Donar <ion-icon ios="ios-log-in" md="md-log-in"></ion-icon>
+            </button>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
   </form>
 </ion-content>

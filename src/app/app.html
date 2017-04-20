@@ -1,22 +1,49 @@
 <ion-menu [content]="content">
-  <ion-content>
-    <ion-avatar>
-      <img src="assets/img/saude.png"/>
-    </ion-avatar>
+  <ion-content class="menu">
+
     <ion-row>
       <ion-col>
-        <ion-list>
-          <ul>
-
-          </ul>
-          <li><a> - Alterar Dados </a></li>
-          <li><a> - Ajuda </a></li>
-          <li><a> Sair </a></li>
-          <li><a> - Contato </a></li>
-          <li><a> - Sobre </a></li>
-        </ion-list>
+        <img src="assets/img/teste.jpg" class="image"/>
       </ion-col>
     </ion-row>
+    <ion-row>
+      <ion-col class="text">
+          Olá Érico,
+      </ion-col>
+    </ion-row>
+
+    <ion-grid class="options">
+        <ion-row>
+          <ion-col>
+            <a class="links"> - Alterar Dados </a>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+          <a class="links"> - Ajuda </a>
+        </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col class="logout">
+            <a class="links"> SAIR <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon></a>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <a class="links"> - Contato </a>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <a class="links"> - Sobre </a>
+          </ion-col>
+        </ion-row>
+    </ion-grid>
+
   </ion-content>
 
 </ion-menu>

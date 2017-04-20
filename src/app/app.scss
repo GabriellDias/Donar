@@ -14,3 +14,46 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.menu-inner{
+    width: 220px;
+}
+
+
+.menu{
+  width: 250px;
+  background-color: #ff0a2f;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.image {
+  display: block;
+  margin: 0px auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.text{
+  font-size: 24px;
+  text-align: center;
+}
+
+.options{
+  margin-top: 30px;
+}
+
+.logout{
+  margin: 25px 0px 25px 25px;
+}
+
+.links{
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.links:visited{
+  color: #ffffff;
+}

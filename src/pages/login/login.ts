@@ -34,13 +34,13 @@ export class Login {
     this.credencial = new Credencial();
   }
 
-  btnDonarLogin(){
+  btnDonarLogin(form){
     this.loginProvider.loginWithCredencial(this.credencial);
     this.loading();
   }
 
-  btnBack(){
-    this.navCtrl.push(HomePage);
+  log(form){
+    console.log(form);
   }
 
   loading() {

@@ -1,7 +1,7 @@
 page-perfil {
 
-  ion-card-content{
-    height: 180px;
+  .publicity{
+    height: 130px;
     padding: 0px;
   }
 
@@ -10,6 +10,16 @@ page-perfil {
     height: 100%;
     margin: 0px auto;
     text-align: center;
+  }
+
+  .health{
+    float: left;
+    padding: 0px;
+  }
+
+  .exam{
+    float: right;
+    padding: 0px;
   }
 
   .list > .item-block:last-child, .list > .item-wrapper:last-child .item-block {
@@ -50,21 +60,13 @@ page-perfil {
         float: right;
     }
 
-    .txt-donation{
-        float: inherit;
-        margin-top: -30px;
-        margin-left: 40px
-    }
-
     .img-donation{
         width: 60px;
-        height: 50px;
-        text-align: center;
+        height: 60px;
     }
 
     .footer-toolbar{
         text-align: center;
-
     }
 
     .btn-footer{

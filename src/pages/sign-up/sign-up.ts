@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import * as $ from 'jquery';
 
 import {Credencial} from "../../models/credencial";
+import { User } from "../../models/user";
 import {LoginProvider} from "../../providers/login-provider";
 import {HomePage} from "../home/home";
 import {Perfil} from "../perfil/perfil";
@@ -15,9 +16,11 @@ import {Perfil} from "../perfil/perfil";
 export class SignUp {
 
   credencial: Credencial;
+  user: User;
 
   constructor(public navCtrl: NavController, public loginProvider: LoginProvider){
     this.credencial = new Credencial();
+    this.user = new User();
   }
 
   ionViewDidLoad(){
@@ -31,10 +34,6 @@ export class SignUp {
 
   SignUp(){
     this.loginProvider.signup(this.credencial);
-  }
-
-  btnBack(){
-    this.navCtrl.push(HomePage);
   }
 
   movement() {
@@ -65,6 +64,5 @@ export class SignUp {
       return false;
     });
   }
+
 }
-
-

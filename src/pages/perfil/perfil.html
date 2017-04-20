@@ -13,7 +13,7 @@
     </ion-buttons>
   </ion-navbar>
 </ion-header>
-<ion-content padding>
+<ion-content>
   <ion-card>
     <ion-card-header>
       <ion-list>
@@ -28,7 +28,7 @@
       </ion-list>
     </ion-card-header>
     <hr/>
-    <ion-card-content>
+    <ion-card-content class="publicity">
       <ion-label class="container">
         texto
 
@@ -36,23 +36,32 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-card>
+  <ion-card class="health">
     <ion-card-header>
       <h2 class="txt-donation">
        Minhas Doações
       </h2>
       <img class="img-donation" src="assets/img/doacoes.png">
     </ion-card-header>
+    <ion-card-content class="exam">
+      <p> Próxima doação a partir de:</p>
+      <p> 21/05/2017 </p>
+      <p> (61 dias) </p>
+
+    </ion-card-content>
 
   </ion-card>
 
-<ion-card>
+<ion-card class="health">
   <ion-card-header>
     <h2 class="txt-donation">
      Meus Exames
     </h2>
     <img class="img-donation" src="assets/img/saude.png">
   </ion-card-header>
+  <ion-card-content class="exam">
+    <button ion-button (clcik)="health()"> Meus Exames </button>
+  </ion-card-content>
 </ion-card>
 </ion-content>
 

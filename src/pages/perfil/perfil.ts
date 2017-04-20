@@ -4,6 +4,7 @@ import {LoginProvider} from "../../providers/login-provider";
 import {HomePage} from "../home/home";
 import {Donation} from "../donation/donation";
 import {Health} from "../health/health";
+import { Information } from "../information/information";
 
 @Component({
   selector: 'page-perfil',
@@ -23,9 +24,6 @@ export class Perfil {
     )
   }
 
-  logout(){
-    this.loginProvider.logout();
-  }
 
   donation(){
     this.navCtrl.push(Donation);
@@ -33,5 +31,9 @@ export class Perfil {
 
   health(){
     this.navCtrl.push(Health);
+}
+
+information(){
+  this.navCtrl.push(Information);
 }
 }
