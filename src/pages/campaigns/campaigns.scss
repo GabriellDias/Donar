@@ -1,0 +1,73 @@
+page-campaigns {
+
+outline: none;
+
+ .title{
+    text-align: center;
+    width: 130px;
+    height: 30px;
+    margin-left: 50px
+  }
+
+  .btn-search{
+    padding-left: 30px;
+    float: right;
+  }
+
+  .txt-donation{
+    float: inherit;
+    margin-top: -30px;
+    margin-left: 40px
+  }
+
+  .img-donation{
+    width: 60px;
+    height: 50px;
+    text-align: center;
+    margin-left: 20px
+  }
+
+  ion-card{
+    text-align: center;
+    vertical-align: middle
+  }
+
+  .btn-campaigns{
+    border-radius: 20px;
+    font-size: 12px;
+    display: inline block;
+    margin-left: 12px;
+    list-style: none;
+  }
+
+.footer-toolbar{
+    text-align: center;
+}
+
+.btn-footer{
+    text-align: center;
+    padding: 0px 20px 0px 20px;
+    font-size: 18px
+}
+
+.txt-donation{
+    text-align: center;
+}
+
+.titlecampaing{
+  color: #ff0a2f;
+}
+
+.tipoblood{
+  color: #ff0a2f;
+}
+
+.largura{
+  width: 300px;
+}
+
+
+}
+
+
+
