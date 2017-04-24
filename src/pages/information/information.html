@@ -8,26 +8,57 @@
     </ion-title>
     <ion-buttons end>
       <button ion-button icon-only>
-        <ion-icon ios="ios-search" md="md-search"></ion-icon>
+        <ion-icon name="search"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
+
 <ion-content>
   <ion-card>
     <ion-card-header>
-      <img class="img-exame" src="assets/img/informacoes.png">
-      <h2 class="txt-exame">
+      <img class="img-inform" src="assets/img/informacoes.png">
+      <h2 class="txt-inform">
        Informações
       </h2>
     </ion-card-header>
     <ion-card-content>
       <hr/>
-      <p><b>Registre as informações de seus exames de sangue.</b></p>
-
+      <h2>
+        Quais exames serão realizados em meu sangue?<br/>
+        <a (click)="inf1()"> Leia mais</a>
+      </h2>
+      <hr/>
+      <h2>
+        Porque a agulha deve ser grossa?<br/>
+        <a (click)="inf2()">Leia mais</a>
+      </h2>
+      <hr/>
+      <h2>
+        É normal ter tontura após a doação?<br/>
+        <a (click)="inf3()">Leia mais</a>
+      </h2>
+      <hr/>
+      <h2>
+        Como repor o sangue doado?<br/>
+        <a (click)="inf4()">Leia mais</a>
+      </h2>
+      <hr/>
+      <h2>
+        Qual é o melhor sangue?<br/>
+        <a (click)="inf5()">Leia mais</a>
+      </h2>
+      <hr/>
+      <h2>
+        Pode ocorrer alguma reação durante a coleta?<br/>
+        <a (click)="inf6()">Leia mais</a>
+      </h2>
     </ion-card-content>
   </ion-card>
 </ion-content>
+
+
+
 <ion-footer>
   <ion-toolbar color="buttons" class="footer-toolbar">
     <button ion-button clear class="btn-footer">
@@ -37,7 +68,7 @@
 
     </button>
     <button ion-button clear class="btn-footer">
-      <ion-icon ios="ios-map" md="md-map" color="light">
+      <ion-icon name="map" color="light">
 
       </ion-icon>
     </button>
