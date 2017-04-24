@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import {NavController, NavParams, AlertController } from 'ionic-angular';
 
+import { Perfil } from "../perfil/perfil";
+import { Campaigns } from "../campaigns/campaigns";
+
 @Component({
   selector: 'page-information',
   templateUrl: 'information.html',
@@ -24,7 +27,7 @@ export class Information {
 
     alert.present();
   }
-  
+
   inf2(){
     let alert = this.alertCtrl.create({
       title: 'Informações',
@@ -93,6 +96,12 @@ export class Information {
 
     alert.present();
   }
-  
 
+  home(){
+    this.navCtrl.push(Perfil);
+  }
+
+  campaigns(){
+    this.navCtrl.push(Campaigns);
+  }
 }

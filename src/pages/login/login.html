@@ -13,7 +13,7 @@
           <ion-label>
             <img src="assets/img/user.png" class="icon"/> Login:
           </ion-label>
-          <input type="email" class="form-control" name="email" placeholder="Digite seu Email"  [(ngModel)]="credencial.email" required #email="ngModel"/>
+          <input type="email" name="email" class="form-control" placeholder="Digite seu Email"  [(ngModel)]="credencial.email" required #email="ngModel"/>
           <div *ngIf="!email.valid && email.touched" class="error">
             E-mail é obrigatório!
           </div>
@@ -25,7 +25,7 @@
           <ion-label for="password">
             <img src="assets/img/key.png" class="icon"/> Senha:
           </ion-label>
-          <input name="password" type="password" placeholder="Digite sua Senha" [(ngModel)]="credencial.password" required  minlength="6" #password="ngModel"/>
+          <input type="password" name="password" class="form-control" placeholder="Digite sua Senha" [(ngModel)]="credencial.password" required  minlength="6" #password="ngModel"/>
           <div *ngIf="!password.valid && password.touched" class="error">
             Senha é obrigatória!
           </div>

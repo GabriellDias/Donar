@@ -1,5 +1,5 @@
 <ion-content>
-  <form id="formulario">
+  <form #f="ngForm" novalidate>
 
     <ul id="progress">
       <li class="active"> Pessoais </li>
@@ -9,12 +9,11 @@
 
     <ion-slides pager class="slider">
 
-
-      <ion-slide class="1">
+      <ion-slide class="first">
           <ion-row>
             <ion-col>
               <ion-label>
-                <input name="name" type="text" placeholder="Nome Completo" [(ngModel)]="user.name" required min="4" #name="ngModel"/>
+                <input name="name" type="text" class="form-control" placeholder="Nome Completo" [(ngModel)]="user.name" required minlength="4" #name="ngModel"/>
                 <div *ngIf="!name.valid && name.touched" class="error">
                   Nome é obrigatório!
                 </div>
@@ -27,12 +26,12 @@
               <ion-label> Genêro:
                 <ul class="containers">
                   <li class="container">
-                    <input name="sexos" type="radio" id="masculino" checked>
+                    <input name="sex" type="radio" id="masculino" checked [(ngModel)]="user.sex">
                     <label for="masculino" class="opcao"> Masculino </label>
                   </li>
 
                   <li class="container">
-                    <input name="sexos" type="radio" id="feminino">
+                    <input name="sex" type="radio" id="feminino">
                     <label for="feminino" class="opcao2"> Feminino </label>
                   </li>
                 </ul>
@@ -43,8 +42,8 @@
           <ion-row>
             <ion-col>
               <ion-label> Estado:
-                <select class="estados">
-                  <option value="estado">Selecione seu Estado</option>
+                <select class="estados" name="state" [(ngModel)]="user.state">
+                  <option value="estado" selected> Selecione </option>
                   <option value="ac">Acre</option>
                   <option value="al">Alagoas</option>
                   <option value="am">Amazonas</option>
@@ -80,8 +79,8 @@
           <ion-row>
             <ion-col>
               <ion-label> Cidade:
-                <select class="cidades">
-                  <option value="selecione" selected>Selecione sua Cidade</option>
+                <select class="cidades" id="city" name="city" [(ngModel)]="user.city">
+                  <option value="selecione" selected> Selecione </option>
                   <option value="ac">Acre</option>
                   <option value="al">Alagoas</option>
                   <option value="ap">Amapá</option>
@@ -100,19 +99,19 @@
           </ion-row>
       </ion-slide>
 
-      <ion-slide class="2">
+      <ion-slide class="second">
           <ion-row>
             <ion-col>
-              <ion-label>
+              <ion-label class="small">
                 Já é doador:
                 <ul class="containers">
                   <li class="container">
-                    <input name="doador" type="radio" id="yes" checked/>
+                    <input name="donnor" type="radio" id="yes" checked/>
                     <label for="yes" class="opcao"> Sim </label>
                   </li>
 
                   <li class="container">
-                    <input name="doador" type="radio" id="nao"/>
+                    <input name="donnor" type="radio" id="nao"/>
                     <label for="nao" class="opcao2"> Não </label>
                   </li>
                 </ul>
@@ -126,27 +125,27 @@
                 Grupo Sanguíno:
                 <ul class="containers">
                   <li class="container">
-                    <input name="grupo" type="radio" id="N" checked/>
+                    <input name="bloodGroup" type="radio" id="N" checked/>
                     <label for="N" class="opcao"> N/S </label>
                   </li>
 
                   <li class="container">
-                    <input name="grupo" type="radio" id="A"/>
+                    <input name="bloodGroup" type="radio" id="A"/>
                     <label for="A" class="opcaoM"> A </label>
                   </li>
 
                   <li class="container">
-                    <input name="grupo" type="radio" id="B"/>
+                    <input name="bloodGroup" type="radio" id="B"/>
                     <label for="B" class="opcaoM"> B </label>
                   </li>
 
                   <li class="container">
-                    <input name="grupo" type="radio" id="Ab"/>
+                    <input name="bloodGroup" type="radio" id="Ab"/>
                     <label for="Ab" class="opcaoM"> AB </label>
                   </li>
 
                   <li class="container">
-                    <input name="grupo" type="radio" id="O"/>
+                    <input name="bloodGroup" type="radio" id="O"/>
                     <label for="O" class="opcao2"> O </label>
                   </li>
                 </ul>
@@ -156,37 +155,45 @@
 
           <ion-row>
             <ion-col>
-              <ion-label>
+              <ion-label class="small">
                 Fator RH:
                 <ul class="containers">
                   <li class="container">
-                    <input name="fator" type="radio" id="n/s" checked/>
+                    <input name="rhFactor" type="radio" id="n/s" checked/>
                     <label for="n/s" class="opcao"> N/S </label>
                   </li>
 
                   <li class="container">
-                    <input name="fator" type="radio" id="positivo"/>
+                    <input name="rhFactor" type="radio" id="positivo"/>
                     <label for="positivo" class="opcaoM"> + </label>
                   </li>
 
                   <li class="container">
-                    <input name="fator" type="radio" id="negativo"/>
+                    <input name="rhFactor" type="radio" id="negativo"/>
                     <label for="negativo" class="opcao2"> - </label>
                   </li>
                 </ul>
               </ion-label>
             </ion-col>
           </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-label> Última doação:
+                <input type="text" placeholder="-- / -- / ----" maxlength="10"/>
+              </ion-label>
+            </ion-col>
+          </ion-row>
       </ion-slide>
 
-      <ion-slide class="3">
+      <ion-slide class="third">
 
         <ion-row>
           <ion-col>
             <ion-label>
-              <img src="assets/img/user.png" class="icon"/> Login:
+              <img src="assets/img/user.png" class="icon-label"/> E-mail:
             </ion-label>
-            <input type="email" class="form-control" name="email" placeholder="Digite seu Email"  [(ngModel)]="credencial.email" required #email="ngModel"/>
+            <input type="email" class="form-control" name="email" placeholder="e-mail@provedor.com.br"  [(ngModel)]="credencial.email" required #email="ngModel"/>
             <div *ngIf="!email.valid && email.touched" class="error">
               E-mail é obrigatório!
             </div>
@@ -195,12 +202,9 @@
 
         <ion-row>
           <ion-col>
-            <ion-label>
-              <img src="assets/img/user.png" class="icon"/> Login:
-            </ion-label>
-            <input type="email" class="form-control" name="email" placeholder="Digite seu Email"  [(ngModel)]="credencial.email" required #email="ngModel"/>
-            <div *ngIf="!password.valid && password.touched" ng-match="!email" class="error">
-              Endereço de e-mail incorreto!
+            <input type="email" class="form-control" name="cEmail" placeholder="Confirme seu Email"  [(ngModel)]="credencial.cEmail" required #cEmail="ngModel"/>
+            <div *ngIf="email.value != cEmail.value && cEmail.touched" class="error">
+              Endereço de e-mail inválido!
             </div>
           </ion-col>
         </ion-row>
@@ -208,9 +212,9 @@
         <ion-row>
           <ion-col>
             <ion-label for="password">
-              <img src="assets/img/key.png" class="icon"/> Senha:
+              <img src="assets/img/key.png" class="icon-label"/> Senha:
             </ion-label>
-            <input name="password" type="password" placeholder="Digite sua Senha" [(ngModel)]="credencial.password" required  minlength="6" #password="ngModel"/>
+            <input name="password" type="password" placeholder="Senha" [(ngModel)]="credencial.password" required  minlength="6" #password="ngModel"/>
             <div *ngIf="!password.valid && password.touched" class="error">
               Senha é obrigatória!
             </div>
@@ -220,12 +224,9 @@
 
         <ion-row>
           <ion-col>
-            <ion-label for="password">
-              <img src="assets/img/key.png" class="icon"/> Senha:
-            </ion-label>
-            <input name="password" type="password" placeholder="Digite sua Senha" [(ngModel)]="credencial.password" required  minlength="6" #password="ngModel"/>
-            <div *ngIf="!password.valid && password.touched" ng-match="!password" class="error">
-              Senha incorreta!
+            <input name="cPassword" type="password" placeholder="Confirme sua Senha" [(ngModel)]="credencial.cPassword" required  minlength="6" #cPassword="ngModel"/>
+            <div *ngIf="password.value != cPassword.value && cPassword.touched" class="error">
+              Senha inválida!
             </div>
           </ion-col>
         </ion-row>

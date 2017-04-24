@@ -37,7 +37,6 @@ ionViewDidLoad(){
     this.navCtrl.push(SignUp);
   }
 
-/*
   btnFbLogin(): void {
     this.facebook.login(['email']).then( (response) => {
       const facebookCredential = firebase.auth.FacebookAuthProvider
@@ -55,10 +54,10 @@ ionViewDidLoad(){
 
     }).catch((error) => { console.log(error) });
   }
-*/
 
-  btnFbLogin(){
-    this.loginProvider.loginWithFacebook();
-  }
+
+  // btnFbLogin(){
+  //   this.loginProvider.loginWithFacebook();
+  // }
 
 }

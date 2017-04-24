@@ -12,16 +12,6 @@ page-perfil {
     text-align: center;
   }
 
-  .health{
-    float: left;
-    padding: 0px;
-  }
-
-  .exam{
-    float: right;
-    padding: 0px;
-  }
-
   .list > .item-block:last-child, .list > .item-wrapper:last-child .item-block {
     border: none;
   }
@@ -52,7 +42,7 @@ page-perfil {
         text-align: center;
         width: 130px;
         height: 30px;
-        margin-left: 50px
+        margin: 10px 40px;
     }
 
     .btn-search{
@@ -63,16 +53,52 @@ page-perfil {
     .img-donation{
         width: 60px;
         height: 60px;
+        margin: 0px auto;
+        margin-top: 10px;
     }
 
+    .box {
+        width: 48%;
+        float: left;
+        padding: 10px 5px;
+    }
+
+    .bar{
+      border: 1px solid rgba(255, 0, 0, 0.4);
+      height: 100px;;
+      float: left;
+      margin: 10px 0px;
+    }
+
+    .exam{
+      text-align: center;
+    }
+
+    .hearth{
+      margin: 30px 0px;
+      padding: 0px 12px;
+      font-size: 14px;
+      border-radius: 25px;
+    }
+
+
     .footer-toolbar{
-        text-align: center;
+      text-align: center;
     }
 
     .btn-footer{
-        text-align: center;
-        padding: 0px 20px 0px 20px;
-        font-size: 18px
+      text-align: center;
+      padding: 0px 20px 0px 20px;
+      font-size: 18px
+    }
+
+    .red{
+      color: #ff0a2f;
+    }
+
+    a{
+      cursor: pointer;
+      color: #000000;
     }
 
 }

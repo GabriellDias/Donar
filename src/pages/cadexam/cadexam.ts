@@ -11,7 +11,6 @@ export class Cadexam {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Cadexam');
   }
 
 }

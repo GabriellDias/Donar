@@ -36,7 +36,8 @@ outline: none;
     border-radius: 20px;
     font-size: 12px;
     display: inline block;
-    margin-left: 12px;
+    margin: 0px auto;
+    margin-bottom: 10px;
     list-style: none;
   }
 
@@ -45,7 +46,6 @@ outline: none;
 }
 
 .btn-footer{
-    text-align: center;
     padding: 0px 20px 0px 20px;
     font-size: 18px
 }
@@ -63,11 +63,8 @@ outline: none;
 }
 
 .largura{
-  width: 300px;
+  width: 94%;
 }
 
 
 }
-
-
-

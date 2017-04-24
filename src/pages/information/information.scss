@@ -1,46 +1,51 @@
 page-information {
-.title{
-    text-align: center;
-    width: 130px;
-    height: 30px;
-    margin-left: 50px
-}
+  .title{
+      text-align: center;
+      width: 130px;
+      height: 30px;
+      margin-left: 50px
+  }
 
-.btn-search{
-    padding-left: 30px;
-    float: right;
-}
+  .btn-search{
+      padding-left: 30px;
+      float: right;
+  }
 
-.txt-inform{
-    float: inherit;
-    margin-top: -30px;
-    margin-left: 40px
-}
+  .txt-inform{
+      float: inherit;
+      margin-top: -30px;
+      margin-left: 40px
+  }
 
-.img-inform{
-    width: 60px;
-    height: 50px;
-    text-align: center;
-    margin-left: 20px
-}
+  .img-inform{
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      margin-left: 20px;
+      vertical-align: middle;
+  }
 
-ion-card{
-    text-align: center;
-}
+  ion-card{
+      text-align: center;
+  }
 
-.btn-add-exame{
-    border-radius: 20px;
-    font-size: 12px
-}
+  .btn-add-exame{
+      border-radius: 20px;
+      font-size: 12px
+  }
 
-.footer-toolbar{
-    text-align: center;
-    
-}
+  .footer-toolbar{
+      text-align: center;
 
-.btn-footer{
-    text-align: center;
-    padding: 0px 20px 0px 20px;
-    font-size: 18px
-}
+  }
+
+  .btn-footer{
+      text-align: center;
+      padding: 0px 20px 0px 20px;
+      font-size: 18px
+  }
+
+  a{
+    cursor: pointer;
+  }
 }

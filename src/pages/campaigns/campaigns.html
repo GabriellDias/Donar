@@ -4,7 +4,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title class="title">
-      <img src="assets/icon/logo_branca.png"/>
+      <img src="assets/img/logo_branca.png"/>
     </ion-title>
     <ion-buttons end>
       <button ion-button icon-only>
@@ -15,14 +15,14 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
 
   <ion-card class="largura">
     <ion-card-header>
       <b>Campanhas próximas a você</b>
     </ion-card-header>
   </ion-card>
-  
+
 <ion-card class="largura">
 
     <ion-card-content>
@@ -34,7 +34,7 @@
 
   <button ion-button color="danger" class="btn-campaigns" (click)="acessEnd()">
       <ion-icon name="pin">
-        Endereço 
+        Endereço
       </ion-icon>
   </button>
 
@@ -56,23 +56,23 @@
 </ion-card>
 
 <ion-footer>
-<ion-toolbar color="buttons" class="footer-toolbar">
- <button ion-button clear class="btn-footer">
-      <ion-icon name="home" color="light">
-      </ion-icon>
-</button>
+  <ion-toolbar color="buttons" class="footer-toolbar">
 
-<button ion-button clear class="btn-footer">
-     <ion-icon name= "map" color="light">
-     </ion-icon> 
-</button>
-    <button ion-button clear class="btn-footer">
-    <ion-icon name="volume-up" color="light">
-</ion-icon> 
+    <button ion-button clear class="btn-footer" (click)="home()">
+      <ion-icon name="home" color="light"></ion-icon>
+    </button>
 
-</button>
     <button ion-button clear class="btn-footer">
-    <ion-icon name="information-circle" color="light">
-    </ion-icon> 
-</button> </ion-toolbar>
+      <ion-icon name= "map" color="light"></ion-icon>
+    </button>
+
+    <button ion-button clear class="btn-footer">
+      <ion-icon name="volume-up" color="light"></ion-icon>
+    </button>
+
+    <button ion-button clear class="btn-footer" (click)="information()">
+      <ion-icon name="information-circle" color="light"></ion-icon>
+    </button>
+
+  </ion-toolbar>
 </ion-footer>

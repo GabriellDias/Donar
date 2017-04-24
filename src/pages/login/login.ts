@@ -3,7 +3,6 @@ import {LoadingController, NavController, NavParams} from 'ionic-angular';
 import {LoginProvider} from "../../providers/login-provider";
 
 import { Credencial } from "../../models/credencial";
-import {HomePage} from "../home/home";
 import {Perfil} from "../perfil/perfil";
 import {ResetPassword} from "../reset-password/reset-password";
 

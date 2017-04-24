@@ -24,6 +24,7 @@ import { Perg2 } from "../pages/perg2/perg2";
 import { Perg3 } from "../pages/perg3/perg3";
 import { ResetPassword } from "../pages/reset-password/reset-password";
 import { SignUp } from "../pages/sign-up/sign-up";
+import { Campaigns } from "../pages/campaigns/campaigns";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAaV8rJnn-CISeGW8qcUGzRLfcrsSaOkJc",
@@ -49,7 +50,8 @@ const firebaseConfig = {
     Perg2,
     Perg3,
     ResetPassword,
-    SignUp
+    SignUp,
+    Campaigns
   ],
   imports: [
     BrowserModule,
@@ -71,7 +73,8 @@ const firebaseConfig = {
     Perg2,
     Perg3,
     ResetPassword,
-    SignUp
+    SignUp,
+    Campaigns
   ],
   providers: [
     LoginProvider,

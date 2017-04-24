@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import * as $ from 'jquery';
 
 import {Credencial} from "../../models/credencial";
 import { User } from "../../models/user";
 import {LoginProvider} from "../../providers/login-provider";
-import {HomePage} from "../home/home";
 import {Perfil} from "../perfil/perfil";
 
 @Component({
@@ -35,34 +33,4 @@ export class SignUp {
   SignUp(){
     this.loginProvider.signup(this.credencial);
   }
-
-  movement() {
-
-    var atual_fs, next_fs, prev_fs;
-
-    $('.next').click(function () {
-
-      atual_fs = $(this).parent();
-      next_fs = $(this).parent().next();
-
-
-      $('#progress li').eq($('fieldset').index(next_fs)).addClass('active');
-      atual_fs.hide(400);
-      next_fs.show(400);
-    });
-
-    $('.prev').click(function () {
-      atual_fs = $(this).parent();
-      prev_fs = $(this).parent().prev();
-
-      $('#progress li').eq($('fieldset').index(atual_fs)).removeClass('active');
-      atual_fs.hide(400);
-      prev_fs.show(400);
-    });
-
-    $('#formulario input[type=submit]').click(function () {
-      return false;
-    });
-  }
-
 }

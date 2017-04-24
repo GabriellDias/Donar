@@ -5,6 +5,7 @@ import {HomePage} from "../home/home";
 import {Donation} from "../donation/donation";
 import {Health} from "../health/health";
 import { Information } from "../information/information";
+import { Campaigns } from "../campaigns/campaigns";
 
 @Component({
   selector: 'page-perfil',
@@ -31,9 +32,14 @@ export class Perfil {
 
   health(){
     this.navCtrl.push(Health);
-}
+  }
 
-information(){
-  this.navCtrl.push(Information);
-}
+  information(){
+    this.navCtrl.push(Information);
+  }
+
+  campaigns(){
+    this.navCtrl.push(Campaigns);
+  }
+
 }

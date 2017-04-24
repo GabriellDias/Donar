@@ -13,6 +13,7 @@
     </ion-buttons>
   </ion-navbar>
 </ion-header>
+
 <ion-content>
   <ion-card>
     <ion-card-header>
@@ -36,67 +37,57 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-card class="health">
-    <ion-card-header>
+  <ion-card>
+    <ion-card-header class="box">
       <h2 class="txt-donation">
-       Minhas Doações
+       <a (click)="donation()"> Minhas Doações
+         <img class="img-donation" src="assets/img/doacoes.png">
+       </a>
       </h2>
-      <img class="img-donation" src="assets/img/doacoes.png">
     </ion-card-header>
-    <ion-card-content class="exam">
+    <div class="bar"></div>
+    <ion-card-content class="box exam">
       <p> Próxima doação a partir de:</p>
-      <p> 21/05/2017 </p>
-      <p> (61 dias) </p>
-
+      <p class="red"> 21/05/2017 </p>
+      <p class="red"> (61 dias) </p>
     </ion-card-content>
 
   </ion-card>
 
-<ion-card class="health">
-  <ion-card-header>
+<ion-card>
+  <ion-card-header class="box">
     <h2 class="txt-donation">
      Meus Exames
     </h2>
     <img class="img-donation" src="assets/img/saude.png">
   </ion-card-header>
-  <ion-card-content class="exam">
-    <button ion-button (clcik)="health()"> Meus Exames </button>
+  <div class="bar"></div>
+  <ion-card-content class="box">
+    <button ion-button class="btn hearth" (click)="health()">
+      <ion-icon ios="ios-copy-outline" md="md-copy"> Meus Exames </ion-icon>
+    </button>
   </ion-card-content>
 </ion-card>
 </ion-content>
 
 
-
-
-
-
-
-
-
-
-
 <ion-footer>
   <ion-toolbar color="buttons" class="footer-toolbar">
     <button ion-button clear class="btn-footer">
-      <ion-icon ios="ios-home" md="md-home" color="light">
-
-      </ion-icon>
-
+      <ion-icon ios="ios-home" md="md-home" color="light"></ion-icon>
     </button>
+
     <button ion-button clear class="btn-footer">
-      <ion-icon ios="ios-map" md="md-map" color="light">
-
-      </ion-icon>
+      <ion-icon ios="ios-map" md="md-map" color="light"></ion-icon>
     </button>
-    <button ion-button clear class="btn-footer">
-      <ion-icon ios="ios-volume-up" md="md-volume-up" color="light">
 
-      </ion-icon>
+    <button ion-button clear class="btn-footer" (click)="campaigns()">
+      <ion-icon ios="ios-volume-up" md="md-volume-up" color="light"></ion-icon>
     </button>
+
     <button ion-button clear class="btn-footer" (click)="information()">
-      <ion-icon ios="ios-information-circle" md="md-information-circle" color="light">
-
-      </ion-icon>
+      <ion-icon ios="ios-information-circle" md="md-information-circle" color="light"></ion-icon>
     </button>
+
   </ion-toolbar>
 </ion-footer>
