@@ -1,0 +1,13 @@
+<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAaV8rJnn-CISeGW8qcUGzRLfcrsSaOkJc",
+    authDomain: "donar-b5d53.firebaseapp.com",
+    databaseURL: "https://donar-b5d53.firebaseio.com",
+    projectId: "donar-b5d53",
+    storageBucket: "donar-b5d53.appspot.com",
+    messagingSenderId: "821855917794"
+  };
+  firebase.initializeApp(config);
+</script>

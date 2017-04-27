@@ -1,0 +1,47 @@
+------------------------ SELECT ---------------------------------------------------------
+const db = firebase.database().ref();    //Database object reference
+
+//Seleciona todas as campanhas
+const campaign = db.child('campaign').orderByKey();
+
+//Seleciona campanha pelo ID
+const campaign = db.child('campaign').child('as6d4as6d54as6588fwe');
+
+//Seleciona campanha por latitude e longitude
+//Estarei fazendo até amanha. Essa é mais complexa
+
+//Exibe os dados
+campaign ('value', snap => {
+	console.log(snap.val()); //Imprime o objeto no console
+	console.log(snap.val().title); //Imprime o titulo
+});
+	
+------------------------ INSERT/UPDATE-----------------------------------------------------
+
+// 1ª Maneira -> passar um objeto
+
+const newPostKey = firebase.database().ref().child('campaign').push().key; //Cria uma chave única no banco para guardar o registro
+
+const db = firebase.database().ref(); //Database object reference
+const campaign = db.child('campaign');
+
+campaign.child(newPostKey).set({
+	"title" : "Campanha Doação",
+	"description" : "Venha doar",
+	"start" : "20170101",
+	"end" : "20170131",
+	"placeId" : "ds65f4sd65sds36s",
+});
+
+//2ª Maneira -> passar os dados para um método que vai gravar
+function saveUserData(id, title, description, start, end, placeId) {
+	const newPostKey = firebase.database().ref().child('campaign').push().key; //Cria uma chave única no banco para guardar o registro
+  firebase.database().ref('campaign/' + id).set({
+    	id : id,
+	title : title,
+	description : description,
+	start : start,
+	end : end,
+	palceId : palceId
+  });
+}

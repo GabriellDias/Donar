@@ -17,11 +17,10 @@ user.on('value', snap => {
 });
 	
 ------------------------ INSERT/UPDATE-----------------------------------------------------
+// 1ª Maneira -> passar um objeto
 const db = firebase.database().ref();    //Database object reference
 const users = db.child('user');
 const primaryKey = "LTa2muyjvZYAdcbxnZprwUWJf4A2";
-
-//Nesse método set vc passa um objeto convertido em Json.
 users.child(primaryKey).set({
 	"name" : "Gabriel Leite",
 	"sex" : "F",
@@ -35,3 +34,20 @@ users.child(primaryKey).set({
 	"rhFactor" : "",
 	"lastDonation" : "20170101"
 });
+
+//2ª Maneira -> passar os dados para um método que vai gravar
+function saveUserData(uid, name, sex, estate, city, lat, long, email, bloodGroup, isDonor, rhFactor, lastDonation) {
+  firebase.database().ref('user/' + userId).set({
+    	name : name ,
+	sex : sex ,
+	estate : estate ,
+	city : city ,
+	lat : lat ,
+	long : long ,
+	email : email ,
+	bloodGroup : bloodGroup ,
+	isDonor : isDonor ,
+	rhFactor : rhFactor ,
+	lastDonation : lastDonation"
+  });
+}
