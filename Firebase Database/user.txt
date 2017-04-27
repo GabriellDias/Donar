@@ -1,0 +1,37 @@
+------------------------ SELECT ---------------------------------------------------------
+const db = firebase.database().ref();    //Database object reference
+
+//Seleciona todos os usuários
+const user = db.child('user').orderByKey();
+
+Seleciona usuário pelo ID
+const user = db.child('user').child('LTa2muyjvZYAdcbxnZprwUWJf4A2');
+
+//Seleciona usuário por email
+const user = db.child('user').orderByChild('email').equalTo('gabi123@hot.com');
+
+//Exibe os dados
+user.on('value', snap => {
+	console.log(snap.val()); //Imprime o objeto no console
+	console.log(snap.val().name); //Imprime o nome
+});
+	
+------------------------ INSERT/UPDATE-----------------------------------------------------
+const db = firebase.database().ref();    //Database object reference
+const users = db.child('user');
+const primaryKey = "LTa2muyjvZYAdcbxnZprwUWJf4A2";
+
+//Nesse método set vc passa um objeto convertido em Json.
+users.child(primaryKey).set({
+	"name" : "Gabriel Leite",
+	"sex" : "F",
+	"estate" : "GO",
+	"city" : "São Francisco",
+	"lat" : "-16.2943818",
+	"long" : "-48.943467",
+	"email" : "gabi123@hot.com",
+	"bloodGroup" : "A",
+	"isDonor" : true,
+	"rhFactor" : "",
+	"lastDonation" : "20170101"
+});
