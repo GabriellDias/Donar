@@ -1,48 +1,48 @@
 <ion-content>
-  <form #f="ngForm" novalidate>
+    <form #f="ngForm" novalidate>
 
-    <ul id="progress">
-      <li class="active"> Pessoais </li>
-      <li> Saúde </li>
-      <li> Conta </li>
-    </ul>
+        <ul id="progress">
+            <li class="active"> Pessoais </li>
+            <li> Saúde </li>
+            <li> Conta </li>
+        </ul>
 
-    <ion-slides pager class="slider">
+        <ion-slides pager class="slider">
 
-      <ion-slide class="first">
-          <ion-row>
-            <ion-col>
-              <ion-label>
-                <input name="name" type="text" class="form-control" placeholder="Nome Completo" [(ngModel)]="user.name" required minlength="4" #name="ngModel"/>
-                <div *ngIf="!name.valid && name.touched" class="error">
-                  Nome é obrigatório!
-                </div>
-              </ion-label>
-            </ion-col>
-          </ion-row>
+            <ion-slide class="first">
+                <ion-row>
+                    <ion-col>
+                        <ion-label>
+                            <input name="name" type="text" class="form-control" placeholder="Nome Completo" [(ngModel)]="user.name" required minlength="4" #name="ngModel" />
+                            <div *ngIf="!name.valid && name.touched" class="error">
+                                Nome é obrigatório!
+                            </div>
+                        </ion-label>
+                    </ion-col>
+                </ion-row>
 
-          <ion-row>
-            <ion-col>
-              <ion-label> Genêro:
-                <ul class="containers">
-                  <li class="container">
-                    <input name="sex" type="radio" id="masculino" checked [(ngModel)]="user.sex">
-                    <label for="masculino" class="opcao"> Masculino </label>
-                  </li>
+                <ion-row>
+                    <ion-col>
+                        <ion-label> Genêro:
+                            <ul class="containers">
+                                <li class="container">
+                                    <input name="sex" type="radio" id="masculino" checked [(ngModel)]="user.sex">
+                                    <label for="masculino" class="opcao"> Masculino </label>
+                                </li>
 
-                  <li class="container">
-                    <input name="sex" type="radio" id="feminino">
-                    <label for="feminino" class="opcao2"> Feminino </label>
-                  </li>
-                </ul>
-              </ion-label>
-            </ion-col>
-          </ion-row>
+                                <li class="container">
+                                    <input name="sex" type="radio" id="feminino">
+                                    <label for="feminino" class="opcao2"> Feminino </label>
+                                </li>
+                            </ul>
+                        </ion-label>
+                    </ion-col>
+                </ion-row>
 
-          <ion-row>
-            <ion-col>
-              <ion-label> Estado:
-                <select class="estados" name="state" [(ngModel)]="user.state">
+                <ion-row>
+                    <ion-col>
+                        <ion-label> Estado:
+                            <select class="estados" name="state" [(ngModel)]="user.state">
                   <option value="estado" selected> Selecione </option>
                   <option value="ac">Acre</option>
                   <option value="al">Alagoas</option>
@@ -72,14 +72,14 @@
                   <option value="sp">São Paulo</option>
                   <option value="to">Tocantins</option>
                 </select>
-              </ion-label>
-            </ion-col>
-          </ion-row>
+                        </ion-label>
+                    </ion-col>
+                </ion-row>
 
-          <ion-row>
-            <ion-col>
-              <ion-label> Cidade:
-                <select class="cidades" id="city" name="city" [(ngModel)]="user.city">
+                <ion-row>
+                    <ion-col>
+                        <ion-label> Cidade:
+                            <select class="cidades" id="city" name="city" [(ngModel)]="user.city">
                   <option value="selecione" selected> Selecione </option>
                   <option value="ac">Acre</option>
                   <option value="al">Alagoas</option>
@@ -94,151 +94,151 @@
                   <option value="mt">Vila Bela da Santíssima Trindade</option>
                   <option value="ms">Mato Grosso do Sul</option>
                 </select>
-              </ion-label>
-            </ion-col>
-          </ion-row>
-      </ion-slide>
+                        </ion-label>
+                    </ion-col>
+                </ion-row>
+            </ion-slide>
 
-      <ion-slide class="second">
-          <ion-row>
-            <ion-col>
-              <ion-label class="small">
-                Já é doador:
-                <ul class="containers">
-                  <li class="container">
-                    <input name="donnor" type="radio" id="yes" checked/>
-                    <label for="yes" class="opcao"> Sim </label>
-                  </li>
+            <ion-slide class="second">
+                <ion-row>
+                    <ion-col>
+                        <ion-label class="small">
+                            Já é doador:
+                            <ul class="containers">
+                                <li class="container">
+                                    <input name="donnor" type="radio" id="yes" checked/>
+                                    <label for="yes" class="opcao"> Sim </label>
+                                </li>
 
-                  <li class="container">
-                    <input name="donnor" type="radio" id="nao"/>
-                    <label for="nao" class="opcao2"> Não </label>
-                  </li>
-                </ul>
-              </ion-label>
-            </ion-col>
-          </ion-row>
+                                <li class="container">
+                                    <input name="donnor" type="radio" id="nao" />
+                                    <label for="nao" class="opcao2"> Não </label>
+                                </li>
+                            </ul>
+                        </ion-label>
+                    </ion-col>
+                </ion-row>
 
-          <ion-row>
-            <ion-col>
-              <ion-label class="grupo">
-                Grupo Sanguíno:
-                <ul class="containers">
-                  <li class="container">
-                    <input name="bloodGroup" type="radio" id="N" checked/>
-                    <label for="N" class="opcao"> N/S </label>
-                  </li>
+                <ion-row>
+                    <ion-col>
+                        <ion-label class="grupo">
+                            Grupo Sanguíno:
+                            <ul class="containers">
+                                <li class="container">
+                                    <input name="bloodGroup" type="radio" id="N" checked/>
+                                    <label for="N" class="opcao"> N/S </label>
+                                </li>
 
-                  <li class="container">
-                    <input name="bloodGroup" type="radio" id="A"/>
-                    <label for="A" class="opcaoM"> A </label>
-                  </li>
+                                <li class="container">
+                                    <input name="bloodGroup" type="radio" id="A" />
+                                    <label for="A" class="opcaoM"> A </label>
+                                </li>
 
-                  <li class="container">
-                    <input name="bloodGroup" type="radio" id="B"/>
-                    <label for="B" class="opcaoM"> B </label>
-                  </li>
+                                <li class="container">
+                                    <input name="bloodGroup" type="radio" id="B" />
+                                    <label for="B" class="opcaoM"> B </label>
+                                </li>
 
-                  <li class="container">
-                    <input name="bloodGroup" type="radio" id="Ab"/>
-                    <label for="Ab" class="opcaoM"> AB </label>
-                  </li>
+                                <li class="container">
+                                    <input name="bloodGroup" type="radio" id="Ab" />
+                                    <label for="Ab" class="opcaoM"> AB </label>
+                                </li>
 
-                  <li class="container">
-                    <input name="bloodGroup" type="radio" id="O"/>
-                    <label for="O" class="opcao2"> O </label>
-                  </li>
-                </ul>
-              </ion-label>
-            </ion-col>
-          </ion-row>
+                                <li class="container">
+                                    <input name="bloodGroup" type="radio" id="O" />
+                                    <label for="O" class="opcao2"> O </label>
+                                </li>
+                            </ul>
+                        </ion-label>
+                    </ion-col>
+                </ion-row>
 
-          <ion-row>
-            <ion-col>
-              <ion-label class="small">
-                Fator RH:
-                <ul class="containers">
-                  <li class="container">
-                    <input name="rhFactor" type="radio" id="n/s" checked/>
-                    <label for="n/s" class="opcao"> N/S </label>
-                  </li>
+                <ion-row>
+                    <ion-col>
+                        <ion-label class="small">
+                            Fator RH:
+                            <ul class="containers">
+                                <li class="container">
+                                    <input name="rhFactor" type="radio" id="n/s" checked/>
+                                    <label for="n/s" class="opcao"> N/S </label>
+                                </li>
 
-                  <li class="container">
-                    <input name="rhFactor" type="radio" id="positivo"/>
-                    <label for="positivo" class="opcaoM"> + </label>
-                  </li>
+                                <li class="container">
+                                    <input name="rhFactor" type="radio" id="positivo" />
+                                    <label for="positivo" class="opcaoM"> + </label>
+                                </li>
 
-                  <li class="container">
-                    <input name="rhFactor" type="radio" id="negativo"/>
-                    <label for="negativo" class="opcao2"> - </label>
-                  </li>
-                </ul>
-              </ion-label>
-            </ion-col>
-          </ion-row>
+                                <li class="container">
+                                    <input name="rhFactor" type="radio" id="negativo" />
+                                    <label for="negativo" class="opcao2"> - </label>
+                                </li>
+                            </ul>
+                        </ion-label>
+                    </ion-col>
+                </ion-row>
 
-          <ion-row>
-            <ion-col>
-              <ion-label> Última doação:
-                <input type="text" placeholder="-- / -- / ----" maxlength="10"/>
-              </ion-label>
-            </ion-col>
-          </ion-row>
-      </ion-slide>
+                <ion-row>
+                    <ion-col>
+                        <ion-label> Última doação:
+                            <input type="text" placeholder="-- / -- / ----" maxlength="10" />
+                        </ion-label>
+                    </ion-col>
+                </ion-row>
+            </ion-slide>
 
-      <ion-slide class="third">
+            <ion-slide class="third">
 
-        <ion-row>
-          <ion-col>
-            <ion-label>
-              <img src="assets/img/user.png" class="icon-label"/> E-mail:
-            </ion-label>
-            <input type="email" class="form-control" name="email" placeholder="e-mail@provedor.com.br"  [(ngModel)]="credencial.email" required #email="ngModel"/>
-            <div *ngIf="!email.valid && email.touched" class="error">
-              E-mail é obrigatório!
-            </div>
-          </ion-col>
-        </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-label>
+                            <img src="assets/img/user.png" class="icon-label" /> E-mail:
+                        </ion-label>
+                        <input type="email" class="form-control" name="email" placeholder="e-mail@provedor.com.br" [(ngModel)]="credencial.email" required #email="ngModel" />
+                        <div *ngIf="!email.valid && email.touched" class="error">
+                            E-mail é obrigatório!
+                        </div>
+                    </ion-col>
+                </ion-row>
 
-        <ion-row>
-          <ion-col>
-            <input type="email" class="form-control" name="cEmail" placeholder="Confirme seu Email"  [(ngModel)]="credencial.cEmail" required #cEmail="ngModel"/>
-            <div *ngIf="email.value != cEmail.value && cEmail.touched" class="error">
-              Endereço de e-mail inválido!
-            </div>
-          </ion-col>
-        </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <input type="email" class="form-control" name="cEmail" placeholder="Confirme seu Email" [(ngModel)]="credencial.cEmail" required #cEmail="ngModel" />
+                        <div *ngIf="email.value != cEmail.value && cEmail.touched" class="error">
+                            Endereço de e-mail inválido!
+                        </div>
+                    </ion-col>
+                </ion-row>
 
-        <ion-row>
-          <ion-col>
-            <ion-label for="password">
-              <img src="assets/img/key.png" class="icon-label"/> Senha:
-            </ion-label>
-            <input name="password" type="password" placeholder="Senha" [(ngModel)]="credencial.password" required  minlength="6" #password="ngModel"/>
-            <div *ngIf="!password.valid && password.touched" class="error">
-              Senha é obrigatória!
-            </div>
-          </ion-col>
-        </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <ion-label for="password">
+                            <img src="assets/img/key.png" class="icon-label" /> Senha:
+                        </ion-label>
+                        <input name="password" type="password" placeholder="Senha" [(ngModel)]="credencial.password" required minlength="6" #password="ngModel" />
+                        <div *ngIf="!password.valid && password.touched" class="error">
+                            Senha é obrigatória!
+                        </div>
+                    </ion-col>
+                </ion-row>
 
 
-        <ion-row>
-          <ion-col>
-            <input name="cPassword" type="password" placeholder="Confirme sua Senha" [(ngModel)]="credencial.cPassword" required  minlength="6" #cPassword="ngModel"/>
-            <div *ngIf="password.value != cPassword.value && cPassword.touched" class="error">
-              Senha inválida!
-            </div>
-          </ion-col>
-        </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <input name="cPassword" type="password" placeholder="Confirme sua Senha" [(ngModel)]="credencial.cPassword" required minlength="6" #cPassword="ngModel" />
+                        <div *ngIf="password.value != cPassword.value && cPassword.touched" class="error">
+                            Senha inválida!
+                        </div>
+                    </ion-col>
+                </ion-row>
 
-            <button ion-button type="submit" (click)="SignUp()" icon-only class="btn check">
+                <button ion-button type="submit" (click)="SignUp()" icon-only class="btn check">
               <ion-icon ios="ios-checkmark" md="md-checkmark"></ion-icon>
             </button>
-      </ion-slide>
+            </ion-slide>
 
-    </ion-slides>
+        </ion-slides>
 
 
-  </form>
+    </form>
 </ion-content>
       

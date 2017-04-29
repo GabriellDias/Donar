@@ -4,6 +4,7 @@ import { NavController } from 'ionic-angular';
 import {Credencial} from "../../models/credencial";
 import { User } from "../../models/user";
 import {LoginProvider} from "../../providers/login-provider";
+import {UserProvider} from "../../providers/user-provider";
 import {Perfil} from "../perfil/perfil";
 
 @Component({
@@ -16,7 +17,7 @@ export class SignUp {
   credencial: Credencial;
   user: User;
 
-  constructor(public navCtrl: NavController, public loginProvider: LoginProvider){
+  constructor(public navCtrl: NavController, public loginProvider: LoginProvider, public userProvider: UserProvider){
     this.credencial = new Credencial();
     this.user = new User();
   }
@@ -32,5 +33,8 @@ export class SignUp {
 
   SignUp(){
     this.loginProvider.signup(this.credencial);
+    console.log(this.user.sex);
+    this.user.uid = this.loginProvider.currentUser.uid;
+    this.userProvider.saveUserData(this.user);
   }
 }

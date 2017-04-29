@@ -9,6 +9,7 @@ import { Facebook } from '@ionic-native/facebook';
 import firebase from "firebase";
 import {LoginProvider} from "../providers/login-provider";
 import {PasswordProvider} from "../providers/password-provider";
+import {UserProvider} from "../providers/user-provider";
 
 import { Caddonate } from "../pages/caddonate/caddonate";
 import { Cadexam } from "../pages/cadexam/cadexam";
@@ -79,6 +80,7 @@ const firebaseConfig = {
   providers: [
     LoginProvider,
     PasswordProvider,
+    UserProvider,
     SplashScreen,
     StatusBar,
     Facebook,
