@@ -38,10 +38,6 @@ export class Login {
     this.loading();
   }
 
-  log(form){
-    console.log(form);
-  }
-
   loading() {
     let loader = this.loadingCtrl.create({
       spinner: 'crescent',

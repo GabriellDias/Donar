@@ -1,21 +1,15 @@
 page-sign-up {
 
-  margin: 0px;
-  padding: 0px;
-
-  ion-content{
-    overflow: hidden;
-  }
-
-  #progress{
-    height: 30%;
-    margin-bottom: 0px;
-  }
+  overflow: hidden;
 
  .slider{
-    height: 70%;
-    width: 100%;
-    margin-top: 10px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 110px;
+  }
+
+  .slider:invalid{
+    padding-bottom: 80px;
   }
 
   .swiper-pagination-bullet{
@@ -59,7 +53,7 @@ page-sign-up {
 
   .slide-zoom{
     text-align: left;
-    padding-left: 15px;
+    padding: 0px 10px;
   }
 
   .containers{
@@ -68,18 +62,15 @@ page-sign-up {
     padding: 5px 0px;
     border: 1px solid #ff0a2f;
     border-radius: 25px;
-  }
-
-  .first .containers{
-    margin-left: 32px;
-  }
-
-  .second .small .containers{
-    margin-left: 48px;
+    margin-left: 34px;
   }
 
   .containers:after{
     content: " ";
+  }
+
+  .second .grupo .containers{
+    margin-left: 4px;
   }
 
   .containers .container{
@@ -89,7 +80,7 @@ page-sign-up {
   .containers .container label {
     cursor: pointer;
     color: rgba(0, 0, 0, .7);
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 25px;
   }
 
@@ -98,22 +89,30 @@ page-sign-up {
   }
 
   .containers .container input[type="radio"] + label{
-    padding: 0px 3px;
+    padding: 0px 16px;
+  }
+
+  .second .grupo .containers .container input[type="radio"] + label{
+    padding: 0px 7px;
   }
 
   .second .small .containers .container input[type="radio"] + label {
-    padding: 0px 15px;
+    padding: 0px 20px;
   }
 
   .containers .container input[type="radio"]:checked + label {
-    padding: 9px 10px 7px 10px;
+    padding: 7px 20px 7px 20px;
     background: #ff0a2f;
     border-radius: 25px;
-    color: #fff;
+    color: #ffffff;
   }
 
   .second .small .containers .container input[type="radio"]:checked + label {
-    padding: 9px 17px 7px 17px;
+    padding: 7px 25px 7px 25px;
+  }
+
+  .second .grupo .containers .container input[type="radio"]:checked + label {
+    padding: 7px 12px 7px 12px;
   }
 
   .containers .container input[type="radio"]:checked + label.opcao{
@@ -133,23 +132,23 @@ page-sign-up {
   .first select{
     outline: none;
     background-color: #ffffff;
+    float: right;
     color: #ff0a2f;
     width: 60%;
     border: none;
     overflow-x: hidden;
+    margin-right: 25px;
     padding: 2px 8px;
-  }
-
-  .second ion-label{
-    white-space: normal;
   }
 
   .check{
     border-radius: 50%;
     display: block;
     margin: 0px auto;
-    margin-top: 30px;
-    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    width: 60px;
+    height: 60px;
   }
 
   .icon-label{
@@ -157,62 +156,4 @@ page-sign-up {
     padding-left: 15px;
     vertical-align: middle;
   }
-
-  #progress{
-    text-align: center;
-    margin: 0px auto;
-    overflow: hidden;
-    counter-reset: step;
-  }
-/*
-  #progress li{
-    list-style: none;
-    color: #ff0a2f;
-    font-size: 14px;
-    float: left;
-    width: 33.33%;
-    position: relative;
-  }
-
-  #progress li:before{
-    content: counter(step);
-    counter-increment: step;
-    display: block;
-    width: 25px;
-    line-height: 25px;
-    background-color: #ffffff;
-    border: 5px solid rgba(255, 0, 0, 0.3);
-    border-color: #ffffff rgba(255, 0, 0, 0.3);
-    border-radius: 50%;
-    margin: 10px 30px;
-  }
-
-  #progress li:after{
-    content: '';
-    width: 100%;
-    background-color: rgba(255, 0, 0, 0.4);
-    height: 5px;
-    position: absolute;
-    top: 25px;
-    left: -60%;
-    z-index: -1;
-  }
-
-  #progress li:first-child:after{
-    content: none;
-  }
-
-  #progress li.active:before{
-    width: 24px;
-    line-height: 24px;
-    border: 5px solid #ff0a2f;
-    color: #ffffff;
-    background: #ff0a2f;
-    border-radius: 50%;
-  }
-
-  #progress li.active:after{
-    background-color: #ff0a2f;
-    color: #ff0a2f;
-  }*/
 }

@@ -14,15 +14,15 @@ export class UserProvider {
   constructor(public http: Http) {}
 
   saveUserData(user: User) {
-  firebase.database().ref('user/' + user.uid).set({
-    	name : user.name ,
-	sex : user.sex ,
-	estate : user.state ,
-	city : user.city ,
-	bloodGroup : user.bloodGroup ,
-	isDonor : user.donor,
-	rhFactor : user.rhFactor ,
-	lastDonation : user.lastDonation
+  firebase.database().ref('user/'+ user.uid).set({
+    	name : user.name,
+    	sex : user.sex,
+    	estate : user.state,
+    	city : user.city,
+    	bloodGroup : user.bloodGroup,
+    	isDonor : user.donor,
+    	rhFactor : user.rhFactor,
+    	lastDonation : user.lastDonation
   });
 }
 
