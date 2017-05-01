@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
-import {NavController, LoadingController} from 'ionic-angular';
+import {NavController, LoadingController, NavParams, ViewController} from 'ionic-angular';
 import {Donation} from "../donation/donation";
+import {Donate} from "../../providers/donate";
+import {DonationModel} from "../../models/model-donation";
+
 
 @Component({
   selector: 'page-caddonate',
@@ -8,7 +11,25 @@ import {Donation} from "../donation/donation";
 })
 export class Caddonate {
 
-  constructor(public navCtrl: NavController, public loadCtrl: LoadingController) {
+  donation: DonationModel;
+
+  constructor(public navCtrl: NavController, 
+  public loadCtrl: LoadingController, public donateProvider: Donate, 
+  public navParams: NavParams, public viewCtrl: ViewController) {
+    this
+  }
+
+  private initialize(){
+    this.donation = this.navParams.get('Donation');
+    if(!this.donation){
+      this.donation = new DonationModel();
+    }
+  }
+
+  saveDonate(){
+    this.donateProvider.save(this.donation);
+    this.viewCtrl.dismiss();
+    this.loadCad();
   }
 
   loadCad(){
@@ -18,7 +39,7 @@ export class Caddonate {
     });
     loader.present();
   }
-
+  
   backPage(){
     this.navCtrl.setRoot(Donation);
   }

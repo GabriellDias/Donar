@@ -12,18 +12,23 @@
 
 <ion-content>
   <ion-list>
+
     <ion-item>
-      <ion-label><ion-icon name="home"></ion-icon> Unidade de doação:</ion-label>
-      <ion-select [(ngModel)]="unidade">
-        <ion-option value="ioha" floating>Instituto Onco-Hematológico de Anápolis</ion-option>
-        <ion-option value="hua">Hospital de Urgências de Anápolis</ion-option>
+      <ion-label floating><ion-icon name="home"></ion-icon> Unidade de doação:</ion-label>
+      <ion-select name="unidade" [(ngModel)]="donation.unidade">
+        <ion-option name="unidade">Instituto Onco-Hematológico de Anápolis</ion-option>
+        <ion-option name="unidade">Hospital de Urgências de Anápolis</ion-option>
       </ion-select>
-    </ion-item><br/>
+    </ion-item>
+    
+    <br/>
+
     <ion-item>
-      <ion-label><ion-icon name="calendar"></ion-icon> Data</ion-label>
-      <ion-datetime displayFormat="DD/MM/YYYY"></ion-datetime>
+      <ion-label floating><ion-icon name="calendar"></ion-icon> Data</ion-label>
+      <ion-datetime name="dtdonate" [(ngModel)]="donation.dtdonate" displayFormat="DD/MM/YYYY"></ion-datetime>
     </ion-item><br/>
-     <button class="btn-add-cad" ion-button (click)="loadCad()">
+
+     <button class="btn-add-cad" ion-button (click)="saveDonate()">
        Cadastrar
      </button>
      <button ion-button (click)="backPage()">
