@@ -28,6 +28,7 @@ import { MyApp } from './app.component';
 import { Perfil } from "../pages/perfil/perfil";
 import { ResetPassword } from "../pages/reset-password/reset-password";
 import { SignUp } from "../pages/sign-up/sign-up";
+import {SignUpUser} from "../pages/sign-up-user/signup-user";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAaV8rJnn-CISeGW8qcUGzRLfcrsSaOkJc",
@@ -51,6 +52,7 @@ const firebaseConfig = {
     Perfil,
     ResetPassword,
     SignUp,
+    SignUpUser,
     Campaigns,
     CampaignsAdd,
     CampaignsList,
@@ -74,6 +76,7 @@ const firebaseConfig = {
     Perfil,
     ResetPassword,
     SignUp,
+    SignUpUser,
     Campaigns,
     CampaignsAdd,
     CampaignsList,

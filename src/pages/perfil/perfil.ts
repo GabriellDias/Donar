@@ -20,15 +20,6 @@ export class Perfil {
     this.initialize();
   }
 
-  ionViewDidLoad(){
-    this.loginProvider.loginSucessEventEmitter.subscribe(
-      state => this.navCtrl.setRoot(HomePage)
-    )
-    this.loginProvider.loginErrorEventEmitter.subscribe(
-      error => console.log(error)
-    )
-  }
-
   private initialize(){
     this.user = new User();
   }

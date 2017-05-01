@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {LoadingController, NavController, NavParams} from 'ionic-angular';
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+
 import {LoginProvider} from "../../providers/login-provider";
 
 import { Credencial } from "../../models/credencial";
@@ -14,8 +16,9 @@ import {ResetPassword} from "../reset-password/reset-password";
 export class Login {
 
   credencial: Credencial;
+  loginForm: FormGroup;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
+  constructor(public navCtrl: NavController, public navParams: NavParams, public fb: FormBuilder,
               public loginProvider: LoginProvider, public loadingCtrl: LoadingController){
     this.initialize();
   }
@@ -31,6 +34,10 @@ export class Login {
 
   private initialize(){
     this.credencial = new Credencial();
+    this.loginForm = this.fb.group({
+      'email': ['', Validators.required],
+      'password': ['', Validators.compose([Validators.required, Validators.minLength(6)])],
+    });
   }
 
   btnDonarLogin(form){

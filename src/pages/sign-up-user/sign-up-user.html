@@ -1,0 +1,191 @@
+<ion-content>
+  <form #f="ngForm" novalidate>
+
+    <ion-slides pager class="slider">
+      <ion-slide class="first">
+        <ion-row>
+          <ion-col>
+            <img src="assets/img/dados.png"/>
+            <ion-label>
+              <input name="name" type="text" class="form-control" placeholder="Nome Completo" [(ngModel)]="user.name" required minlength="4" #name="ngModel" />
+              <div *ngIf="!name.valid && name.touched" class="error">
+                Nome é obrigatório!
+              </div>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-label> Genêro:
+              <ul class="containers">
+                <li class="container">
+                  <input name="sex" type="radio" id="masculino" value="Masculino" [(ngModel)]="user.sex">
+                  <label for="masculino" class="opcao"> Masculino </label>
+                </li>
+
+                <li class="container">
+                  <input name="sex" type="radio" id="feminino" value="Feminino" [(ngModel)]="user.sex">
+                  <label for="feminino" class="opcao2"> Feminino </label>
+                </li>
+              </ul>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-label> Estado:
+              <select class="estados" name="state" [(ngModel)]="user.state">
+                <option value=""> Selecione </option>
+                <option value="Acre">Acre</option>
+                <option value="Alagoas">Alagoas</option>
+                <option value="Amazonas">Amazonas</option>
+                <option value="Amapá">Amapá</option>
+                <option value="Bahia">Bahia</option>
+                <option value="Ceará">Ceará</option>
+                <option value="Distrito Federal">Distrito Federal</option>
+                <option value="Espírito Santo">Espírito Santo</option>
+                <option value="Goiás">Goiás</option>
+                <option value="Maranhão">Maranhão</option>
+                <option value="Mato Grosso">Mato Grosso</option>
+                <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                <option value="Minas Gerais">Minas Gerais</option>
+                <option value="Pará">Pará</option>
+                <option value="Paraíba">Paraíba</option>
+                <option value="Paraná">Paraná</option>
+                <option value="Pernambuco">Pernambuco</option>
+                <option value="Piauí">Piauí</option>
+                <option value="Rio de Janeiro">Rio de Janeiro</option>
+                <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                <option value="Rondônia">Rondônia</option>
+                <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                <option value="Roraima">Roraima</option>
+                <option value="Santa Catarina">Santa Catarina</option>
+                <option value="Sergipe">Sergipe</option>
+                <option value="São Paulo">São Paulo</option>
+                <option value="Tocantins">Tocantins</option>
+              </select>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-label> Cidade:
+              <select class="cidades" id="city" name="city" [(ngModel)]="user.city">
+                <option value=""> Selecione </option>
+                <option value="Rio Branco">Rio Branco</option>
+                <option value="Maceió">Maceió</option>
+                <option value="ap">Amapá</option>
+                <option value="am">Amazonas</option>
+                <option value="ba">Bahia</option>
+                <option value="ce">Ceará</option>
+                <option value="Brasília">Brasília</option>
+                <option value="es">Espírito Santo</option>
+                <option value="São Francisco de Goiás">São Francisco de Goiás</option>
+                <option value="ma">Maranhão</option>
+                <option value="mt">Vila Bela da Santíssima Trindade</option>
+                <option value="ms">Mato Grosso do Sul</option>
+              </select>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-slide>
+
+      <ion-slide class="second">
+        <ion-row>
+          <ion-col>
+            <img src="assets/img/dados2.png" class="logo"/>
+            <ion-label class="small">
+              Já é doador:
+              <ul class="containers">
+                <li class="container">
+                  <input name="donnor" type="radio" id="yes" value="Sim" [(ngModel)]="user.donor"/>
+                  <label for="yes" class="opcao"> Sim </label>
+                </li>
+
+                <li class="container">
+                  <input name="donnor" type="radio" id="nao" value="Não" [(ngModel)]="user.donor"/>
+                  <label for="nao" class="opcao2"> Não </label>
+                </li>
+              </ul>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-label class="grupo">
+              Grupo Sanguíno:
+              <ul class="containers">
+                <li class="container">
+                  <input name="bloodGroup" type="radio" id="N" ng-checked value="Não Sei" [(ngModel)]="user.bloodGroup"/>
+                  <label for="N" class="opcao"> N/S </label>
+                </li>
+
+                <li class="container">
+                  <input name="bloodGroup" type="radio" id="A" value="A" [(ngModel)]="user.bloodGroup"/>
+                  <label for="A" class="opcaoM"> A </label>
+                </li>
+
+                <li class="container">
+                  <input name="bloodGroup" type="radio" id="B" value="B" [(ngModel)]="user.bloodGroup"/>
+                  <label for="B" class="opcaoM"> B </label>
+                </li>
+
+                <li class="container">
+                  <input name="bloodGroup" type="radio" id="Ab" value="Ab" [(ngModel)]="user.bloodGroup"/>
+                  <label for="Ab" class="opcaoM"> AB </label>
+                </li>
+
+                <li class="container">
+                  <input name="bloodGroup" type="radio" id="O" value="O" [(ngModel)]="user.bloodGroup"/>
+                  <label for="O" class="opcao2"> O </label>
+                </li>
+              </ul>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-label class="small">
+              Fator RH:
+              <ul class="containers">
+                <li class="container">
+                  <input name="rhFactor" type="radio" id="n/s" value="Não Sei" [(ngModel)]="user.rhFactor"/>
+                  <label for="n/s" class="opcao"> N/S </label>
+                </li>
+
+                <li class="container">
+                  <input name="rhFactor" type="radio" id="positivo" value="Positivo" [(ngModel)]="user.rhFactor"/>
+                  <label for="positivo" class="opcaoM"> + </label>
+                </li>
+
+                <li class="container">
+                  <input name="rhFactor" type="radio" id="negativo" value="Negativo" [(ngModel)]="user.rhFactor"/>
+                  <label for="negativo" class="opcao2"> - </label>
+                </li>
+              </ul>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-label> Última doação:
+              <input type="text" name="lastDonation" placeholder="-- / -- / ----" maxlength="10" [(ngModel)]="user.lastDonation"/>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-slide>
+
+      <button ion-button type="submit" (click)="SignUp()" icon-only class="btn check">
+        <ion-icon ios="ios-checkmark" md="md-checkmark"></ion-icon>
+      </button>
+
+    </ion-slides>
+
+  </form>
+</ion-content>
