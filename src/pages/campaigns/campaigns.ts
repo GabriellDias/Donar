@@ -3,6 +3,8 @@ import {NavController, NavParams } from 'ionic-angular';
 
 import { Perfil } from "../perfil/perfil";
 import { Information } from "../information/information";
+import {Campaign} from "../../models/campaign";
+import {CampaignsAdd} from "../campaigns-add/campaigns-add";
 
 @Component({
   selector: 'page-campaigns',
@@ -35,5 +37,9 @@ export class Campaigns {
 
   information(){
     this.navCtrl.setRoot(Information);
+  }
+
+  addCampaign(){
+    this.navCtrl.push(CampaignsAdd, {'campaign' : new Campaign()})
   }
 }

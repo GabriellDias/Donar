@@ -1,5 +1,6 @@
 export class User{
   uid: string;
+  img: string;
   bloodGroup: string;
   city: string;
   donor: boolean;
@@ -10,7 +11,7 @@ export class User{
   password: string;
   cPassword: string;
   rhFactor: string;
-  sex: any;
+  sex: string;
   state: string;
   lastDonation: string;
 }

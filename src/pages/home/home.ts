@@ -54,10 +54,4 @@ ionViewDidLoad(){
 
     }).catch((error) => { console.log(error) });
   }
-
-
-  // btnFbLogin(){
-  //   this.loginProvider.loginWithFacebook();
-  // }
-
 }

@@ -33,8 +33,7 @@ export class SignUp {
 
   SignUp(){
     this.loginProvider.signup(this.credencial);
-    console.log(this.user.sex);
-    this.user.uid = this.loginProvider.currentUser.uid;
-    this.userProvider.saveUserData(this.user);
+    console.log(this.loginProvider.currentUser.uid);
+
   }
 }

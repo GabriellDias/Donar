@@ -1,4 +1,4 @@
-import {EventEmitter, Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import firebase from "firebase";
@@ -7,9 +7,6 @@ import { User } from "../models/user";
 
 @Injectable()
 export class UserProvider {
-
-  SucessEventEmitter: EventEmitter<any>;
-  ErrorEventEmitter: EventEmitter<any>;
 
   constructor(public http: Http) {}
 
@@ -25,14 +22,5 @@ export class UserProvider {
     	lastDonation : user.lastDonation
   });
 }
-
- private callbackSucess(result){
-    this.SucessEventEmitter.emit(result.state);
-  }
-
-  private callbackError(error){
-    this.ErrorEventEmitter.emit({code : error.code, message : error.message});
-  }
-
 
 }

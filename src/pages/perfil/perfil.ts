@@ -6,6 +6,7 @@ import {Donation} from "../donation/donation";
 import {Health} from "../health/health";
 import { Information } from "../information/information";
 import { Campaigns } from "../campaigns/campaigns";
+import {User} from "../../models/user";
 
 @Component({
   selector: 'page-perfil',
@@ -13,7 +14,10 @@ import { Campaigns } from "../campaigns/campaigns";
 })
 export class Perfil {
 
+  user: User
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public loginProvider:LoginProvider) {
+    this.initialize();
   }
 
   ionViewDidLoad(){
@@ -25,6 +29,9 @@ export class Perfil {
     )
   }
 
+  private initialize(){
+    this.user = new User();
+  }
 
   donation(){
     this.navCtrl.setRoot(Donation);

@@ -1,8 +1,12 @@
 import {EventEmitter, Injectable, NgZone} from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-import {Credencial} from "../models/credencial";
 import firebase from "firebase";
+
+import {UserProvider} from "./user-provider";
+
+import {Credencial} from "../models/credencial";
+import {User} from "../models/user";
 
 @Injectable()
 export class LoginProvider {
@@ -50,15 +54,6 @@ export class LoginProvider {
 
   }
 
-  loginWithFacebook(){
-    let provider = new firebase.auth.FacebookAuthProvider();
-
-    return firebase.auth().signInWithPopup(provider)
-      .then(result => this.callbackSucessLogin(result))
-      .catch(error => this.callbackErrorLogin(error))
-
-  }
-
   logout(){
     firebase.auth().signOut()
       .then( () => this.logoutEventEmitter.emit(true))
@@ -67,8 +62,8 @@ export class LoginProvider {
 
   signup(credencial: Credencial){
     firebase.auth().createUserWithEmailAndPassword(credencial.email, credencial.password)
-      .then(result => console.log(result))
-      .catch(error => console.log(error));
+      .then(result => this.callbackSucessLogin(result))
+      .catch(error => this.callbackErrorLogin(error));
   }
 
 }
