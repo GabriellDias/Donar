@@ -16,7 +16,7 @@ export class Caddonate {
   constructor(public navCtrl: NavController, 
   public loadCtrl: LoadingController, public donateProvider: Donate, 
   public navParams: NavParams, public viewCtrl: ViewController) {
-    this
+    this.initialize();
   }
 
   private initialize(){
@@ -39,7 +39,7 @@ export class Caddonate {
     });
     loader.present();
   }
-  
+
   backPage(){
     this.navCtrl.setRoot(Donation);
   }

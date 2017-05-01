@@ -13,7 +13,7 @@ export class ExamsProvider {
   reference;
 
   constructor(public http: Http, public loginProvider: LoginProvider) {
-    console.log('Hello ExamsProvider Provider');
+    this.initialize();
   }
 
   private initialize(){
