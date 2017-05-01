@@ -14,44 +14,44 @@
 
       <ion-item>
         <ion-label>Teste HIV:</ion-label>
-        <ion-select [(ngModel)]="hiv">
-          <ion-option value="reagente">Reagente</ion-option>
-          <ion-option value="nreagente">Não Reagente</ion-option>
+        <ion-select name="hiv" [(ngModel)]="hiv">
+          <ion-option name="hiv">Reagente</ion-option>
+          <ion-option name="hiv">Não Reagente</ion-option>
         </ion-select>
       </ion-item>
 
       <ion-item>
         <ion-label>Teste Sífilis:</ion-label>
-        <ion-select [(ngModel)]="sifilis">
-          <ion-option value="reagente">Reagente</ion-option>
-          <ion-option value="nreagente">Não Reagente</ion-option>
+        <ion-select name="sifilis" [(ngModel)]="sifilis">
+          <ion-option name="sifilis">Reagente</ion-option>
+          <ion-option name="sifilis">Não Reagente</ion-option>
         </ion-select>
       </ion-item>
 
       <ion-item>
         <ion-label>Teste HPV:</ion-label>
-        <ion-select [(ngModel)]="hpv">
-          <ion-option value="reagente">Reagente</ion-option>
-          <ion-option value="nreagente">Não Reagente</ion-option>
+        <ion-select name="hpv" [(ngModel)]="hpv">
+          <ion-option name="hpv">Reagente</ion-option>
+          <ion-option name="hpv">Não Reagente</ion-option>
         </ion-select>
       </ion-item>
 
       <ion-item>
         <ion-label>Glicose:</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" name="glicose" [(ngModel)]="exams.glicose"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label>Cálcio:</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" name="calcio" [(ngModel)]="exams.calcio"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label>Proteina Totais:</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" name="proteina" [(ngModel)]="exams.proteina"></ion-input>
       </ion-item>
 
-      <button class="btn-add-cad" ion-button (click)="loadSend()">
+      <button class="btn-add-cad" ion-button (click)="saveExam()">
         Cadastrar
       </button>
 
