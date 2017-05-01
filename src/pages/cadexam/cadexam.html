@@ -1,85 +1,62 @@
 <ion-header>
-
   <ion-navbar color="buttons">
-    <ion-title>Cadastro de Exame</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="title">
+      Cadstro de Exames
+    </ion-title>
   </ion-navbar>
-
 </ion-header>
 
 <ion-content>
   <ion-list>
+
       <ion-item>
-        <ion-label>VHDL:</ion-label>
-        <ion-select [(ngModel)]="vhdl">
-          <ion-option value="reagente">Reagente</ion-option>
-          <ion-option value="nreagente">Não Reagente</ion-option>
-        </ion-select>
-      </ion-item>
-      <ion-item>
-        <ion-label>HBSAG:</ion-label>
-          <ion-select [(ngModel)]="hbsab">
-            <ion-option value="reagente">Reagente</ion-option>
-            <ion-option value="nreagente">Não Reagente</ion-option>
-          </ion-select>
-      </ion-item>
-      <ion-item>
-        <ion-label>Anti-HBC:</ion-label>
-        <ion-select [(ngModel)]="hbc">
-          <ion-option value="reagente">Reagente</ion-option>
-          <ion-option value="nreagente">Não Reagente</ion-option>
-        </ion-select>
-      </ion-item>
-      <ion-item>
-        <ion-label>Anti-HCV:</ion-label>
-        <ion-select [(ngModel)]="hcv">
-          <ion-option value="reagente">Reagente</ion-option>
-          <ion-option value="nreagente">Não Reagente</ion-option>
-        </ion-select>
-      </ion-item>
-      <ion-item>
-        <ion-label>Anti-HIV (Murex):</ion-label>
-        <ion-select [(ngModel)]="ahiv">
-          <ion-option value="reagente">Reagente</ion-option>
-          <ion-option value="nreagente">Não Reagente</ion-option>
-        </ion-select>
-      </ion-item>
-      <ion-item>
-        <ion-label>Anti-HLTV:</ion-label>
-        <ion-select [(ngModel)]="hltv">
-          <ion-option value="reagente">Reagente</ion-option>
-          <ion-option value="nreagente">Não Reagente</ion-option>
-        </ion-select>
-      </ion-item>
-      <ion-item>
-        <ion-label>NAT-HIV:</ion-label>
+        <ion-label>Teste HIV:</ion-label>
         <ion-select [(ngModel)]="hiv">
           <ion-option value="reagente">Reagente</ion-option>
           <ion-option value="nreagente">Não Reagente</ion-option>
         </ion-select>
       </ion-item>
+
       <ion-item>
-        <ion-label>NAT-HCV:</ion-label>
-        <ion-select [(ngModel)]="nhcv">
+        <ion-label>Teste Sífilis:</ion-label>
+        <ion-select [(ngModel)]="sifilis">
           <ion-option value="reagente">Reagente</ion-option>
           <ion-option value="nreagente">Não Reagente</ion-option>
         </ion-select>
       </ion-item>
+
       <ion-item>
-        <ion-label>NAT-HBV:</ion-label>
-        <ion-select [(ngModel)]="nhbv">
+        <ion-label>Teste HPV:</ion-label>
+        <ion-select [(ngModel)]="hpv">
           <ion-option value="reagente">Reagente</ion-option>
           <ion-option value="nreagente">Não Reagente</ion-option>
         </ion-select>
       </ion-item>
+
       <ion-item>
-        <ion-label>Anti-T.CRUZI:</ion-label>
-        <ion-select [(ngModel)]="cruzi">
-          <ion-option value="reagente">Reagente</ion-option>
-          <ion-option value="nreagente">Não Reagente</ion-option>
-        </ion-select>
-      </ion-item><br/>
-      <button class="btn-add-cad" ion-button type="submit">
+        <ion-label>Glicose:</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Cálcio:</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Proteina Totais:</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <button class="btn-add-cad" ion-button (click)="loadSend()">
         Cadastrar
+      </button>
+
+      <button class="btn-add-cad" ion-button (click)="backExam()">
+        Cancelar
       </button>
     </ion-list>
 </ion-content>

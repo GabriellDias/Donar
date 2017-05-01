@@ -37,7 +37,7 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-card>
+  <ion-card (click)="donation()">
     <ion-card-header class="box">
       <h2 class="txt-donation">
        <a (click)="donation()"> Minhas Doações
@@ -70,24 +70,19 @@
 </ion-card>
 </ion-content>
 
-
 <ion-footer>
   <ion-toolbar color="buttons" class="footer-toolbar">
     <button ion-button clear class="btn-footer">
-      <ion-icon ios="ios-home" md="md-home" color="light"></ion-icon>
+      <img src="../assets/footer/inicio.png" width="60" height="40">
     </button>
-
     <button ion-button clear class="btn-footer">
-      <ion-icon ios="ios-map" md="md-map" color="light"></ion-icon>
+      <img src="../assets/footer/hemocentros.png" width="60" height="40">
     </button>
-
     <button ion-button clear class="btn-footer" (click)="campaigns()">
-      <ion-icon ios="ios-volume-up" md="md-volume-up" color="light"></ion-icon>
+      <img src="../assets/footer/campanhas.png" width="60" height="40">
     </button>
-
     <button ion-button clear class="btn-footer" (click)="information()">
-      <ion-icon ios="ios-information-circle" md="md-information-circle" color="light"></ion-icon>
+      <img src="../assets/footer/informacoes.png" width="60" height="40">
     </button>
-
   </ion-toolbar>
 </ion-footer>

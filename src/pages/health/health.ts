@@ -16,19 +16,19 @@ export class Health {
   }
 
   home(){
-    this.navCtrl.pop(Perfil);
+    this.navCtrl.setRoot(Perfil);
   }
 
   information(){
-    this.navCtrl.push(Information);
+    this.navCtrl.setRoot(Information);
   }
 
   cadexam(){
-    this.navCtrl.push(Cadexam);
+    this.navCtrl.setRoot(Cadexam);
   }
 
   campaigns(){
-    this.navCtrl.push(Campaigns);
+    this.navCtrl.setRoot(Campaigns);
   }
 
 }

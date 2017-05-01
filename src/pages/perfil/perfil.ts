@@ -27,19 +27,19 @@ export class Perfil {
 
 
   donation(){
-    this.navCtrl.push(Donation);
+    this.navCtrl.setRoot(Donation);
   }
 
   health(){
-    this.navCtrl.push(Health);
+    this.navCtrl.setRoot(Health);
   }
 
   information(){
-    this.navCtrl.push(Information);
+    this.navCtrl.setRoot(Information);
   }
 
   campaigns(){
-    this.navCtrl.push(Campaigns);
+    this.navCtrl.setRoot(Campaigns);
   }
 
 }

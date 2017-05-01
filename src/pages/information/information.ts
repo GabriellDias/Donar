@@ -98,10 +98,10 @@ export class Information {
   }
 
   home(){
-    this.navCtrl.push(Perfil);
+    this.navCtrl.setRoot(Perfil);
   }
 
   campaigns(){
-    this.navCtrl.push(Campaigns);
+    this.navCtrl.setRoot(Campaigns);
   }
 }

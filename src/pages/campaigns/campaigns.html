@@ -19,7 +19,7 @@
 
   <ion-card class="largura">
     <ion-card-header>
-      <b>Campanhas próximas a você</b>
+      <b color="buttons">Campanhas próximas a você</b>
     </ion-card-header>
   </ion-card>
 
@@ -32,20 +32,20 @@
 
 <ion-row>
 
-  <button ion-button color="danger" class="btn-campaigns" (click)="acessEnd()">
+  <button ion-button color="buttons" class="btn-campaigns" (click)="acessEnd()">
       <ion-icon name="pin">
         Endereço
       </ion-icon>
   </button>
 
-  <button ion-button color="danger" class="btn-campaigns" (click)="acessTel()">
+  <button ion-button color="buttons" class="btn-campaigns" (click)="acessTel()">
       <ion-icon name="call">
         Telefone
       </ion-icon>
   </button>
 
 
-  <button ion-button color="danger" class="btn-campaigns" (click)="acessSite()">
+  <button ion-button color="buttons" class="btn-campaigns" (click)="acessSite()">
       <ion-icon name="globe">
         Site
       </ion-icon>
@@ -57,22 +57,17 @@
 
 <ion-footer>
   <ion-toolbar color="buttons" class="footer-toolbar">
-
     <button ion-button clear class="btn-footer" (click)="home()">
-      <ion-icon name="home" color="light"></ion-icon>
+      <img src="../assets/footer/inicio.png" width="60" height="40">
     </button>
-
     <button ion-button clear class="btn-footer">
-      <ion-icon name= "map" color="light"></ion-icon>
+      <img src="../assets/footer/hemocentros.png" width="60" height="40">
     </button>
-
     <button ion-button clear class="btn-footer">
-      <ion-icon name="volume-up" color="light"></ion-icon>
+      <img src="../assets/footer/campanhas.png" width="60" height="40">
     </button>
-
     <button ion-button clear class="btn-footer" (click)="information()">
-      <ion-icon name="information-circle" color="light"></ion-icon>
+      <img src="../assets/footer/informacoes.png" width="60" height="40">
     </button>
-
   </ion-toolbar>
 </ion-footer>

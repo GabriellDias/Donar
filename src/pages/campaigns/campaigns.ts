@@ -30,10 +30,10 @@ export class Campaigns {
   }
 
   home(){
-    this.navCtrl.push(Perfil);
+    this.navCtrl.setRoot(Perfil);
   }
 
   information(){
-    this.navCtrl.push(Information);
+    this.navCtrl.setRoot(Information);
   }
 }

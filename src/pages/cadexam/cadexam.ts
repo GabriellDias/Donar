@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {NavController, NavParams } from 'ionic-angular';
+import {NavController, NavParams, LoadingController } from 'ionic-angular';
+import {Health} from "../health/health";
 
 @Component({
   selector: 'page-cadexam',
@@ -7,10 +8,20 @@ import {NavController, NavParams } from 'ionic-angular';
 })
 export class Cadexam {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public loadCtrl: LoadingController,
+   public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
+  backExam(){
+    this.navCtrl.setRoot(Health);
+  }
+
+  loadSend(){
+    let loader = this.loadCtrl.create({
+      content: "Salvando...",
+      duration: 2000
+    });
+    loader.present();
   }
 
 }
