@@ -5,6 +5,7 @@ import { Perfil } from "../perfil/perfil";
 import { Information } from "../information/information";
 import {Campaign} from "../../models/campaign";
 import {CampaignsAdd} from "../campaigns-add/campaigns-add";
+import { Hemocentros} from "../hemocentros/hemocentros";
 
 @Component({
   selector: 'page-campaigns',
@@ -41,5 +42,8 @@ export class Campaigns {
 
   addCampaign(){
     this.navCtrl.push(CampaignsAdd, {'campaign' : new Campaign()})
+  }
+   hemocentros(){
+    this.navCtrl.push(Hemocentros);
   }
 }

@@ -3,6 +3,7 @@ import {NavController, NavParams, AlertController } from 'ionic-angular';
 
 import { Perfil } from "../perfil/perfil";
 import { Campaigns } from "../campaigns/campaigns";
+import { Hemocentros} from "../hemocentros/hemocentros";
 
 @Component({
   selector: 'page-information',
@@ -103,5 +104,9 @@ export class Information {
 
   campaigns(){
     this.navCtrl.setRoot(Campaigns);
+  }
+
+  hemocentros(){
+    this.navCtrl.push(Hemocentros);
   }
 }

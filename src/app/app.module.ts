@@ -14,7 +14,6 @@ import {UserProvider} from "../providers/user-provider";
 import {CampaignProvider} from "../providers/campaign-provider";
 import {ListProvider} from "../providers/list-provider";
 
-import { About } from "../pages/about/about";
 import { Caddonate } from "../pages/caddonate/caddonate";
 import { Cadexam } from "../pages/cadexam/cadexam";
 import { Campaigns } from "../pages/campaigns/campaigns";
@@ -29,7 +28,7 @@ import { MyApp } from './app.component';
 import { Perfil } from "../pages/perfil/perfil";
 import { ResetPassword } from "../pages/reset-password/reset-password";
 import { SignUp } from "../pages/sign-up/sign-up";
-import { SignUpUser } from "../pages/sign-up-user/signup-user";
+import { Hemocentros} from "../pages/hemocentros/hemocentros";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAaV8rJnn-CISeGW8qcUGzRLfcrsSaOkJc",
@@ -42,7 +41,6 @@ const firebaseConfig = {
 
 @NgModule({
   declarations: [
-    About,
     Caddonate,
     Cadexam,
     Donation,
@@ -54,11 +52,11 @@ const firebaseConfig = {
     Perfil,
     ResetPassword,
     SignUp,
-    SignUpUser,
     Campaigns,
     CampaignsAdd,
     CampaignsList,
-    CampaignListItem
+    CampaignListItem,
+    Hemocentros
   ],
   imports: [
     BrowserModule,
@@ -67,7 +65,6 @@ const firebaseConfig = {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    About,
     Caddonate,
     Cadexam,
     Donation,
@@ -79,11 +76,11 @@ const firebaseConfig = {
     Perfil,
     ResetPassword,
     SignUp,
-    SignUpUser,
     Campaigns,
     CampaignsAdd,
     CampaignsList,
-    CampaignListItem
+    CampaignListItem,
+    Hemocentros
   ],
   providers: [
     LoginProvider,

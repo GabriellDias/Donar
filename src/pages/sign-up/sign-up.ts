@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-
-import {LoginProvider} from "../../providers/login-provider";
 
 import {Credencial} from "../../models/credencial";
-
-import {SignUpUser} from "../sign-up-user/signup-user";
+import { User } from "../../models/user";
+import {LoginProvider} from "../../providers/login-provider";
+import {UserProvider} from "../../providers/user-provider";
+import {Perfil} from "../perfil/perfil";
 
 @Component({
   selector: 'page-sign-up',
@@ -16,32 +15,25 @@ import {SignUpUser} from "../sign-up-user/signup-user";
 export class SignUp {
 
   credencial: Credencial;
-  signUpForm: FormGroup;
+  user: User;
 
-  constructor(public navCtrl: NavController, public loginProvider: LoginProvider, public fb: FormBuilder){
-    this.initialize();
+  constructor(public navCtrl: NavController, public loginProvider: LoginProvider, public userProvider: UserProvider){
+    this.credencial = new Credencial();
+    this.user = new User();
   }
 
   ionViewDidLoad(){
     this.loginProvider.loginSucessEventEmitter.subscribe(
-      state => this.navCtrl.setRoot(SignUpUser)
+      state => this.navCtrl.setRoot(Perfil)
     )
     this.loginProvider.loginErrorEventEmitter.subscribe(
       error => console.log(error)
     )
   }
 
-  private initialize(){
-    this.credencial = new Credencial();
-    this.signUpForm = this.fb.group({
-      'email': ['', Validators.required],
-      'cEmail': ['', Validators.required],
-      'password': ['', Validators.compose([Validators.required, Validators.minLength(6)])],
-      'cPassword': ['', Validators.compose([Validators.required, Validators.minLength(6)])]
-    });
-  }
-
   SignUp(){
     this.loginProvider.signup(this.credencial);
+    console.log(this.loginProvider.currentUser.uid);
+
   }
 }

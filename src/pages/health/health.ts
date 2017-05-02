@@ -5,6 +5,7 @@ import {Information} from "../information/information";
 import {Cadexam} from "../cadexam/cadexam";
 import {Perfil} from "../perfil/perfil";
 import { Campaigns } from "../campaigns/campaigns";
+import { Hemocentros} from "../hemocentros/hemocentros";
 
 @Component({
   selector: 'page-health',
@@ -31,4 +32,7 @@ export class Health {
     this.navCtrl.setRoot(Campaigns);
   }
 
+hemocentros(){
+    this.navCtrl.push(Hemocentros);
+  }
 }

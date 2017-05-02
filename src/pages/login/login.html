@@ -1,6 +1,7 @@
 <ion-content>
-  <form [formGroup]="loginForm">
+  <form #f="ngForm" novalidate>
 
+    <ion-grid>
       <ion-row>
         <ion-col>
           <img src="assets/img/logo.png"/>
@@ -9,23 +10,25 @@
 
       <ion-row>
         <ion-col>
-          <ion-item>
-            <ion-label floating>
-              <img src="assets/img/user.png" class="icon"/> Login:
-            </ion-label>
-            <ion-input formControlName="email" type="email" name="email" [(ngModel)]="credencial.email"></ion-input>
-          </ion-item>
+          <ion-label>
+            <img src="assets/img/user.png" class="icon"/> Login:
+          </ion-label>
+          <input type="email" name="email" class="form-control" placeholder="Digite seu Email"  [(ngModel)]="credencial.email" required #email="ngModel"/>
+          <div *ngIf="!email.valid && email.touched" class="error">
+            E-mail é obrigatório!
+          </div>
         </ion-col>
       </ion-row>
 
       <ion-row>
         <ion-col>
-          <ion-item>
-            <ion-label floating>
-              <img src="assets/img/key.png" class="icon"/> Senha:
-            </ion-label>
-            <ion-input formControlName="password" type="password" name="password" [(ngModel)]="credencial.password"></ion-input>
-          </ion-item>
+          <ion-label for="password">
+            <img src="assets/img/key.png" class="icon"/> Senha:
+          </ion-label>
+          <input type="password" name="password" class="form-control" placeholder="Digite sua Senha" [(ngModel)]="credencial.password" required  minlength="6" #password="ngModel"/>
+          <div *ngIf="!password.valid && password.touched" class="error">
+            Senha é obrigatória!
+          </div>
         </ion-col>
       </ion-row>
 
@@ -40,12 +43,13 @@
       <ion-row>
         <ion-col>
           <ion-label>
-            <button ion-button full type="submit" class="btn" (click)="btnDonarLogin()" [disabled]="loginForm.invalid">
+            <button ion-button full type="submit" class="btn" (click)="btnDonarLogin()">
               Entrar no Donar <ion-icon ios="ios-log-in" md="md-log-in"></ion-icon>
             </button>
           </ion-label>
         </ion-col>
       </ion-row>
+    </ion-grid>
 
   </form>
 </ion-content>

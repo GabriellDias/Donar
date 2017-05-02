@@ -7,6 +7,7 @@ import {Health} from "../health/health";
 import { Information } from "../information/information";
 import { Campaigns } from "../campaigns/campaigns";
 import {User} from "../../models/user";
+import { Hemocentros} from "../hemocentros/hemocentros";
 
 @Component({
   selector: 'page-perfil',
@@ -18,6 +19,15 @@ export class Perfil {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loginProvider:LoginProvider) {
     this.initialize();
+  }
+
+  ionViewDidLoad(){
+    this.loginProvider.loginSucessEventEmitter.subscribe(
+      state => this.navCtrl.setRoot(HomePage)
+    )
+    this.loginProvider.loginErrorEventEmitter.subscribe(
+      error => console.log(error)
+    )
   }
 
   private initialize(){
@@ -38,6 +48,10 @@ export class Perfil {
 
   campaigns(){
     this.navCtrl.setRoot(Campaigns);
+  }
+
+  hemocentros(){
+    this.navCtrl.push(Hemocentros);
   }
 
 }

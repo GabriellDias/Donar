@@ -58,9 +58,9 @@ this.campaignProvider.reference.on('child_removed', (snapshot) => {
 
   deleteCampaign(campaign: Campaign){
     this.campaignProvider.delete(campaign).then(
-      sucess => console.log('Campanha deletada')
+      sucess => console.log('Campanhas deletada')
     )
-    .catch(error => console.log('Não foi Possível Deletar a Campanha'));
+    .catch(error => console.log('Não foi Possível Deletar a Tarefa'));
   }
 
 }

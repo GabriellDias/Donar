@@ -1,0 +1,48 @@
+<ion-header>
+    <ion-navbar color="buttons">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title class="title">
+            <img src="assets/img/logo_branca.png">
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only>
+        <ion-icon ios="ios-search" md="md-search"></ion-icon>
+      </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<!-- em desenvolvimento
+<ion-content>
+    <ion-list [virtualScroll]="hemocentro">
+        <ion-item-sliding *virtualItem="let campaign">
+            <button ion-item>
+              <campaign-list-item [campaign]="campaign"></campaign-list-item>
+            </button>
+
+            <ion-item-options>
+                <button ion-button clear icon-only (click)="deleteCampaign(campaign)">
+                    <ion-icon name="trash"></ion-icon>
+                </button>
+            </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+</ion-content>
+-->
+<ion-footer>
+    <ion-toolbar color="buttons" class="footer-toolbar">
+        <button ion-button clear class="btn-footer" (click)="home()">
+      <img src="../assets/footer/inicio.png" width="60" height="40">
+    </button>
+        <button ion-button clear class="btn-footer" (click)="hemocentros()">
+      <img src=" ../assets/footer/hemocentros.png " width="60 " height="40 ">
+    </button>
+        <button ion-button clear class="btn-footer " (click)="campaigns() ">
+      <img src="../assets/footer/campanhas.png " width="60 " height="40 ">
+    </button>
+        <button ion-button clear class="btn-footer ">
+      <img src="../assets/footer/informacoes.png " width="60 " height="40 ">
+    </button>
+    </ion-toolbar>
+</ion-footer>
