@@ -5,7 +5,6 @@ import {LoginProvider} from "../../providers/login-provider";
 
 import {User} from "../../models/user";
 
-import {HomePage} from "../home/home";
 import {Donation} from "../donation/donation";
 import {Health} from "../health/health";
 import { Information } from "../information/information";

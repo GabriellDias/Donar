@@ -2,11 +2,12 @@ page-campaigns {
 
 outline: none;
 
- .title{
-    text-align: center;
+  .title{
     width: 130px;
     height: 30px;
-    margin-left: 50px
+    margin: 0px auto;
+    display: block;
+    vertical-align: middle;
   }
 
   .btn-search{
@@ -61,10 +62,5 @@ outline: none;
 .tipoblood{
   color: #ff0a2f;
 }
-
-.largura{
-  width: 94%;
-}
-
 
 }

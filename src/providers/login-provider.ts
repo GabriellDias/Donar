@@ -3,8 +3,6 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import firebase from "firebase";
 
-import {UserProvider} from "./user-provider";
-
 import {Credencial} from "../models/credencial";
 import {User} from "../models/user";
 

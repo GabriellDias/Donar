@@ -24,7 +24,8 @@ import { CampaignsAdd } from "../pages/campaigns-add/campaigns-add";
 import { CampaignsList } from "../pages/campaigns-list/campaigns-list";
 import { Donation } from "../pages/donation/donation";
 import { Health } from "../pages/health/health";
-import { Hemocentros} from "../pages/hemocentros/hemocentros";
+import { Hemocentros } from "../pages/hemocentros/hemocentros";
+import { HemocentrosList } from "../pages/hemocentros-list/hemocentros-list";
 import { HomePage } from '../pages/home/home';
 import { Information } from "../pages/information/information";
 import { Login } from "../pages/login/login";
@@ -48,9 +49,14 @@ const firebaseConfig = {
     About,
     Caddonate,
     Cadexam,
+    Campaigns,
+    CampaignsAdd,
+    CampaignsList,
+    CampaignListItem,
     Donation,
     Health,
     Hemocentros,
+    HemocentrosList,
     HomePage,
     Information,
     Login,
@@ -58,11 +64,7 @@ const firebaseConfig = {
     Perfil,
     ResetPassword,
     SignUp,
-    SignUpUser,
-    Campaigns,
-    CampaignsAdd,
-    CampaignsList,
-    CampaignListItem
+    SignUpUser
   ],
   imports: [
     BrowserModule,
@@ -74,9 +76,14 @@ const firebaseConfig = {
     About,
     Caddonate,
     Cadexam,
+    Campaigns,
+    CampaignsAdd,
+    CampaignsList,
+    CampaignListItem,
     Donation,
     Health,
     Hemocentros,
+    HemocentrosList,
     HomePage,
     Information,
     Login,
@@ -84,11 +91,7 @@ const firebaseConfig = {
     Perfil,
     ResetPassword,
     SignUp,
-    SignUpUser,
-    Campaigns,
-    CampaignsAdd,
-    CampaignsList,
-    CampaignListItem
+    SignUpUser
   ],
   providers: [
     CampaignProvider,

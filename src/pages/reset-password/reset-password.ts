@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {LoadingController, NavController, NavParams} from 'ionic-angular';
+import { NavController, NavParams} from 'ionic-angular';
+import { FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 import {ResetPass} from "../../models/resetPass";
 import {PasswordProvider} from "../../providers/password-provider";
@@ -12,9 +13,10 @@ import {HomePage} from "../home/home";
 export class ResetPassword {
 
   resetPass: ResetPass;
+  resetPassForm: FormGroup;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              public passwordProvider: PasswordProvider, public loadingCtrl: LoadingController){
+              public passwordProvider: PasswordProvider, public fb: FormBuilder){
     this.initialize();
   }
 
@@ -29,6 +31,9 @@ export class ResetPassword {
 
   private initialize(){
     this.resetPass = new ResetPass();
+    this.resetPassForm = this.fb.group({
+      'email': ['', Validators.required]
+    });
   }
 
   reset(){
