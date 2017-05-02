@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import {NavController, NavParams } from 'ionic-angular';
 
-import { Perfil } from "../perfil/perfil";
-import { Information } from "../information/information";
+import {Perfil} from "../perfil/perfil";
+import {Information } from "../information/information";
 import {Campaign} from "../../models/campaign";
 import {CampaignsAdd} from "../campaigns-add/campaigns-add";
-import { Hemocentros} from "../hemocentros/hemocentros";
+import {Hemocentros} from "../hemocentros/hemocentros";
 
 @Component({
   selector: 'page-campaigns',
@@ -40,10 +40,11 @@ export class Campaigns {
     this.navCtrl.setRoot(Information);
   }
 
+  hemocentros(){
+    this.navCtrl.setRoot(Hemocentros);
+  }
+
   addCampaign(){
     this.navCtrl.push(CampaignsAdd, {'campaign' : new Campaign()})
-  }
-   hemocentros(){
-    this.navCtrl.setRoot(Hemocentros);
   }
 }

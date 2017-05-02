@@ -21,7 +21,7 @@ export class Donation {
   }
 
   acessCad(){
-    this.navCtrl.setRoot(Caddonate);
+    this.navCtrl.push(Caddonate);
   }
 
   information(){

@@ -107,6 +107,6 @@ export class Information {
   }
 
   hemocentros(){
-    this.navCtrl.setRoot(Hemocentros);
-  }
+   this.navCtrl.setRoot(Hemocentros);
+ }
 }

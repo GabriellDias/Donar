@@ -4,14 +4,23 @@ import 'rxjs/add/operator/map';
 import firebase from "firebase";
 
 import { User } from "../models/user";
+import {LoginProvider} from "./login-provider";
 
 @Injectable()
 export class UserProvider {
 
-  constructor(public http: Http) {}
+  reference;
+
+  constructor(public http: Http, public loginProvider: LoginProvider) {
+    this.initialize();
+  }
+
+  private initialize(){
+    this.reference = firebase.database().ref('user/'+ this.loginProvider.currentUser.uid);
+  }
 
   saveUserData(user: User) {
-  firebase.database().ref('user/'+ user.uid).set({
+  this.reference.set({
     	name : user.name,
     	sex : user.sex,
     	estate : user.state,

@@ -26,20 +26,20 @@
         </ion-row>
 
         <ion-row>
-          <ion-col class="logout">
-            <a class="links"> SAIR <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon></a>
-          </ion-col>
-        </ion-row>
-
-        <ion-row>
           <ion-col>
             <a class="links"> - Contato </a>
           </ion-col>
         </ion-row>
-
+        <hr>
         <ion-row>
           <ion-col>
-            <a class="links"> - Sobre </a>
+            <a class="links" (click)="about()"> - Sobre </a>
+          </ion-col>
+        </ion-row>
+        <hr>
+        <ion-row>
+          <ion-col class="logout">
+            <a class="links" (click)="logout()"> Sair <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon></a>
           </ion-col>
         </ion-row>
     </ion-grid>

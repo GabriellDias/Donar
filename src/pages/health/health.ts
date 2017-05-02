@@ -25,14 +25,15 @@ export class Health {
   }
 
   cadexam(){
-    this.navCtrl.setRoot(Cadexam);
+    this.navCtrl.push(Cadexam);
   }
 
   campaigns(){
     this.navCtrl.setRoot(Campaigns);
   }
 
-hemocentros(){
+  hemocentros(){
     this.navCtrl.setRoot(Hemocentros);
   }
+
 }
