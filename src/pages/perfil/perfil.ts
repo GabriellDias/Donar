@@ -51,7 +51,7 @@ export class Perfil {
   }
 
   hemocentros(){
-    this.navCtrl.push(Hemocentros);
+    this.navCtrl.setRoot(Hemocentros);
   }
 
 }

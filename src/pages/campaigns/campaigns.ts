@@ -44,6 +44,6 @@ export class Campaigns {
     this.navCtrl.push(CampaignsAdd, {'campaign' : new Campaign()})
   }
    hemocentros(){
-    this.navCtrl.push(Hemocentros);
+    this.navCtrl.setRoot(Hemocentros);
   }
 }

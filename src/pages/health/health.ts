@@ -33,6 +33,6 @@ export class Health {
   }
 
 hemocentros(){
-    this.navCtrl.push(Hemocentros);
+    this.navCtrl.setRoot(Hemocentros);
   }
 }
