@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {NavController, NavParams } from 'ionic-angular';
+import {AlertController, NavController, NavParams} from 'ionic-angular';
 
 import {Perfil} from "../perfil/perfil";
 import {Information } from "../information/information";
@@ -13,7 +13,7 @@ import {Hemocentros} from "../hemocentros/hemocentros";
 })
 export class Campaigns {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -21,15 +21,30 @@ export class Campaigns {
   }
 
   acessEnd(){
-    console.log("Av Marciano França, Nº4, Centro, Ouro verde de Goiás.");
+    let alert = this.alertCtrl.create({
+      title: 'Endereço',
+      subTitle: 'Av. Goiás, Nº210, Centro, Anápolis de Goiás.',
+      buttons: ['OK']
+    })
+    alert.present();
   }
 
   acessTel(){
-    console.log("06293342-1158");
+    let alert = this.alertCtrl.create({
+      title: 'Telefone',
+      subTitle: '(062) 99342-1158',
+      buttons: ['OK']
+    })
+    alert.present();
   }
 
   acessSite(){
-    console.log("www.hemocentroanapolis.com.br");
+    let alert = this.alertCtrl.create({
+      title: 'Site',
+      subTitle: 'www.hemocentroanapolis.com.br',
+      buttons: ['OK']
+    })
+    alert.present();
   }
 
   home(){
@@ -42,9 +57,5 @@ export class Campaigns {
 
   hemocentros(){
     this.navCtrl.setRoot(Hemocentros);
-  }
-
-  addCampaign(){
-    this.navCtrl.push(CampaignsAdd, {'campaign' : new Campaign()})
   }
 }

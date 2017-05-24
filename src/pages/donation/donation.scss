@@ -1,44 +1,49 @@
 page-donation {
-.title{
-    text-align: center;
-    width: 130px;
-    height: 30px;
-    margin-left: 50px
-}
 
-.btn-search{
-    padding-left: 30px;
-    float: right;
-}
+  .scroll-content{
+    overflow: hidden;
+  }
 
-.txt-donation{
-    float: inherit;
-    margin-top: -30px;
-    margin-left: 40px
-}
+  .title{
+      text-align: center;
+      width: 130px;
+      height: 30px;
+      margin-left: 50px
+  }
 
-.img-donation{
-    width: 60px;
-    height: 50px;
-    text-align: center;
-}
+  .btn-search{
+      padding-left: 30px;
+      float: right;
+  }
 
-ion-card{
-    text-align: center;
-}
+  .txt-donation{
+      float: inherit;
+      margin-top: -30px;
+      margin-left: 40px
+  }
 
-.btn-add-donate{
-    border-radius: 20px;
-    font-size: 12px
-}
+  .img-donation{
+      width: 60px;
+      height: 50px;
+      text-align: center;
+  }
 
-.footer-toolbar{
-    text-align: center;
-    
-}
+  ion-card{
+      text-align: center;
+  }
 
-.btn-footer{
-    text-align: center;
-    padding: 0px 10px 0px 10px;
-}
+  .btn-add-donate{
+      border-radius: 20px;
+      font-size: 12px
+  }
+
+  .footer-toolbar{
+      text-align: center;
+
+  }
+
+  .btn-footer{
+      text-align: center;
+      padding: 0px 10px 0px 10px;
+  }
 }

@@ -1,6 +1,8 @@
 page-campaigns {
 
-outline: none;
+  .scroll-content{
+    overflow: hidden;
+  }
 
   .title{
     width: 130px;

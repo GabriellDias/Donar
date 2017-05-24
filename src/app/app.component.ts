@@ -5,8 +5,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import {LoginProvider} from "../providers/login-provider";
 
+import { About } from "../pages/about/about";
+import { Contact } from "../pages/contact/contact";
+import { Help } from "../pages/help/help";
 import { HomePage } from '../pages/home/home';
-import {About} from "../pages/about/about";
+import { Logout } from "../pages/logout/logout";
+import { Update } from "../pages/update/update";
 
 @Component({
   templateUrl: 'app.html'
@@ -21,6 +25,15 @@ export class MyApp {
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,
               public loginProvider: LoginProvider) {
     this.initializeApp();
+
+    // used for an example of ngFor and navigation
+    this.pages = [
+      { title: 'Alterar Dados', component: Update},
+      { title: 'Ajuda', component: Help},
+      { title: 'Contato', component: Contact },
+      { title: 'Sobre', component: About },
+      { title: 'Sair', component: Logout},
+    ];
   }
 
   initializeApp() {
@@ -32,15 +45,5 @@ export class MyApp {
 
   openPage(page) {
     this.nav.setRoot(page.component);
-  }
-
-  logout(){
-    console.log('Sucess');
-    this.loginProvider.logout();
-    this.nav.setRoot(HomePage);
-  }
-
-  about(){
-    this.nav.setRoot(About);
   }
 }

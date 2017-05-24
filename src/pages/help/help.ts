@@ -1,33 +1,36 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {Perfil} from "../perfil/perfil";
-import {Information} from "../information/information";
-import {Campaigns} from "../campaigns/campaigns";
 import {Hemocentros} from "../hemocentros/hemocentros";
+import {Campaigns} from "../campaigns/campaigns";
+import {Information} from "../information/information";
 
 @Component({
-  selector: 'page-hemocentros-list',
-  templateUrl: 'hemocentros-list.html',
+  selector: 'page-help',
+  templateUrl: 'help.html',
 })
-export class HemocentrosList {
+export class Help {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  home(){
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad Help');
+  }
+
+  perfil(){
     this.navCtrl.setRoot(Perfil);
-  }
-
-  information(){
-    this.navCtrl.setRoot(Information);
-  }
-
-  campaigns(){
-    this.navCtrl.setRoot(Campaigns);
   }
 
   hemocentros(){
     this.navCtrl.setRoot(Hemocentros);
   }
 
+  campaigns(){
+    this.navCtrl.setRoot(Campaigns);
+  }
+
+  information(){
+    this.navCtrl.setRoot(Information);
+  }
 }

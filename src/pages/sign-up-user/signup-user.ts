@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import {LoadingController, NavController, NavParams} from 'ionic-angular';
 
 import {UserProvider} from "../../providers/user-provider";
 import {LoginProvider} from "../../providers/login-provider";
@@ -17,7 +17,7 @@ export class SignUpUser {
   user: User;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              public loginProvider: LoginProvider, public userProvider: UserProvider) {
+              public loginProvider: LoginProvider, public loadCtrl: LoadingController, public userProvider: UserProvider) {
     this.user = new User();
   }
 
@@ -32,6 +32,16 @@ export class SignUpUser {
 
   SignUp(){
     this.userProvider.saveUserData(this.user);
+    this.navCtrl.setRoot(Perfil);
+    this.loadSend();
+  }
+
+  loadSend(){
+    let loader = this.loadCtrl.create({
+      content: "Entrando...",
+      duration: 2000
+    });
+    loader.present();
   }
 
 }

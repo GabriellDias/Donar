@@ -22,18 +22,22 @@ import { Cadexam } from "../pages/cadexam/cadexam";
 import { Campaigns } from "../pages/campaigns/campaigns";
 import { CampaignsAdd } from "../pages/campaigns-add/campaigns-add";
 import { CampaignsList } from "../pages/campaigns-list/campaigns-list";
+import { Contact } from "../pages/contact/contact";
 import { Donation } from "../pages/donation/donation";
 import { Health } from "../pages/health/health";
+import { Help } from "../pages/help/help";
 import { Hemocentros } from "../pages/hemocentros/hemocentros";
 import { HemocentrosList } from "../pages/hemocentros-list/hemocentros-list";
 import { HomePage } from '../pages/home/home';
 import { Information } from "../pages/information/information";
 import { Login } from "../pages/login/login";
+import { Logout } from "../pages/logout/logout";
 import { MyApp } from './app.component';
 import { Perfil } from "../pages/perfil/perfil";
 import { ResetPassword } from "../pages/reset-password/reset-password";
 import { SignUp } from "../pages/sign-up/sign-up";
 import { SignUpUser } from "../pages/sign-up-user/signup-user";
+import {Update} from "../pages/update/update";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAaV8rJnn-CISeGW8qcUGzRLfcrsSaOkJc",
@@ -53,18 +57,22 @@ const firebaseConfig = {
     CampaignsAdd,
     CampaignsList,
     CampaignListItem,
+    Contact,
     Donation,
     Health,
+    Help,
     Hemocentros,
     HemocentrosList,
     HomePage,
     Information,
     Login,
+    Logout,
     MyApp,
     Perfil,
     ResetPassword,
     SignUp,
-    SignUpUser
+    SignUpUser,
+    Update
   ],
   imports: [
     BrowserModule,
@@ -80,18 +88,22 @@ const firebaseConfig = {
     CampaignsAdd,
     CampaignsList,
     CampaignListItem,
+    Contact,
     Donation,
     Health,
+    Help,
     Hemocentros,
     HemocentrosList,
     HomePage,
     Information,
     Login,
+    Logout,
     MyApp,
     Perfil,
     ResetPassword,
     SignUp,
-    SignUpUser
+    SignUpUser,
+    Update
   ],
   providers: [
     CampaignProvider,
