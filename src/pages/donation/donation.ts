@@ -6,6 +6,7 @@ import {Perfil} from "../perfil/perfil";
 import {Caddonate} from "../caddonate/caddonate";
 import { Campaigns } from "../campaigns/campaigns";
 import { Hemocentros} from "../hemocentros/hemocentros";
+import {DonationList} from "../donation-list/donation-list";
 
 @Component({
   selector: 'page-donation',

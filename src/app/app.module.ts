@@ -38,6 +38,7 @@ import { ResetPassword } from "../pages/reset-password/reset-password";
 import { SignUp } from "../pages/sign-up/sign-up";
 import { SignUpUser } from "../pages/sign-up-user/signup-user";
 import {Update} from "../pages/update/update";
+import {DonationList} from "../pages/donation-list/donation-list";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAaV8rJnn-CISeGW8qcUGzRLfcrsSaOkJc",
@@ -59,6 +60,7 @@ const firebaseConfig = {
     CampaignListItem,
     Contacts,
     Donation,
+    DonationList,
     Health,
     Help,
     Hemocentros,
@@ -90,6 +92,7 @@ const firebaseConfig = {
     CampaignListItem,
     Contacts,
     Donation,
+    DonationList,
     Health,
     Help,
     Hemocentros,

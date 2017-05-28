@@ -17,7 +17,7 @@ export class Donate {
   }
 
   private initialize(){
-    this.reference = firebase.database().ref(this.loginProvider.currentUser.uid+'/donation/');
+    this.reference = firebase.database().ref('/donation/'+this.loginProvider.currentUser.uid);
   }
 
   save(donation: DonationModel){
@@ -30,6 +30,10 @@ export class Donate {
       donation.id = id;
     }
     this.reference.child(id).update(donation);
+  }
+
+  delete(donation: DonationModel):any{
+    return this.reference.child(donation.id).remove();
   }
 
 }

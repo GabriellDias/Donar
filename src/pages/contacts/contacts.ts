@@ -14,6 +14,66 @@ export class Contacts {
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
+  erico(){
+    let alert = this.alertCtrl.create({
+      title: 'Erico Junior',
+      subTitle: 'ericojunior.morais@hotmail.com',
+      buttons: ['Voltar']
+    })
+
+    alert.present();
+  }
+
+  gabriel(){
+    let alert = this.alertCtrl.create({
+      title: 'Gabriel Leite',
+      subTitle: 'gabriel123leitedias@gmail.com',
+      buttons: ['Voltar']
+    })
+
+    alert.present();
+  }
+
+  josimar(){
+    let alert = this.alertCtrl.create({
+      title: 'Josimar Cândido',
+      subTitle: 'josimar.infotecnico@gmail.com',
+      buttons: ['Voltar']
+    })
+
+    alert.present();
+  }
+
+  lucas(){
+    let alert = this.alertCtrl.create({
+      title: 'Lucas Andrade',
+      subTitle: 'lucas.tecnico.dev@gmail.com',
+      buttons: ['Voltar']
+    })
+
+    alert.present();
+  }
+
+  matheus(){
+    let alert = this.alertCtrl.create({
+      title: 'Matheus Lima',
+      subTitle: 'matheuslima_123@hotmail.com',
+      buttons: ['Voltar']
+    })
+
+    alert.present();
+  }
+
+  samuel(){
+    let alert = this.alertCtrl.create({
+      title: 'Samuel de Souza',
+      subTitle: 'samdev@outlook.com.br',
+      buttons: ['Voltar']
+    })
+
+    alert.present();
+  }
+
   perfil(){
     this.navCtrl.setRoot(Perfil);
   }
@@ -30,13 +90,5 @@ export class Contacts {
     this.navCtrl.setRoot(Information);
   }
 
-  erico(){
-    let alert = this.alertCtrl.create({
-      title: 'Erico',
-      buttons: ['OK']
-    })
-
-    alert.present();
-  }
 
 }
