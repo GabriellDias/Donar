@@ -22,9 +22,9 @@
           <ion-avatar item-left>
             <img class="img-donation" src="assets/img/teste.jpg">
           </ion-avatar>
-          <p>Érico Junior de Morais</p>
-          <p>Tipo de Sangue AB+</p>
-          <p>Última Doação: 10/03/2017</p>
+          <p>{{user.firstName}}</p>
+          <p>Tipo de Sangue {{user.bloodGroup}}{{user.rhFactor}}</p>
+          <p>Última Doação: {{user.lastDonation}}</p>
         </ion-item>
       </ion-list>
     </ion-card-header>

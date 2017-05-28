@@ -17,14 +17,17 @@ import { Hemocentros} from "../hemocentros/hemocentros";
 })
 export class Perfil {
 
-  user: User
+  user: User;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loginProvider:LoginProvider) {
     this.initialize();
   }
 
   private initialize(){
-    this.user = new User();
+    this.user = this.navParams.get('user');
+    if(!this.user) {
+      this.user = new User();
+    }
   }
 
   donation(){

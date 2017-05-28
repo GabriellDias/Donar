@@ -18,7 +18,7 @@ export class CampaignProvider {
   }
 
   private initialize(){
-    this.reference = firebase.database().ref(this.loginProvider.currentUser.uid+'/campaign/');
+    this.reference = firebase.database().ref('/campaign/' + this.loginProvider.currentUser.uid);
   }
 
   save(campaign: Campaign){

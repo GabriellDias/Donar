@@ -23,19 +23,13 @@ $font-path: "../assets/fonts";
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:     #ff0a2f,
+  primary:    #ff0a2f,
   secondary:  #32db64,
   facebook:   #3b5998,
   light:      #f4f4f4,
   dark:       #222,
   buttons:    #ff0a2f
 );
-
-.btn:hover{
-  color: #ff0a2f;
-  background-color: #ffffff;
-  border: 1px solid #ff0a2f;
-}
 
 // App iOS Variables
 // --------------------------------------------------

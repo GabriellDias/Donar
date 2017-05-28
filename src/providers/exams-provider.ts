@@ -17,7 +17,7 @@ export class ExamsProvider {
   }
 
   private initialize(){
-    this.reference = firebase.database().ref(this.loginProvider.currentUser.uid+'/exams/');
+    this.reference = firebase.database().ref('/exams/' + this.loginProvider.currentUser.uid);
   }
 
   save(exams: Exams){

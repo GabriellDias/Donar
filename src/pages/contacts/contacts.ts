@@ -26,8 +26,8 @@ export class Contacts {
 
   gabriel(){
     let alert = this.alertCtrl.create({
-      title: 'Gabriel Leite',
-      subTitle: 'gabriel123leitedias@gmail.com',
+      title: 'Gabriel Dias',
+      subTitle: 'gabrielldias_12@hotmail.com',
       buttons: ['Voltar']
     })
 

@@ -5,11 +5,10 @@ export class User{
   city: string;
   donor: boolean;
   email: string;
-  cEmail: string;
   id: number;
-  name: string;
+  firstName: string;
+  lastName: String;
   password: string;
-  cPassword: string;
   rhFactor: string;
   sex: string;
   state: string;

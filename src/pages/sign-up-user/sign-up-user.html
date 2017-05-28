@@ -1,17 +1,31 @@
 <ion-content>
-  <form #f="ngForm" novalidate>
+  <form [formGroup]="signUpUserForm">
 
     <ion-slides pager class="slider">
       <ion-slide class="first">
+
         <ion-row>
-          <ion-col>
+          <ion-row>
             <img src="assets/img/dados.png"/>
-            <ion-label>
-              <input name="name" type="text" class="form-control" placeholder="Nome Completo" [(ngModel)]="user.name" required minlength="4" #name="ngModel" />
-              <div *ngIf="!name.valid && name.touched" class="error">
-                Nome é obrigatório!
-              </div>
-            </ion-label>
+          </ion-row>
+        </ion-row>
+
+        <ion-row>
+          <ion-col width-50>
+              <ion-item>
+                <ion-label floating>
+                  <img src="assets/img/user.png" class="icon-label"/> Primeiro Nome:
+                </ion-label>
+                <ion-input formControlName="firstName" type="text" name="name" [(ngModel)]="user.firstName"></ion-input>
+              </ion-item>
+          </ion-col>
+          <ion-col width-50>
+            <ion-item>
+              <ion-label floating>
+                Sobrenome:
+              </ion-label>
+              <ion-input formControlName="lastName" type="text" name="lastName" [(ngModel)]="user.lastName"></ion-input>
+            </ion-item>
           </ion-col>
         </ion-row>
 
@@ -20,12 +34,12 @@
             <ion-label> Genêro:
               <ul class="containers">
                 <li class="container">
-                  <input name="sex" type="radio" id="masculino" value="Masculino" [(ngModel)]="user.sex">
+                  <input formControlName="sex" name="sex" type="radio" id="masculino" value="Masculino" [(ngModel)]="user.sex">
                   <label for="masculino" class="opcao"> Masculino </label>
                 </li>
 
                 <li class="container">
-                  <input name="sex" type="radio" id="feminino" value="Feminino" [(ngModel)]="user.sex">
+                  <input formControlName="sex" name="sex" type="radio" id="feminino" value="Feminino" [(ngModel)]="user.sex">
                   <label for="feminino" class="opcao2"> Feminino </label>
                 </li>
               </ul>
@@ -36,7 +50,7 @@
         <ion-row>
           <ion-col>
             <ion-label> Estado:
-              <select class="estados" name="state" [(ngModel)]="user.state">
+              <select class="estados" formControlName="state" name="state" [(ngModel)]="user.state">
                 <option value=""> Selecione </option>
                 <option value="Acre">Acre</option>
                 <option value="Alagoas">Alagoas</option>
@@ -73,7 +87,7 @@
         <ion-row>
           <ion-col>
             <ion-label> Cidade:
-              <select class="cidades" id="city" name="city" [(ngModel)]="user.city">
+              <select class="cidades" formControlName="city" id="city" name="city" [(ngModel)]="user.city">
                 <option value=""> Selecione </option>
                 <option value="Rio Branco">Rio Branco</option>
                 <option value="Maceió">Maceió</option>
@@ -101,12 +115,12 @@
               Já é doador:
               <ul class="containers">
                 <li class="container">
-                  <input name="donnor" type="radio" id="yes" value="Sim" [(ngModel)]="user.donor"/>
+                  <input formControlName="donor" name="donor" type="radio" id="yes" value="Sim" [(ngModel)]="user.donor"/>
                   <label for="yes" class="opcao"> Sim </label>
                 </li>
 
                 <li class="container">
-                  <input name="donnor" type="radio" id="nao" value="Não" [(ngModel)]="user.donor"/>
+                  <input formControlName="donor" name="donor" type="radio" id="nao" value="Não" [(ngModel)]="user.donor"/>
                   <label for="nao" class="opcao2"> Não </label>
                 </li>
               </ul>
@@ -120,27 +134,27 @@
               Grupo Sanguíno:
               <ul class="containers">
                 <li class="container">
-                  <input name="bloodGroup" type="radio" id="N" ng-checked value="Não Sei" [(ngModel)]="user.bloodGroup"/>
+                  <input formControlName="bloodGroup" name="bloodGroup" type="radio" id="N" ng-checked value="Não Sei" [(ngModel)]="user.bloodGroup"/>
                   <label for="N" class="opcao"> N/S </label>
                 </li>
 
                 <li class="container">
-                  <input name="bloodGroup" type="radio" id="A" value="A" [(ngModel)]="user.bloodGroup"/>
+                  <input formControlName="bloodGroup" name="bloodGroup" type="radio" id="A" value="A" [(ngModel)]="user.bloodGroup"/>
                   <label for="A" class="opcaoM"> A </label>
                 </li>
 
                 <li class="container">
-                  <input name="bloodGroup" type="radio" id="B" value="B" [(ngModel)]="user.bloodGroup"/>
+                  <input formControlName="bloodGroup" name="bloodGroup" type="radio" id="B" value="B" [(ngModel)]="user.bloodGroup"/>
                   <label for="B" class="opcaoM"> B </label>
                 </li>
 
                 <li class="container">
-                  <input name="bloodGroup" type="radio" id="Ab" value="Ab" [(ngModel)]="user.bloodGroup"/>
+                  <input formControlName="bloodGroup" name="bloodGroup" type="radio" id="Ab" value="Ab" [(ngModel)]="user.bloodGroup"/>
                   <label for="Ab" class="opcaoM"> AB </label>
                 </li>
 
                 <li class="container">
-                  <input name="bloodGroup" type="radio" id="O" value="O" [(ngModel)]="user.bloodGroup"/>
+                  <input formControlName="bloodGroup" name="bloodGroup" type="radio" id="O" value="O" [(ngModel)]="user.bloodGroup"/>
                   <label for="O" class="opcao2"> O </label>
                 </li>
               </ul>
@@ -154,17 +168,17 @@
               Fator RH:
               <ul class="containers">
                 <li class="container">
-                  <input name="rhFactor" type="radio" id="n/s" value="Não Sei" [(ngModel)]="user.rhFactor"/>
+                  <input formControlName="rhFactor" name="rhFactor" type="radio" id="n/s" value="Não Sei" [(ngModel)]="user.rhFactor"/>
                   <label for="n/s" class="opcao"> N/S </label>
                 </li>
 
                 <li class="container">
-                  <input name="rhFactor" type="radio" id="positivo" value="Positivo" [(ngModel)]="user.rhFactor"/>
+                  <input formControlName="rhFactor" name="rhFactor" type="radio" id="positivo" value="Positivo" [(ngModel)]="user.rhFactor"/>
                   <label for="positivo" class="opcaoM"> + </label>
                 </li>
 
                 <li class="container">
-                  <input name="rhFactor" type="radio" id="negativo" value="Negativo" [(ngModel)]="user.rhFactor"/>
+                  <input formControlName="rhFactor" name="rhFactor" type="radio" id="negativo" value="Negativo" [(ngModel)]="user.rhFactor"/>
                   <label for="negativo" class="opcao2"> - </label>
                 </li>
               </ul>
@@ -174,23 +188,21 @@
 
         <ion-row>
           <ion-col>
-            <ion-label> Última doação:
-              <input type="text" name="lastDonation" placeholder="-- / -- / ----" maxlength="10" [(ngModel)]="user.lastDonation"/>
-            </ion-label>
+            <ion-item>
+              <ion-label floating><ion-icon name="calendar"></ion-icon> Última doação:</ion-label>
+              <ion-datetime formControlName="lastDonation" name="lastDonation" [(ngModel)]="user.lastDonation" displayFormat="DD/MM/YYYY"></ion-datetime>
+            </ion-item>
           </ion-col>
         </ion-row>
 
         <ion-row>
           <ion-col>
-            <button ion-button type="submit" (click)="SignUp()" icon-only class="btn check">
+            <button ion-button type="submit" (click)="SignUp()" [disabled]="signUpUserForm.invalid" icon-only class="btn check">
               <ion-icon ios="ios-checkmark" md="md-checkmark"></ion-icon>
             </button>
           </ion-col>
         </ion-row>
       </ion-slide>
-
-
-
     </ion-slides>
 
   </form>

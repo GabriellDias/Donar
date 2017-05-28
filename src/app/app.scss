@@ -14,9 +14,8 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-
-.scroll-content{
-  overflow: hidden;
+::-webkit-scrollbar {
+  width: 0px;
 }
 
 .menu-inner{
@@ -38,7 +37,7 @@
 }
 
 .text{
-  font-size: 24px;
+  font-size: 16px;
   text-align: center;
   background-color: #ed3851;
   color: #ffffff;

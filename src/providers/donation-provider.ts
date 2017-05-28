@@ -8,7 +8,7 @@ import {LoginProvider} from "../providers/login-provider";
 import {DonationModel} from "../models/model-donation";
 
 @Injectable()
-export class Donate {
+export class DonationProvider {
 
   reference;
 
@@ -17,7 +17,7 @@ export class Donate {
   }
 
   private initialize(){
-    this.reference = firebase.database().ref('/donation/'+this.loginProvider.currentUser.uid);
+    this.reference = firebase.database().ref('/donation/'+ this.loginProvider.currentUser.uid);
   }
 
   save(donation: DonationModel){

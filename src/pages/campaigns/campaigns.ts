@@ -3,8 +3,6 @@ import {AlertController, NavController, NavParams} from 'ionic-angular';
 
 import {Perfil} from "../perfil/perfil";
 import {Information } from "../information/information";
-import {Campaign} from "../../models/campaign";
-import {CampaignsAdd} from "../campaigns-add/campaigns-add";
 import {Hemocentros} from "../hemocentros/hemocentros";
 
 @Component({

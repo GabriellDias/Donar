@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import {NavController, LoadingController, NavParams, ViewController} from 'ionic-angular';
 import {Donation} from "../donation/donation";
-import {Donate} from "../../providers/donate";
 import {DonationModel} from "../../models/model-donation";
-
+import {DonationProvider} from "../../providers/donation-provider";
 
 @Component({
   selector: 'page-caddonate',
@@ -13,8 +12,8 @@ export class Caddonate {
 
   donation: DonationModel;
 
-  constructor(public navCtrl: NavController, 
-  public loadCtrl: LoadingController, public donateProvider: Donate, 
+  constructor(public navCtrl: NavController,
+  public loadCtrl: LoadingController, public donateProvider: DonationProvider,
   public navParams: NavParams, public viewCtrl: ViewController) {
     this.initialize();
   }

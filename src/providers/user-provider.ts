@@ -37,7 +37,8 @@ export class UserProvider {
 
   saveUserData(user: User) {
   this.reference.set({
-    	name : user.name,
+    	name : user.firstName,
+      lastName : user.lastName,
     	sex : user.sex,
     	estate : user.state,
     	city : user.city,

@@ -1,38 +1,53 @@
 import { Component } from '@angular/core';
-import {LoadingController, NavController, NavParams} from 'ionic-angular';
+import { LoadingController, NavController, NavParams } from 'ionic-angular';
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
 import {UserProvider} from "../../providers/user-provider";
 import {LoginProvider} from "../../providers/login-provider";
 
 import {User} from "../../models/user";
 
-import {Perfil} from "../perfil/perfil";
-
 @Component({
   selector: 'page-sign-up-user',
   templateUrl: 'sign-up-user.html',
 })
+
 export class SignUpUser {
 
   user: User;
+  signUpUserForm: FormGroup;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-              public loginProvider: LoginProvider, public loadCtrl: LoadingController, public userProvider: UserProvider) {
-    this.user = new User();
+  constructor(public navCtrl: NavController, public navParams: NavParams, /*public loginProvider: LoginProvider,
+              public loadCtrl: LoadingController, public userProvider: UserProvider,*/ public fb: FormBuilder){
+               this.initialize();
   }
 
-  ionViewDidLoad(){
-    this.loginProvider.loginSucessEventEmitter.subscribe(
+  /*ionViewDidLoad(){
+    this.userProvider.loginSucessEventEmitter.subscribe(
       state => this.navCtrl.setRoot(Perfil)
     )
-    this.loginProvider.loginErrorEventEmitter.subscribe(
+    this.userProvider.loginErrorEventEmitter.subscribe(
       error => console.log(error)
     )
   }
-
+*/
+   private initialize(){
+   this.user = new User();
+   this.signUpUserForm = this.fb.group({
+    'firstName': ['', Validators.required],
+    'lastName': ['', Validators.required],
+    'sex': ['', Validators.required],
+    'state': ['', Validators.required],
+    'city': ['', Validators.required],
+    'donor': ['', Validators.required],
+    'bloodGroup': ['', Validators.required],
+    'rhFactor': ['', Validators.required],
+    'lastDonation': ['', Validators.compose([Validators.required, Validators.minLength(6)])]
+   });
+   }
+/*
   SignUp(){
     this.userProvider.saveUserData(this.user);
-    this.navCtrl.setRoot(Perfil);
     this.loadSend();
   }
 
@@ -43,5 +58,5 @@ export class SignUpUser {
     });
     loader.present();
   }
-
+*/
 }
