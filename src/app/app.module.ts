@@ -22,7 +22,7 @@ import { Cadexam } from "../pages/cadexam/cadexam";
 import { Campaigns } from "../pages/campaigns/campaigns";
 import { CampaignsAdd } from "../pages/campaigns-add/campaigns-add";
 import { CampaignsList } from "../pages/campaigns-list/campaigns-list";
-import { Contact } from "../pages/contact/contact";
+import { Contacts } from "../pages/contacts/contacts";
 import { Donation } from "../pages/donation/donation";
 import { Health } from "../pages/health/health";
 import { Help } from "../pages/help/help";
@@ -57,7 +57,7 @@ const firebaseConfig = {
     CampaignsAdd,
     CampaignsList,
     CampaignListItem,
-    Contact,
+    Contacts,
     Donation,
     Health,
     Help,
@@ -88,7 +88,7 @@ const firebaseConfig = {
     CampaignsAdd,
     CampaignsList,
     CampaignListItem,
-    Contact,
+    Contacts,
     Donation,
     Health,
     Help,

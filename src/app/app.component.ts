@@ -6,7 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import {LoginProvider} from "../providers/login-provider";
 
 import { About } from "../pages/about/about";
-import { Contact } from "../pages/contact/contact";
+import { Contacts } from "../pages/contacts/contacts";
 import { Help } from "../pages/help/help";
 import { HomePage } from '../pages/home/home';
 import { Logout } from "../pages/logout/logout";
@@ -30,7 +30,7 @@ export class MyApp {
     this.pages = [
       { title: 'Alterar Dados', component: Update},
       { title: 'Ajuda', component: Help},
-      { title: 'Contato', component: Contact },
+      { title: 'Contato', component: Contacts },
       { title: 'Sobre', component: About },
       { title: 'Sair', component: Logout},
     ];
