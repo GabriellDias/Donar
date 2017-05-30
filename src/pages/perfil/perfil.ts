@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { AdMob } from '@ionic-native/admob';
+import { Platform } from 'ionic-angular';
 
 import {LoginProvider} from "../../providers/login-provider";
 
 import {User} from "../../models/user";
 
-import {Donation} from "../donation/donation";
-import {Health} from "../health/health";
 import { Information } from "../information/information";
-import { Campaigns } from "../campaigns/campaigns";
-import { BloodCenters} from "../blood-centers/blood-centers";
+import { Hemocentros} from "../hemocentros/hemocentros";
+import { DonationList } from "../donation-list/donation-list";
+import { CampaignsList } from "../campaigns-list/campaigns-list";
+import {ExamAdd} from "../exam-add/exam-add";
 
 @Component({
   selector: 'page-perfil',
@@ -19,7 +21,8 @@ export class Perfil {
 
   user: User;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loginProvider:LoginProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loginProvider:LoginProvider,
+              private admob: AdMob, private platform: Platform) {
     this.initialize();
   }
 
@@ -31,11 +34,11 @@ export class Perfil {
   }
 
   donation(){
-    this.navCtrl.setRoot(Donation);
+    this.navCtrl.setRoot(DonationList);
   }
 
   health(){
-    this.navCtrl.setRoot(Health);
+    this.navCtrl.setRoot(ExamAdd);
   }
 
   information(){
@@ -43,12 +46,11 @@ export class Perfil {
   }
 
   campaigns(){
-    this.navCtrl.setRoot(Campaigns);
+    this.navCtrl.setRoot(CampaignsList);
   }
 
-  BloodCenters(){
-    this.navCtrl.setRoot(BloodCenters);
+  hemocentros(){
+    this.navCtrl.setRoot(Hemocentros);
   }
-
 
 }

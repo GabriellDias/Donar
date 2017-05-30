@@ -1,9 +1,5 @@
 page-campaigns {
 
-  .scroll-content{
-    overflow: hidden;
-  }
-
   .title{
     width: 130px;
     height: 30px;
@@ -44,25 +40,25 @@ page-campaigns {
     list-style: none;
   }
 
-.footer-toolbar{
+  .footer-toolbar{
+      text-align: center;
+  }
+
+  .btn-footer{
     text-align: center;
-}
+      padding: 0px 10px 0px 10px;
+  }
 
-.btn-footer{
-  text-align: center;
-    padding: 0px 10px 0px 10px;
-}
+  .txt-donation{
+      text-align: center;
+  }
 
-.txt-donation{
-    text-align: center;
-}
+  .titlecampaing{
+    color: #ff0a2f;
+  }
 
-.titlecampaing{
-  color: #ff0a2f;
-}
-
-.tipoblood{
-  color: #ff0a2f;
-}
+  .tipoblood{
+    color: #ff0a2f;
+  }
 
 }

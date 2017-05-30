@@ -1,9 +1,7 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-import {Perfil} from "../perfil/perfil";
-import {Information} from "../information/information";
-import {Campaigns} from "../campaigns/campaigns";
-import {Hemocentros} from "../hemocentros/hemocentros";
+import {Component, NgZone} from '@angular/core';
+import {NavController, ToastController} from 'ionic-angular';
+import {Place} from "../../models/place";
+import {PlaceProvider} from "../../providers/place-provider";
 
 @Component({
   selector: 'page-hemocentros-list',
@@ -11,23 +9,24 @@ import {Hemocentros} from "../hemocentros/hemocentros";
 })
 export class HemocentrosList {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  place: Array<Place>;
+
+  constructor(public navCtrl: NavController, public placeProvider: PlaceProvider,
+              public ngZone: NgZone, public toastCtrl: ToastController) {
   }
 
-  home(){
-    this.navCtrl.setRoot(Perfil);
-  }
-
-  information(){
-    this.navCtrl.setRoot(Information);
-  }
-
-  campaigns(){
-    this.navCtrl.setRoot(Campaigns);
-  }
-
-  hemocentros(){
-    this.navCtrl.setRoot(Hemocentros);
+  ionViewDidLoad() {
+    this.placeProvider.reference.on('value', (snapshot) => {
+      this.ngZone.run( () => {
+        let innerArray = new Array();
+        snapshot.forEach(elemento => {
+          let el = elemento.val();
+          innerArray.push(el);
+        })
+        this.place = innerArray;
+      })
+    })
   }
 
 }
+

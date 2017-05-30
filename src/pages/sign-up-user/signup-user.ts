@@ -6,6 +6,7 @@ import {UserProvider} from "../../providers/user-provider";
 import {LoginProvider} from "../../providers/login-provider";
 
 import {User} from "../../models/user";
+import {Perfil} from "../perfil/perfil";
 
 @Component({
   selector: 'page-sign-up-user',
@@ -17,12 +18,12 @@ export class SignUpUser {
   user: User;
   signUpUserForm: FormGroup;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, /*public loginProvider: LoginProvider,
-              public loadCtrl: LoadingController, public userProvider: UserProvider,*/ public fb: FormBuilder){
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loginProvider: LoginProvider,
+              public loadCtrl: LoadingController, public userProvider: UserProvider,public fb: FormBuilder){
                this.initialize();
   }
 
-  /*ionViewDidLoad(){
+  ionViewDidLoad(){
     this.userProvider.loginSucessEventEmitter.subscribe(
       state => this.navCtrl.setRoot(Perfil)
     )
@@ -30,22 +31,22 @@ export class SignUpUser {
       error => console.log(error)
     )
   }
-*/
+
    private initialize(){
    this.user = new User();
    this.signUpUserForm = this.fb.group({
-    'firstName': ['', Validators.required],
-    'lastName': ['', Validators.required],
-    'sex': ['', Validators.required],
+    'firstName': [null, Validators.required],
+    'lastName': [null, Validators.required],
+    'sex': [null, Validators.required],
     'state': ['', Validators.required],
     'city': ['', Validators.required],
     'donor': ['', Validators.required],
     'bloodGroup': ['', Validators.required],
     'rhFactor': ['', Validators.required],
-    'lastDonation': ['', Validators.compose([Validators.required, Validators.minLength(6)])]
+    'lastDonation': ['', Validators.required]
    });
    }
-/*
+
   SignUp(){
     this.userProvider.saveUserData(this.user);
     this.loadSend();
@@ -58,5 +59,5 @@ export class SignUpUser {
     });
     loader.present();
   }
-*/
+
 }

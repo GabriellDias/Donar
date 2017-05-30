@@ -1,35 +1,40 @@
+import { AdMob } from "@ionic-native/admob";
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
+import { Facebook } from '@ionic-native/facebook';
+import { HttpModule } from '@angular/http';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { ScreenOrientation } from "@ionic-native/screen-orientation";
+import { SocialSharing } from "@ionic-native/social-sharing";
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-import { HttpModule } from '@angular/http';
-import { Facebook } from '@ionic-native/facebook';
 
-import {CampaignListItem} from "../components/campaign-list-item/campaign-list-item";
-import {DonationListItem} from "../components/donation-list-item/donation-list-item";
+import { CampaignListItem } from "../components/campaign-list-item/campaign-list-item";
+import { DonationListItem } from "../components/donation-list-item/donation-list-item";
+import { ExamListItem } from "../components/exam-list-item/exam-list-item";
+import { HemocentrosListItem } from "../components/hemocentros-list-item/hemocentros-list-item";
 
+import { CampaignProvider } from "../providers/campaign-provider";
+import { DonationProvider } from "../providers/donation-provider";
+import { ExamsProvider } from "../providers/exams-provider";
 import firebase from "firebase";
-import {LoginProvider} from "../providers/login-provider";
-import {PasswordProvider} from "../providers/password-provider";
-import {UserProvider} from "../providers/user-provider";
-import {PlaceProvider} from "../providers/place-provider";
-import {CampaignProvider} from "../providers/campaign-provider";
-import {DonationProvider} from "../providers/donation-provider";
-import {ExamsProvider} from "../providers/exams-provider";
+import { LoginProvider } from "../providers/login-provider";
+import { PasswordProvider } from "../providers/password-provider";
+import { UserProvider } from "../providers/user-provider";
 
 import { About } from "../pages/about/about";
-import { Caddonate } from "../pages/caddonate/caddonate";
-import { Cadexam } from "../pages/cadexam/cadexam";
 import { Campaigns } from "../pages/campaigns/campaigns";
 import { CampaignsList } from "../pages/campaigns-list/campaigns-list";
 import { Contacts } from "../pages/contacts/contacts";
 import { Donation } from "../pages/donation/donation";
-import {DonationList} from "../pages/donation-list/donation-list";
-import { Health } from "../pages/health/health";
+import { DonationAdd } from "../pages/donation-add/donation-add";
+import { DonationList } from "../pages/donation-list/donation-list";
+import { Exam } from "../pages/exam/exam";
+import { ExamAdd } from "../pages/exam-add/exam-add";
+import { ExamList } from "../pages/exam-list/exam-list";
 import { Help } from "../pages/help/help";
-import {BloodCenters} from "../pages/blood-centers/blood-centers";
-import {BloodCentersList} from "../pages/blood-centers-list/blood-centers-list";
+import { Hemocentros } from "../pages/hemocentros/hemocentros";
+import { HemocentrosList } from "../pages/hemocentros-list/hemocentros-list";
 import { HomePage } from '../pages/home/home';
 import { Information } from "../pages/information/information";
 import { Login } from "../pages/login/login";
@@ -39,7 +44,6 @@ import { Perfil } from "../pages/perfil/perfil";
 import { ResetPassword } from "../pages/reset-password/reset-password";
 import { SignUp } from "../pages/sign-up/sign-up";
 import { SignUpUser } from "../pages/sign-up-user/signup-user";
-import {Update} from "../pages/update/update";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAaV8rJnn-CISeGW8qcUGzRLfcrsSaOkJc",
@@ -53,19 +57,22 @@ const firebaseConfig = {
 @NgModule({
   declarations: [
     About,
-    Caddonate,
-    Cadexam,
     Campaigns,
     CampaignsList,
     CampaignListItem,
     Contacts,
     Donation,
+    DonationAdd,
     DonationList,
     DonationListItem,
-    Health,
+    Exam,
+    ExamAdd,
+    ExamList,
+    ExamListItem,
     Help,
-    BloodCenters,
-    BloodCentersList,
+    Hemocentros,
+    HemocentrosList,
+    HemocentrosListItem,
     HomePage,
     Information,
     Login,
@@ -74,8 +81,7 @@ const firebaseConfig = {
     Perfil,
     ResetPassword,
     SignUp,
-    SignUpUser,
-    Update
+    SignUpUser
   ],
   imports: [
     BrowserModule,
@@ -85,19 +91,22 @@ const firebaseConfig = {
   bootstrap: [IonicApp],
   entryComponents: [
     About,
-    Caddonate,
-    Cadexam,
     Campaigns,
     CampaignsList,
     CampaignListItem,
     Contacts,
     Donation,
+    DonationAdd,
     DonationList,
     DonationListItem,
-    Health,
+    Exam,
+    ExamAdd,
+    ExamList,
+    ExamListItem,
     Help,
-    BloodCenters,
-    BloodCentersList,
+    Hemocentros,
+    HemocentrosList,
+    HemocentrosListItem,
     HomePage,
     Information,
     Login,
@@ -106,20 +115,21 @@ const firebaseConfig = {
     Perfil,
     ResetPassword,
     SignUp,
-    SignUpUser,
-    Update
+    SignUpUser
   ],
   providers: [
+    AdMob,
     CampaignProvider,
     DonationProvider,
     ExamsProvider,
+    Facebook,
     LoginProvider,
     PasswordProvider,
-    PlaceProvider,
-    UserProvider,
+    ScreenOrientation,
+    SocialSharing,
     SplashScreen,
     StatusBar,
-    Facebook,
+    UserProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

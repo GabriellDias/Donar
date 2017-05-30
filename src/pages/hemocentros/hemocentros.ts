@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {Perfil} from "../perfil/perfil";
 import {Information} from "../information/information";
-import {Campaigns} from "../campaigns/campaigns";
-
+import {CampaignsList} from "../campaigns-list/campaigns-list";
 
 @Component({
   selector: 'page-hemocentros',
@@ -23,7 +22,7 @@ export class Hemocentros {
   }
 
   campaigns(){
-    this.navCtrl.setRoot(Campaigns);
+    this.navCtrl.setRoot(CampaignsList);
   }
 
 }

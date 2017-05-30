@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import {LoginProvider} from "../../providers/login-provider";
+import {HomePage} from "../home/home";
 
 @Component({
   selector: 'page-logout',
@@ -7,11 +9,12 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class Logout {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loginProvider: LoginProvider) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad Logout');
+  ionViewDidLoad(){
+    this.loginProvider.logout(),
+    this.navCtrl.setRoot(HomePage)
   }
 
 }

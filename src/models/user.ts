@@ -5,7 +5,6 @@ export class User{
   city: string;
   donor: boolean;
   email: string;
-  id: number;
   firstName: string;
   lastName: String;
   password: string;

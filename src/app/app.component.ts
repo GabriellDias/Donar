@@ -2,15 +2,16 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ScreenOrientation } from "@ionic-native/screen-orientation";
 
-import {LoginProvider} from "../providers/login-provider";
+import { LoginProvider } from "../providers/login-provider";
 
 import { About } from "../pages/about/about";
 import { Contacts } from "../pages/contacts/contacts";
 import { Help } from "../pages/help/help";
 import { HomePage } from '../pages/home/home';
 import { Logout } from "../pages/logout/logout";
-import { Update } from "../pages/update/update";
+import { SignUpUser } from "../pages/sign-up-user/signup-user";
 
 @Component({
   templateUrl: 'app.html'
@@ -23,12 +24,11 @@ export class MyApp {
   pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,
-              public loginProvider: LoginProvider) {
+              public loginProvider: LoginProvider, public screenOrientation: ScreenOrientation) {
     this.initializeApp();
 
-    // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Alterar Dados', component: Update},
+      { title: 'Alterar Dados', component: SignUpUser},
       { title: 'Ajuda', component: Help},
       { title: 'Contato', component: Contacts },
       { title: 'Sobre', component: About },
@@ -40,6 +40,7 @@ export class MyApp {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.LANDSCAPE);
     });
   }
 

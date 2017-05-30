@@ -3,10 +3,9 @@ import {NavController} from 'ionic-angular';
 
 import {Information} from "../information/information";
 import {Perfil} from "../perfil/perfil";
-import {Caddonate} from "../caddonate/caddonate";
-import { Campaigns } from "../campaigns/campaigns";
-import { BloodCenters} from "../blood-centers/blood-centers";
-import {DonationList} from "../donation-list/donation-list";
+import { Hemocentros} from "../hemocentros/hemocentros";
+import {DonationAdd} from "../donation-add/donation-add";
+import {CampaignsList} from "../campaigns-list/campaigns-list";
 
 @Component({
   selector: 'page-donation',
@@ -22,7 +21,7 @@ export class Donation {
   }
 
   acessCad(){
-    this.navCtrl.push(Caddonate);
+    this.navCtrl.push(DonationAdd);
   }
 
   information(){
@@ -30,11 +29,11 @@ export class Donation {
   }
 
   campaigns(){
-    this.navCtrl.setRoot(Campaigns);
+    this.navCtrl.setRoot(CampaignsList);
   }
 
-  BloodCenters(){
-    this.navCtrl.setRoot(BloodCenters);
+  hemocentros(){
+    this.navCtrl.setRoot(Hemocentros);
   }
 
 }

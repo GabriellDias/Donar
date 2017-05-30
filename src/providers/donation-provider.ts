@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 import firebase from "firebase";
 
 import {LoginProvider} from "../providers/login-provider";
-import {DonationModel} from "../models/model-donation";
+import {Donation} from "../models/donation";
 
 @Injectable()
 export class DonationProvider {
@@ -20,7 +20,7 @@ export class DonationProvider {
     this.reference = firebase.database().ref('/donation/'+ this.loginProvider.currentUser.uid);
   }
 
-  save(donation: DonationModel){
+  save(donation: Donation){
     let id;
 
     if(donation.id != undefined){
@@ -32,7 +32,7 @@ export class DonationProvider {
     this.reference.child(id).update(donation);
   }
 
-  delete(donation: DonationModel):any{
+  delete(donation: Donation):any{
     return this.reference.child(donation.id).remove();
   }
 

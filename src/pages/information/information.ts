@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import {NavController, NavParams, AlertController } from 'ionic-angular';
 
 import { Perfil } from "../perfil/perfil";
-import { Campaigns } from "../campaigns/campaigns";
-import { BloodCenters} from "../blood-centers/blood-centers";
+import { Hemocentros} from "../hemocentros/hemocentros";
+import {CampaignsList} from "../campaigns-list/campaigns-list";
 
 @Component({
   selector: 'page-information',
@@ -103,10 +103,10 @@ export class Information {
   }
 
   campaigns(){
-    this.navCtrl.setRoot(Campaigns);
+    this.navCtrl.setRoot(CampaignsList);
   }
 
-  BloodCenters(){
-   this.navCtrl.setRoot(BloodCenters);
+  hemocentros(){
+   this.navCtrl.setRoot(Hemocentros);
  }
 }

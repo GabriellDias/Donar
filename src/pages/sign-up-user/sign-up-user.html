@@ -4,17 +4,13 @@
     <ion-slides pager class="slider">
       <ion-slide class="first">
 
-        <ion-row>
-          <ion-row>
-            <img src="assets/img/dados.png"/>
-          </ion-row>
-        </ion-row>
+        <img src="assets/img/dados.png" class="logo"/>
 
         <ion-row>
           <ion-col width-50>
               <ion-item>
-                <ion-label floating>
-                  <img src="assets/img/user.png" class="icon-label"/> Primeiro Nome:
+                <ion-label floating class="name">
+                  Nome
                 </ion-label>
                 <ion-input formControlName="firstName" type="text" name="name" [(ngModel)]="user.firstName"></ion-input>
               </ion-item>
@@ -22,7 +18,7 @@
           <ion-col width-50>
             <ion-item>
               <ion-label floating>
-                Sobrenome:
+                Sobrenome
               </ion-label>
               <ion-input formControlName="lastName" type="text" name="lastName" [(ngModel)]="user.lastName"></ion-input>
             </ion-item>
@@ -115,12 +111,12 @@
               Já é doador:
               <ul class="containers">
                 <li class="container">
-                  <input formControlName="donor" name="donor" type="radio" id="yes" value="Sim" [(ngModel)]="user.donor"/>
+                  <input formControlName="donor" name="donor" type="radio" id="yes" value="true" [(ngModel)]="user.donor"/>
                   <label for="yes" class="opcao"> Sim </label>
                 </li>
 
                 <li class="container">
-                  <input formControlName="donor" name="donor" type="radio" id="nao" value="Não" [(ngModel)]="user.donor"/>
+                  <input formControlName="donor" name="donor" type="radio" id="nao" value="false" [(ngModel)]="user.donor"/>
                   <label for="nao" class="opcao2"> Não </label>
                 </li>
               </ul>
@@ -197,7 +193,7 @@
 
         <ion-row>
           <ion-col>
-            <button ion-button type="submit" (click)="SignUp()" [disabled]="signUpUserForm.invalid" icon-only class="btn check">
+            <button ion-button type="submit" (click)="SignUp()" icon-only class="btn check">
               <ion-icon ios="ios-checkmark" md="md-checkmark"></ion-icon>
             </button>
           </ion-col>

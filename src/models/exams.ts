@@ -1,9 +1,9 @@
 export class Exams{
-  id: number;
-  hiv: String;
-  sifilis: String;
-  hpv: String;
-  glicose: String;
-  calcio: String;
-  proteina: String;
+  id: string;
+  hiv: string;
+  sifilis: string;
+  hpv: string;
+  glicose: string;
+  calcio: string;
+  proteina: string;
 }

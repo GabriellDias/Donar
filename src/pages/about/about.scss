@@ -1,16 +1,21 @@
 page-about {
 
-  .scroll-content{
-    overflow: hidden;
-  }
-
-  ion-card-title{
+  .title, ion-card-title{
     text-align: center;
   }
 
   ion-card-content{
     text-align: justify;
     text-indent: 35px;
+  }
+
+  .footer-toolbar{
+    text-align: center;
+  }
+
+  .btn-footer{
+    text-align: center;
+    padding: 0px 10px 0px 10px;
   }
 
 }

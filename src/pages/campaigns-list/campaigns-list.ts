@@ -1,9 +1,14 @@
 import { Component, NgZone } from '@angular/core';
 import { NavController, ToastController } from 'ionic-angular';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 import {CampaignProvider} from "../../providers/campaign-provider";
 
 import { Campaign } from "../../models/campaign";
+import {Hemocentros} from "../hemocentros/hemocentros";
+import {Perfil} from "../perfil/perfil";
+import {Information} from "../information/information";
+import {Campaigns} from "../campaigns/campaigns";
 
 @Component({
   selector: 'page-campaigns-list',
@@ -14,7 +19,7 @@ export class CampaignsList {
   campaign: Array<Campaign>;
 
   constructor(public navCtrl: NavController, public campaignProvider: CampaignProvider,
-              public ngZone: NgZone, public toastCtrl: ToastController) {}
+              public ngZone: NgZone, public toastCtrl: ToastController, public socialSharing: SocialSharing) {}
 
   ionViewDidLoad(){
 
@@ -37,7 +42,7 @@ export class CampaignsList {
     this.campaignProvider.reference.on('value', (snapshot) => {
       this.ngZone.run( () => {
         let innerArray = new Array();
-        snapshot.forEach(elemento => {
+        snapshot.array.forEach(elemento => {
           let el = elemento.val();
           innerArray.push(el);
         })
@@ -51,6 +56,34 @@ export class CampaignsList {
       sucess => console.log('Campanha deletada')
     )
       .catch(error => console.log('Não foi Possível Deletar a Campanha'));
+  }
+
+  twitterShare(){
+    this.socialSharing.shareViaTwitter("Sua doação pode salvar uma vida","assets/img/logo_branca.png", null);
+  }
+
+  whatsappShare(){
+    this.socialSharing.shareViaWhatsApp("Sua doação pode salvar uma vida","assets/img/logo_branca.png", null);
+  }
+
+  instagramShare(){
+    this.socialSharing.shareViaInstagram("Sua doação pode salvar uma vida","assets/img/logo_branca.png");
+  }
+
+  perfil(){
+    this.navCtrl.setRoot(Perfil);
+  }
+
+  hemocentros(){
+    this.navCtrl.setRoot(Hemocentros);
+  }
+
+  campaigns(){
+    this.navCtrl.setRoot(Campaigns);
+  }
+
+  information(){
+    this.navCtrl.setRoot(Information);
   }
 
 }

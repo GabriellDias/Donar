@@ -3,7 +3,7 @@ import {AlertController, NavController, NavParams} from 'ionic-angular';
 
 import {Perfil} from "../perfil/perfil";
 import {Information } from "../information/information";
-import {BloodCenters} from "../blood-centers/blood-centers";
+import {Hemocentros} from "../hemocentros/hemocentros";
 
 @Component({
   selector: 'page-campaigns',
@@ -53,7 +53,7 @@ export class Campaigns {
     this.navCtrl.setRoot(Information);
   }
 
-  BloodCenters(){
-    this.navCtrl.setRoot(BloodCenters);
+  hemocentros(){
+    this.navCtrl.setRoot(Hemocentros);
   }
 }

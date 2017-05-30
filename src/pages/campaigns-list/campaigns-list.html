@@ -1,14 +1,18 @@
 <ion-header>
-
-  <ion-navbar color='primary'>
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Suas Campanhas</ion-title>
+    <ion-title class="title">
+      Campanhas
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
-
 
 <ion-content>
   <ion-list [virtualScroll]="campaign">
@@ -22,6 +26,43 @@
           <ion-icon name="trash"></ion-icon>
         </button>
       </ion-item-options>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <button ion-button icon-only (click)="twitterShare()" color="twitter" clear>
+              <ion-icon class="share-icon" name="logo-twitter"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-only (click)="whatsappShare()" color="whatsapp" clear>
+              <ion-icon class="share-icon" name="logo-whatsapp"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-only (click)="instagramShare()" clear>
+              <ion-icon class="share-icon" name="logo-instagram"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-item-sliding>
   </ion-list>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary" class="footer-toolbar">
+    <button ion-button clear class="btn-footer" (click)="home()">
+      <img src="assets/img/inicio.png" width="60" height="40">
+    </button>
+    <button ion-button clear class="btn-footer" (click)="hemocentros()">
+      <img src="assets/img/hemocentros.png" width="60" height="40">
+    </button>
+    <button ion-button clear class="btn-footer" (click)="campaigns()">
+      <img src="assets/img/campanhas.png" width="60" height="40">
+    </button>
+    <button ion-button clear class="btn-footer" (click)="information()">
+      <img src="assets/img/informacoes.png" width="60" height="40">
+    </button>
+  </ion-toolbar>
+</ion-footer>
+

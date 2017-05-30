@@ -1,8 +1,5 @@
-import {CampaignState} from "./campaign-state";
-
 export class Campaign{
-  id: number;
+  id: string;
   title: string;
   description: string;
-  state: CampaignState;
 }
