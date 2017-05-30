@@ -1,5 +1,6 @@
 import { Component, NgZone } from '@angular/core';
 import { NavController, ToastController } from 'ionic-angular';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 import {CampaignProvider} from "../../providers/campaign-provider";
 
@@ -14,7 +15,7 @@ export class CampaignsList {
   campaign: Array<Campaign>;
 
   constructor(public navCtrl: NavController, public campaignProvider: CampaignProvider,
-              public ngZone: NgZone, public toastCtrl: ToastController) {}
+              public ngZone: NgZone, public toastCtrl: ToastController, public socialSharing: SocialSharing) {}
 
   ionViewDidLoad(){
 
@@ -51,6 +52,18 @@ export class CampaignsList {
       sucess => console.log('Campanha deletada')
     )
       .catch(error => console.log('Não foi Possível Deletar a Campanha'));
+  }
+
+  twitterShare(){
+    this.socialSharing.shareViaTwitter("Sua doação pode salvar uma vida","assets/img/logo_branca.png", null);
+  }
+
+  whatsappShare(){
+    this.socialSharing.shareViaWhatsApp("Sua doação pode salvar uma vida","assets/img/logo_branca.png", null);
+  }
+
+  instagramShare(){
+    this.socialSharing.shareViaInstagram("Sua doação pode salvar uma vida","assets/img/logo_branca.png");
   }
 
 }

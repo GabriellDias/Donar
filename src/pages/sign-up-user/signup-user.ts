@@ -34,15 +34,15 @@ export class SignUpUser {
    private initialize(){
    this.user = new User();
    this.signUpUserForm = this.fb.group({
-    'firstName': ['', Validators.required],
-    'lastName': ['', Validators.required],
-    'sex': ['', Validators.required],
+    'firstName': [null, Validators.required],
+    'lastName': [null, Validators.required],
+    'sex': [null, Validators.required],
     'state': ['', Validators.required],
     'city': ['', Validators.required],
     'donor': ['', Validators.required],
     'bloodGroup': ['', Validators.required],
     'rhFactor': ['', Validators.required],
-    'lastDonation': ['', Validators.compose([Validators.required, Validators.minLength(6)])]
+    'lastDonation': ['', Validators.required]
    });
    }
 /*

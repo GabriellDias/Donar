@@ -1,7 +1,9 @@
 import { Component, NgZone } from '@angular/core';
-import { NavController, NavParams, ToastController } from 'ionic-angular';
-import {DonationModel} from "../../models/model-donation";
-import {DonationProvider} from "../../providers/donation-provider";
+import { NavController, ToastController } from 'ionic-angular';
+
+import { DonationProvider } from "../../providers/donation-provider";
+
+import { DonationModel } from "../../models/model-donation";
 
 @Component({
   selector: 'page-donation-list',
@@ -9,10 +11,10 @@ import {DonationProvider} from "../../providers/donation-provider";
 })
 export class DonationList {
 
-  donates: Array<DonationModel>;
+  donation: Array<DonationModel>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-  public donationProvider: DonationProvider, public ngZone: NgZone, public toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController, public donationProvider: DonationProvider,
+              public ngZone: NgZone, public toastCtrl: ToastController) {
   }
 
   ionViewDidLoad() {
@@ -20,8 +22,8 @@ export class DonationList {
     this.donationProvider.reference.on('child_removed', (snapshot) => {
       let donationRemoved = snapshot.val();
       this.toastCtrl.create({
-        message: 'Doação Removida',
-        duration: 2000
+        message: 'Doação Removida!',
+        duration: 3000
       }).present();
     })
 
@@ -32,17 +34,16 @@ export class DonationList {
           let el = elemento.val();
           innerArray.push(el);
         })
-        this.donates = innerArray;
+        this.donation = innerArray;
       })
     })
   }
 
-  deleteDonate(donation: DonationModel){
+  deleteDonation(donation: DonationModel){
     this.donationProvider.delete(donation).then(
-      sucess => console.log('Doação Deletada')
+      sucess => console.log('Doação Deletada!')
     )
-
-    .catch(error => console.log('Não Foi Possível Excluir'));
+    .catch(error => console.log('Não Foi Possível Excluir!'));
   }
 
 }

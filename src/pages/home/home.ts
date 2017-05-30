@@ -12,7 +12,6 @@ import {SignUp} from "../sign-up/sign-up";
   selector: 'page-home',
   templateUrl: 'home.html'
 })
-
 export class HomePage {
 
   userProfile: any = null;

@@ -9,7 +9,6 @@
 
 </ion-header>
 
-
 <ion-content>
   <ion-list [virtualScroll]="campaign">
     <ion-item-sliding *virtualItem="let campaign">
@@ -24,4 +23,23 @@
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-only (click)="twitterShare()" color="dark" clear>
+          <ion-icon class="share-icon" name="logo-twitter"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-only (click)="whatsappShare()" color="dark" clear>
+          <ion-icon class="share-icon" name="logo-whatsapp"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-only (click)="instagramShare()" color="dark" clear>
+          <ion-icon class="share-icon" name="logo-instagram"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color="buttons">
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -19,7 +19,7 @@
 
   <ion-card>
     <ion-card-header>
-      <b color="buttons">Campanhas próximas a você</b>
+      <b color="primary">Campanhas próximas a você</b>
     </ion-card-header>
   </ion-card>
 
@@ -32,31 +32,71 @@
 
     <ion-row>
 
-      <button ion-button color="buttons" class="btn-campaigns" (click)="acessEnd()">
+      <button ion-button color="primary" class="btn-campaigns" (click)="acessEnd()">
         <ion-icon name="pin">
           Endereço
         </ion-icon>
       </button>
 
-      <button ion-button color="buttons" class="btn-campaigns" (click)="acessTel()">
+      <button ion-button color="primary" class="btn-campaigns" (click)="acessTel()">
         <ion-icon name="call">
           Telefone
         </ion-icon>
       </button>
 
 
-      <button ion-button color="buttons" class="btn-campaigns" (click)="acessSite()">
+      <button ion-button color="primary" class="btn-campaigns" (click)="acessSite()">
         <ion-icon name="globe">
           Site
         </ion-icon>
       </button>
+
+      <ion-header>
+        <ion-navbar>
+          <ion-title>
+            IWantToShare
+          </ion-title>
+        </ion-navbar>
+      </ion-header>
+
+      <ion-content padding>
+        <p>
+          <em>I'm the hulk!</em>
+        </p>
+
+        <img src="assets/img/hulk.jpg" />
+
+        <button ion-button color="positive" block (click)="regularShare()">
+          Share me!
+        </button>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <button ion-button icon-only (click)="twitterShare()" color="dark" clear>
+                <ion-icon class="share-icon" name="logo-twitter"></ion-icon>
+              </button>
+            </ion-col>
+            <ion-col>
+              <button ion-button icon-only (click)="whatsappShare()" color="dark" clear>
+                <ion-icon class="share-icon" name="logo-whatsapp"></ion-icon>
+              </button>
+            </ion-col>
+            <ion-col>
+              <button ion-button icon-only (click)="instagramShare()" color="dark" clear>
+                <ion-icon class="share-icon" name="logo-instagram"></ion-icon>
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-content>
 
     </ion-row>
   </ion-card>
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar color="buttons" class="footer-toolbar">
+  <ion-toolbar color="primary" class="footer-toolbar">
     <button ion-button clear class="btn-footer" (click)="home()">
       <img src="assets/img/inicio.png" width="60" height="40">
     </button>
