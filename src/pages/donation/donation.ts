@@ -5,7 +5,7 @@ import {Information} from "../information/information";
 import {Perfil} from "../perfil/perfil";
 import {Caddonate} from "../caddonate/caddonate";
 import { Campaigns } from "../campaigns/campaigns";
-import { Hemocentros} from "../hemocentros/hemocentros";
+import { BloodCenters} from "../blood-centers/blood-centers";
 import {DonationList} from "../donation-list/donation-list";
 
 @Component({
@@ -33,8 +33,8 @@ export class Donation {
     this.navCtrl.setRoot(Campaigns);
   }
 
-  hemocentros(){
-    this.navCtrl.setRoot(Hemocentros);
+  BloodCenters(){
+    this.navCtrl.setRoot(BloodCenters);
   }
 
 }

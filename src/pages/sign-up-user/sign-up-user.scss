@@ -1,5 +1,9 @@
 page-sign-up-user {
 
+  .scroll-content{
+    overflow: hidden;
+  }
+
   .slider{
     box-sizing: border-box;
     padding-top: 20px;
@@ -12,17 +16,6 @@ page-sign-up-user {
 
   .swiper-pagination-bullet{
     display: none;
-  }
-
-  .logo{
-    display: block;
-    margin: 0px auto;
-    width: 90%;
-    height: 110px;
-  }
-
-  select::-webkit-scrollbar{
-    width: 0px;
   }
 
   input{
@@ -165,5 +158,4 @@ page-sign-up-user {
     padding-left: 15px;
     vertical-align: middle;
   }
-
 }

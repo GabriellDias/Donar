@@ -1,6 +1,5 @@
 export class DonationModel{
-  id: string;
+  id: number;
   unidade: string;
-  bloodType: string;
   dtdonate: string;
 }

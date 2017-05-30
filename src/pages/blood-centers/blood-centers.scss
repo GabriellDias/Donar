@@ -1,0 +1,72 @@
+page-blood-centers {
+    .scroll-content {
+        overflow: hidden;
+    }
+    .title {
+        width: 130px;
+        height: 30px;
+        margin: 0px auto;
+        display: block;
+        vertical-align: middle;
+    }
+    .btn-search {
+        padding-left: 30px;
+        float: right;
+    }
+    .txt-hemocentro {
+        float: inherit;
+        margin-top: 0px;
+        margin-left: 10px;
+        font-size: 13px;
+    }
+    .txt-hemocentro p {
+        float: right;
+        color: #ff0a2f;
+        font-size: 16px;
+        margin-top: -10px;
+        margin-right: 9px;
+    }
+    .infor-hemocentro h1 {
+        color: #ff0a2f;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .infor-hemocentro img {
+        width: 35px;
+        height: 65px;
+        margin-left: 20px;
+    }
+    .infor-hemocentro h2 {
+        font-size: 13px;
+    }
+    .tipoblood {
+        color: #ff0a2f;
+        font-size: 13px;
+    }
+    .infor-hemocentro h3 {
+        float: right;
+        text-align: center;
+        color: #ff0a2f;
+        margin-top: -115px;
+        font-size: 12px;
+    }
+    .btn-campaigns {
+        position: absolute;
+        margin-top: -72px;
+        margin-left: 130px;
+        border-radius: 20px;
+        font-size: 10px;
+        height: 26px;
+        width: 150px;
+    }
+    .ion-card {
+        padding: 60%;
+    }
+    .footer-toolbar {
+        text-align: center;
+    }
+    .btn-footer {
+        text-align: center;
+        padding: 0px 10px 0px 10px;
+    }
+}

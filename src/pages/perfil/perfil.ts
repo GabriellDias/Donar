@@ -1,17 +1,15 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { AdMob } from '@ionic-native/admob';
-import { Platform } from 'ionic-angular';
 
 import {LoginProvider} from "../../providers/login-provider";
 
 import {User} from "../../models/user";
 
-import { Health} from "../health/health";
+import {Donation} from "../donation/donation";
+import {Health} from "../health/health";
 import { Information } from "../information/information";
-import { Hemocentros} from "../hemocentros/hemocentros";
-import { DonationList } from "../donation-list/donation-list";
-import { CampaignsList } from "../campaigns-list/campaigns-list";
+import { Campaigns } from "../campaigns/campaigns";
+import { BloodCenters} from "../blood-centers/blood-centers";
 
 @Component({
   selector: 'page-perfil',
@@ -21,8 +19,7 @@ export class Perfil {
 
   user: User;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loginProvider:LoginProvider,
-              private admob: AdMob, private platform: Platform) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loginProvider:LoginProvider) {
     this.initialize();
   }
 
@@ -33,17 +30,8 @@ export class Perfil {
     }
   }
 
-  loadAd(){
-    let adId;
-
-    adId = 'ca-app-pub-2283408156410755~4219842624';
-    this.admob.prepareInterstitial({adId: 'ca-app-pub-2283408156410755/5556975028'})
-      .then(() => {this.admob.showInterstitial();
-      });
-  }
-
   donation(){
-    this.navCtrl.setRoot(DonationList);
+    this.navCtrl.setRoot(Donation);
   }
 
   health(){
@@ -55,11 +43,12 @@ export class Perfil {
   }
 
   campaigns(){
-    this.navCtrl.setRoot(CampaignsList);
+    this.navCtrl.setRoot(Campaigns);
   }
 
-  hemocentros(){
-    this.navCtrl.setRoot(Hemocentros);
+  BloodCenters(){
+    this.navCtrl.setRoot(BloodCenters);
   }
+
 
 }

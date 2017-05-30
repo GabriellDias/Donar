@@ -43,5 +43,6 @@ export class SignUp {
 
   SignUp(){
     this.loginProvider.signup(this.credencial);
+    console.log(this.loginProvider);
   }
 }

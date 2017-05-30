@@ -1,49 +1,49 @@
 <ion-header>
-  <ion-navbar color="primary">
-    <button ion-button menuToggle>
+    <ion-navbar color="buttons">
+        <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title class="title">
-      <img src="assets/img/logo_branca.png">
-    </ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only>
+        <ion-title class="title">
+            <img src="assets/img/logo_branca.png">
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only>
         <ion-icon ios="ios-search" md="md-search"></ion-icon>
       </button>
-    </ion-buttons>
-  </ion-navbar>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
 <ion-content>
-  <ion-card>
-    <ion-card-header>
-      <img class="img-exame" src="assets/img/saude.png">
-      <h2 class="txt-exame">
-       Meus Exames
-      </h2>
-    </ion-card-header>
-    <ion-card-content>
-      <hr/>
-      <p><b>Registre as informações de seus exames de sangue.</b></p>
-      <button ion-button class="btn-add-exame" (click)="cadexam()" color="primary">
+    <ion-card>
+        <ion-card-header>
+            <img class="img-exame" src="assets/img/saude.png">
+            <h2 class="txt-exame">
+                Minha Saúde
+            </h2>
+        </ion-card-header>
+        <ion-card-content>
+            <hr/>
+            <p><b>Registre as informações de seus exames de sangue.</b></p>
+            <button ion-button class="btn-add-exame" (click)="cadexam()" color="buttons">
         + Inserir exame
       </button>
-    </ion-card-content>
-  </ion-card>
+        </ion-card-content>
+    </ion-card>
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar color="primary" class="footer-toolbar">
-    <button ion-button clear class="btn-footer" (click)="home()">
+    <ion-toolbar color="buttons" class="footer-toolbar">
+        <button ion-button clear class="btn-footer" (click)="home()">
       <img src="assets/img/inicio.png" width="60" height="40">
     </button>
-    <button ion-button clear class="btn-footer" (click)="hemocentros()">
+        <button ion-button clear class="btn-footer" (click)="BloodCenters()">
       <img src="assets/img/hemocentros.png" width="60" height="40">
     </button>
-    <button ion-button clear class="btn-footer" (click)="campaigns()">
+        <button ion-button clear class="btn-footer" (click)="campaigns()">
       <img src="assets/img/campanhas.png" width="60" height="40">
     </button>
-    <button ion-button clear class="btn-footer" (click)="information()">
+        <button ion-button clear class="btn-footer" (click)="information()">
       <img src="assets/img/informacoes.png" width="60" height="40">
     </button>
-  </ion-toolbar>
+    </ion-toolbar>
 </ion-footer>

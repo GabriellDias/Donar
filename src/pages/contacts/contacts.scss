@@ -1,39 +1,35 @@
 page-contacts {
 
-  .title{
-    text-align: center;
-  }
+    ion-card{
+        text-align: center;
+    }
 
-  ion-card{
+    .name-title{
+        font-size: 16px;
+        color: #ff0a2f;
+    }
+
+    .card-title{
+        font-size: 17px;
+        text-decoration: none
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    a:visited{
+        text-decoration: none;
+        color: #ff0a2f;
+    }
+
+    .footer-toolbar{
       text-align: center;
-  }
 
-  .name-title{
-      font-size: 16px;
-      color: #ff0a2f;
-  }
+    }
 
-  .card-title{
-      font-size: 17px;
-      text-decoration: none
-  }
-
-  a{
-      text-decoration: none;
-  }
-
-  a:visited{
-      text-decoration: none;
-      color: #ff0a2f;
-  }
-
-  .footer-toolbar{
-    text-align: center;
-
-  }
-
-  .btn-footer{
-    text-align: center;
-    padding: 0px 10px 0px 10px;
-  }
+    .btn-footer{
+      text-align: center;
+      padding: 0px 10px 0px 10px;
+    }
 }

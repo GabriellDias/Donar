@@ -1,53 +1,54 @@
 <ion-header>
-  <ion-navbar color="primary">
-    <button ion-button menuToggle>
+    <ion-navbar color="buttons">
+        <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title class="title">
-      Contato
-    </ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only>
-        <ion-icon ios="ios-search" md="md-search"></ion-icon>
-      </button>
-    </ion-buttons>
-  </ion-navbar>
+        <ion-title class="title">
+            Contato
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-  <ion-card>
-    <ion-card-content>
-      <p class="card-title">Equipe Donar</p>
-      <hr/><p class="name-title" (click)="erico()">Érico Junior de Morais</p><hr/>
-      <p class="name-title" (click)="gabriel()">Gabriel Dias</p><hr/>
-      <p class="name-title" (click)="josimar()">Josimar Cândido Martins</p><hr/>
-      <p class="name-title" (click)="lucas()">Lucas Andrade</p><hr/>
-      <p class="name-title" (click)="matheus()">Matheus Lima</p><hr/>
-      <p class="name-title" (click)="samuel()">Samuel de Souza</p>
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <ion-card-header>
-      <p class="card-title">Sugestões ou Reclamações</p>
-      <p class="card-title"><a href="mailto:digitalsolutions.donar@gmail.com">Contato</a></p>
-    </ion-card-header>
-  </ion-card>
+    <ion-card>
+        <ion-card-content>
+            <p class="card-title">Equipe Donar</p>
+            <hr/>
+            <p class="name-title" (click)="erico()">Érico Junior de Morais</p>
+            <hr/>
+            <p class="name-title" (click)="gabriel()">Gabriel Dias</p>
+            <hr/>
+            <p class="name-title" (click)="josimar()">Josimar Cândido Martins</p>
+            <hr/>
+            <p class="name-title" (click)="lucas()">Lucas Andrade</p>
+            <hr/>
+            <p class="name-title" (click)="matheus()">Matheus Lima</p>
+            <hr/>
+            <p class="name-title" (click)="samuel()">Samuel de Souza</p>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <p class="card-title">Sugestões ou Reclamações</p>
+            <p class="card-title"><a href="mailto:digitalsolutions.donar@gmail.com">Contato</a></p>
+        </ion-card-header>
+    </ion-card>
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar color="primary" class="footer-toolbar">
-    <button ion-button clear class="btn-footer" (click)="perfil()">
+    <ion-toolbar color="buttons" class="footer-toolbar">
+        <button ion-button clear class="btn-footer" (click)="perfil()">
       <img src="../assets/footer/inicio.png" width="60" height="40">
     </button>
-    <button ion-button clear class="btn-footer" (click)="hemocentros()">
+        <button ion-button clear class="btn-footer" (click)="BloodCenters()">
       <img src="../assets/footer/hemocentros.png" width="60" height="40">
     </button>
-    <button ion-button clear class="btn-footer" (click)="campaigns()">
+        <button ion-button clear class="btn-footer" (click)="campaigns()">
       <img src="../assets/footer/campanhas.png" width="60" height="40">
     </button>
-    <button ion-button clear class="btn-footer" (click)="information()">
+        <button ion-button clear class="btn-footer" (click)="information()">
       <img src="../assets/footer/informacoes.png" width="60" height="40">
     </button>
-  </ion-toolbar>
+    </ion-toolbar>
 </ion-footer>

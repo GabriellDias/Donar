@@ -1,77 +1,77 @@
 <ion-header>
-  <ion-navbar color="primary">
-    <button ion-button menuToggle>
+    <ion-navbar color="buttons">
+        <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title class="title">
-      <img src="assets/img/logo_branca.png">
-    </ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only>
+        <ion-title class="title">
+            <img src="assets/img/logo_branca.png">
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only>
         <ion-icon name="search"></ion-icon>
       </button>
-    </ion-buttons>
-  </ion-navbar>
+        </ion-buttons>
+    </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <ion-card-header>
-      <img class="img-inform" src="assets/img/info.png">
-      <h2 class="txt-inform">
-       Informações
-      </h2>
-    </ion-card-header>
-    <ion-card-content>
-      <hr/>
-      <h2>
-        Quais exames serão realizados em meu sangue?<br/>
-        <a (click)="inf1()"> Leia mais</a>
-      </h2>
-      <hr/>
-      <h2>
-        Porque a agulha deve ser grossa?<br/>
-        <a (click)="inf2()">Leia mais</a>
-      </h2>
-      <hr/>
-      <h2>
-        É normal ter tontura após a doação?<br/>
-        <a (click)="inf3()">Leia mais</a>
-      </h2>
-      <hr/>
-      <h2>
-        Como repor o sangue doado?<br/>
-        <a (click)="inf4()">Leia mais</a>
-      </h2>
-      <hr/>
-      <h2>
-        Qual é o melhor sangue?<br/>
-        <a (click)="inf5()">Leia mais</a>
-      </h2>
-      <hr/>
-      <h2>
-        Pode ocorrer alguma reação durante a coleta?<br/>
-        <a (click)="inf6()">Leia mais</a>
-      </h2>
-    </ion-card-content>
-  </ion-card>
+    <ion-card>
+        <ion-card-header>
+            <img class="img-inform" src="assets/img/info.png">
+            <h2 class="txt-inform">
+                Informações
+            </h2>
+        </ion-card-header>
+        <ion-card-content>
+            <hr/>
+            <h2>
+                Quais exames serão realizados em meu sangue?<br/>
+                <a (click)="inf1()"> Leia mais</a>
+            </h2>
+            <hr/>
+            <h2>
+                Porque a agulha deve ser grossa?<br/>
+                <a (click)="inf2()">Leia mais</a>
+            </h2>
+            <hr/>
+            <h2>
+                É normal ter tontura após a doação?<br/>
+                <a (click)="inf3()">Leia mais</a>
+            </h2>
+            <hr/>
+            <h2>
+                Como repor o sangue doado?<br/>
+                <a (click)="inf4()">Leia mais</a>
+            </h2>
+            <hr/>
+            <h2>
+                Qual é o melhor sangue?<br/>
+                <a (click)="inf5()">Leia mais</a>
+            </h2>
+            <hr/>
+            <h2>
+                Pode ocorrer alguma reação durante a coleta?<br/>
+                <a (click)="inf6()">Leia mais</a>
+            </h2>
+        </ion-card-content>
+    </ion-card>
 </ion-content>
 
 
 
 <ion-footer>
-  <ion-toolbar color="primary" class="footer-toolbar">
-    <button ion-button clear class="btn-footer" (click)="home()">
+    <ion-toolbar color="buttons" class="footer-toolbar">
+        <button ion-button clear class="btn-footer" (click)="home()">
       <img src="assets/img/inicio.png" width="60" height="40">
     </button>
-    <button ion-button clear class="btn-footer" (click)="hemocentros()">
+        <button ion-button clear class="btn-footer" (click)="BloodCenters()">
       <img src="assets/img/hemocentros.png" width="60" height="40">
     </button>
-    <button ion-button clear class="btn-footer" (click)="campaigns()">
+        <button ion-button clear class="btn-footer" (click)="campaigns()">
       <img src="assets/img/campanhas.png" width="60" height="40">
     </button>
-    <button ion-button clear class="btn-footer">
+        <button ion-button clear class="btn-footer">
       <img src="assets/img/informacoes.png" width="60" height="40">
     </button>
-  </ion-toolbar>
+    </ion-toolbar>
 </ion-footer>

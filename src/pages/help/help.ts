@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {Perfil} from "../perfil/perfil";
-import {Hemocentros} from "../hemocentros/hemocentros";
+import {BloodCenters} from "../blood-centers/blood-centers";
 import {Campaigns} from "../campaigns/campaigns";
 import {Information} from "../information/information";
 
@@ -22,8 +22,8 @@ export class Help {
     this.navCtrl.setRoot(Perfil);
   }
 
-  hemocentros(){
-    this.navCtrl.setRoot(Hemocentros);
+  BloodCenters(){
+    this.navCtrl.setRoot(BloodCenters);
   }
 
   campaigns(){

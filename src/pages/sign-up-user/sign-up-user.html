@@ -4,13 +4,17 @@
     <ion-slides pager class="slider">
       <ion-slide class="first">
 
-        <img src="assets/img/dados.png" class="logo"/>
+        <ion-row>
+          <ion-row>
+            <img src="assets/img/dados.png"/>
+          </ion-row>
+        </ion-row>
 
         <ion-row>
           <ion-col width-50>
               <ion-item>
-                <ion-label floating class="name">
-                  Nome
+                <ion-label floating>
+                  <img src="assets/img/user.png" class="icon-label"/> Primeiro Nome:
                 </ion-label>
                 <ion-input formControlName="firstName" type="text" name="name" [(ngModel)]="user.firstName"></ion-input>
               </ion-item>
@@ -18,7 +22,7 @@
           <ion-col width-50>
             <ion-item>
               <ion-label floating>
-                Sobrenome
+                Sobrenome:
               </ion-label>
               <ion-input formControlName="lastName" type="text" name="lastName" [(ngModel)]="user.lastName"></ion-input>
             </ion-item>
@@ -193,7 +197,7 @@
 
         <ion-row>
           <ion-col>
-            <button ion-button type="submit" (click)="SignUp()" icon-only class="btn check">
+            <button ion-button type="submit" (click)="SignUp()" [disabled]="signUpUserForm.invalid" icon-only class="btn check">
               <ion-icon ios="ios-checkmark" md="md-checkmark"></ion-icon>
             </button>
           </ion-col>
