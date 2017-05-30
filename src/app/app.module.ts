@@ -8,6 +8,7 @@ import { Facebook } from '@ionic-native/facebook';
 
 import {CampaignListItem} from "../components/campaign-list-item/campaign-list-item";
 import {DonationListItem} from "../components/donation-list-item/donation-list-item";
+import {HealthListItem} from "../components/health-list-item/health-list-item";
 
 import firebase from "firebase";
 import {LoginProvider} from "../providers/login-provider";
