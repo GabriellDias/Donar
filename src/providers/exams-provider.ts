@@ -31,4 +31,8 @@ export class ExamsProvider {
     this.reference.child(id).update(exams);
   }
 
+  delete(exams: Exams){
+    return this.reference.child(exams.id).remove();
+  }
+
 }

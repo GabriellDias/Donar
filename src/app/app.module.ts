@@ -26,6 +26,7 @@ import { Contacts } from "../pages/contacts/contacts";
 import { Donation } from "../pages/donation/donation";
 import {DonationList} from "../pages/donation-list/donation-list";
 import { Health } from "../pages/health/health";
+import { HealthList} from "../pages/health-list/health-list";
 import { Help } from "../pages/help/help";
 import { Hemocentros } from "../pages/hemocentros/hemocentros";
 import { HemocentrosList } from "../pages/hemocentros-list/hemocentros-list";
@@ -62,6 +63,7 @@ const firebaseConfig = {
     DonationList,
     DonationListItem,
     Health,
+    HealthList,
     Help,
     Hemocentros,
     HemocentrosList,
@@ -94,6 +96,7 @@ const firebaseConfig = {
     DonationList,
     DonationListItem,
     Health,
+    HealthList,
     Help,
     Hemocentros,
     HemocentrosList,
