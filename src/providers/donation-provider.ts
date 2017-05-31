@@ -22,7 +22,6 @@ export class DonationProvider {
 
   save(donation: Donation){
     let id;
-
     if(donation.id != undefined){
       id = donation.id;
     } else{
@@ -32,7 +31,7 @@ export class DonationProvider {
     this.reference.child(id).update(donation);
   }
 
-  delete(donation: Donation):any{
+  delete(donation: Donation){
     return this.reference.child(donation.id).remove();
   }
 

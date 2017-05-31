@@ -60,9 +60,23 @@
       </button>
 
       <ion-item-options>
-        <button ion-button clear icon-only (click)="deleteCampaign(campaign)">
-          <ion-icon name="trash"></ion-icon>
-        </button>
+        <ion-row>
+          <ion-col>
+            <button ion-button icon-only (click)="twitterShare()" color="twitter" clear>
+              <ion-icon class="share-icon" name="logo-twitter"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-only (click)="whatsappShare()" color="whatsapp" clear>
+              <ion-icon class="share-icon" name="logo-whatsapp"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-only (click)="instagramShare()" clear>
+              <ion-icon class="share-icon" name="logo-instagram"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
       </ion-item-options>
 
     </ion-item-sliding>

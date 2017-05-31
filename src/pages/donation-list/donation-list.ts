@@ -1,5 +1,5 @@
 import { Component, NgZone } from '@angular/core';
-import { NavController, ToastController } from 'ionic-angular';
+import {NavController, NavParams, ToastController} from 'ionic-angular';
 
 import { DonationProvider } from "../../providers/donation-provider";
 
@@ -18,7 +18,7 @@ export class DonationList {
 
   donations: Array<Donation>;
 
-  constructor(public navCtrl: NavController, public donationProvider: DonationProvider,
+  constructor(public navCtrl: NavController, public donationProvider: DonationProvider, public navParams: NavParams,
               public ngZone: NgZone, public toastCtrl: ToastController) {
   }
 
@@ -54,8 +54,7 @@ export class DonationList {
   deleteDonation(donation: Donation){
     this.donationProvider.delete(donation).then(
       sucess => console.log('Doação Deletada!')
-    )
-    .catch(error => console.log('Não Foi Possível Excluir!'));
+    ).catch(error => console.log('Não Foi Possível Excluir!'));
   }
 
   home(){

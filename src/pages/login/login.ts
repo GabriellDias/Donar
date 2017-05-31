@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import {LoadingController, NavController, NavParams} from 'ionic-angular';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {LoadingController, NavController, NavParams, ToastController} from 'ionic-angular';
+import { FormBuilder, FormGroup, Validators} from "@angular/forms";
+import { Network } from "@ionic-native/network";
 
-import {LoginProvider} from "../../providers/login-provider";
+import { LoginProvider } from "../../providers/login-provider";
 
 import { Credencial } from "../../models/credencial";
-import {Perfil} from "../perfil/perfil";
-import {ResetPassword} from "../reset-password/reset-password";
+import { Perfil } from "../perfil/perfil";
+import { ResetPassword } from "../reset-password/reset-password";
 
 @Component({
   selector: 'page-login',
@@ -19,7 +20,8 @@ export class Login {
   loginForm: FormGroup;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public fb: FormBuilder,
-              public loginProvider: LoginProvider, public loadingCtrl: LoadingController){
+              public loginProvider: LoginProvider, public loadingCtrl: LoadingController, public network: Network,
+              public toastCtrl: ToastController){
     this.initialize();
   }
 
@@ -41,8 +43,18 @@ export class Login {
   }
 
   btnDonarLogin(form){
-    this.loginProvider.loginWithCredencial(this.credencial);
-    this.loading();
+
+      let disconnectSubscription = this.network.onDisconnect().subscribe(() => {
+        this.toastCtrl.create({
+          message: 'Sem Acesso à Internet',
+          showCloseButton: true,
+          closeButtonText: 'Ok',
+          position: 'middle'
+        }).present();
+      });
+
+      this.loginProvider.loginWithCredencial(this.credencial);
+      this.loading();
   }
 
   loading() {

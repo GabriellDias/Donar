@@ -32,7 +32,7 @@ export class CampaignProvider {
     this.reference.child(id).update(campaign);
   }
 
-  delete(campaign: Campaign):any{
+  delete(campaign: Campaign){
     return this.reference.child(campaign.id).remove();
   }
 

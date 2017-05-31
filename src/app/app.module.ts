@@ -4,6 +4,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { Facebook } from '@ionic-native/facebook';
 import { HttpModule } from '@angular/http';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { Network } from "@ionic-native/network";
 import { ScreenOrientation } from "@ionic-native/screen-orientation";
 import { SocialSharing } from "@ionic-native/social-sharing";
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -23,13 +24,10 @@ import { PasswordProvider } from "../providers/password-provider";
 import { UserProvider } from "../providers/user-provider";
 
 import { About } from "../pages/about/about";
-import { Campaigns } from "../pages/campaigns/campaigns";
 import { CampaignsList } from "../pages/campaigns-list/campaigns-list";
 import { Contacts } from "../pages/contacts/contacts";
-import { Donation } from "../pages/donation/donation";
 import { DonationAdd } from "../pages/donation-add/donation-add";
 import { DonationList } from "../pages/donation-list/donation-list";
-import { Exam } from "../pages/exam/exam";
 import { ExamAdd } from "../pages/exam-add/exam-add";
 import { ExamList } from "../pages/exam-list/exam-list";
 import { Help } from "../pages/help/help";
@@ -57,15 +55,12 @@ const firebaseConfig = {
 @NgModule({
   declarations: [
     About,
-    Campaigns,
     CampaignsList,
     CampaignListItem,
     Contacts,
-    Donation,
     DonationAdd,
     DonationList,
     DonationListItem,
-    Exam,
     ExamAdd,
     ExamList,
     ExamListItem,
@@ -91,15 +86,12 @@ const firebaseConfig = {
   bootstrap: [IonicApp],
   entryComponents: [
     About,
-    Campaigns,
     CampaignsList,
     CampaignListItem,
     Contacts,
-    Donation,
     DonationAdd,
     DonationList,
     DonationListItem,
-    Exam,
     ExamAdd,
     ExamList,
     ExamListItem,
@@ -124,6 +116,7 @@ const firebaseConfig = {
     ExamsProvider,
     Facebook,
     LoginProvider,
+    Network,
     PasswordProvider,
     ScreenOrientation,
     SocialSharing,

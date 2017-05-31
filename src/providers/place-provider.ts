@@ -32,7 +32,7 @@ export class PlaceProvider {
     this.reference.child(id).update(place);
   }
 
-  delete(place: Place):any{
+  delete(place: Place){
     return this.reference.child(place.id).remove();
   }
 

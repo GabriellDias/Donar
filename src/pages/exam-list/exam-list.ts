@@ -26,7 +26,7 @@ export class ExamList {
     this.examsProvider.reference.on('child_removed', (snapshot) => {
       let examRemoved = snapshot.val();
       this.toastCtrl.create({
-        message: 'Exame removido',
+        message: 'Exame Removido',
         duration: 2000
       }).present();
     })
@@ -35,7 +35,8 @@ export class ExamList {
       this.ngZone.run( () => {
         let innerArray = new Array();
         snapshot.forEach(elemento => {
-          let el = elemento.val();innerArray.push(el);
+          let el = elemento.val();
+          innerArray.push(el);
         })
         this.exam = innerArray;
       })

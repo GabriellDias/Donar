@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import {NavController, NavParams, LoadingController, ViewController } from 'ionic-angular';
-import {Exam} from "../exam/exam";
 import {Exams} from "../../models/exams";
 import {ExamsProvider} from "../../providers/exams-provider";
 import {Perfil} from "../perfil/perfil";
 import {Hemocentros} from "../hemocentros/hemocentros";
 import {Information} from "../information/information";
 import {CampaignsList} from "../campaigns-list/campaigns-list";
+import {ExamList} from "../exam-list/exam-list";
 
 @Component({
   selector: 'page-exam-add',
@@ -35,7 +35,7 @@ export class ExamAdd {
   }
 
   backExam(){
-    this.navCtrl.setRoot(Exam);
+    this.navCtrl.setRoot(ExamList);
   }
 
   loadSend(){
