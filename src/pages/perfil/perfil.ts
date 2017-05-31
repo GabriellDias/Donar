@@ -11,7 +11,7 @@ import { Information } from "../information/information";
 import { Hemocentros} from "../hemocentros/hemocentros";
 import { DonationList } from "../donation-list/donation-list";
 import { CampaignsList } from "../campaigns-list/campaigns-list";
-import {ExamList} from "../exam-list/exam-list'";
+import {ExamList} from "../exam-list/exam-list";
 
 @Component({
   selector: 'page-perfil',

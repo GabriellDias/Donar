@@ -6,6 +6,7 @@ import {Perfil} from "../perfil/perfil";
 import {Hemocentros} from "../hemocentros/hemocentros";
 import {Information} from "../information/information";
 import {CampaignsList} from "../campaigns-list/campaigns-list";
+import {ExamAdd} from "../exam-add/exam-add";
 
 @Component({
   selector: 'page-exam-list',
@@ -33,12 +34,16 @@ export class ExamList {
     this.examsProvider.reference.on('value', (snapshot) => {
       this.ngZone.run( () => {
         let innerArray = new Array();
-        snapshot.array.array.forEach(elemento => {
+        snapshot.forEach(elemento => {
           let el = elemento.val();innerArray.push(el);
         })
         this.exams = innerArray;
       })
     })
+  }
+
+  updateExam(exams: Exams){
+    this.navCtrl.push(ExamAdd, {'exams' : exams});
   }
 
   deleteExam(exams: Exams){
@@ -47,6 +52,10 @@ export class ExamList {
     )
 
     .catch(error => console.log('Não foi possível excluir'));
+  }
+
+  cadexam(){
+    this.navCtrl.setRoot(ExamAdd);
   }
 
   perfil(){

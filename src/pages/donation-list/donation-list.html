@@ -26,7 +26,7 @@
       <hr color="primary"/>
       <p><b>Você Esta apto para fazer uma doação!</b></p>
       <p>Vá até um centro de doações depois cadastre sua doação aqui</p>
-      <button ion-button class="btn-add-donate" color="primary" (click)="acessCad()">
+      <button ion-button class="btn-add-donate" color="primary" (click)="insertDonation()">
         + Inserir nova doação
       </button>
     </ion-card-content>
@@ -49,7 +49,7 @@
 
 <ion-footer>
   <ion-toolbar color="primary" class="footer-toolbar">
-    <button ion-button clear class="btn-footer" (click)="home()">
+    <button ion-button clear class="btn-footer" (click)="perfil()">
       <img src="assets/img/inicio.png" width="60" height="40">
     </button>
     <button ion-button clear class="btn-footer" (click)="hemocentros()">

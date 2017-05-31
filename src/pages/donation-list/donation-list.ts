@@ -26,8 +26,8 @@ export class DonationList {
     this.donationProvider.reference.on('child_removed', (snapshot) => {
       let donationRemoved = snapshot.val();
       this.toastCtrl.create({
-        message: 'Doação Removida!',
-        duration: 3000
+        message: 'Doação Removida',
+        duration: 2000
       }).present();
     })
 

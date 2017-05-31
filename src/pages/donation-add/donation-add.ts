@@ -7,6 +7,7 @@ import {Perfil} from "../perfil/perfil";
 import {Hemocentros} from "../hemocentros/hemocentros";
 import {Information} from "../information/information";
 import {CampaignsList} from "../campaigns-list/campaigns-list";
+import { DonationList } from "../donation-list/donation-list";
 
 @Component({
   selector: 'page-donation-add',
@@ -40,6 +41,10 @@ export class DonationAdd {
       duration: 2000
     });
     loader.present();
+  }
+
+  backPage(){
+    this.navCtrl.setRoot(DonationList);
   }
 
   perfil(){
