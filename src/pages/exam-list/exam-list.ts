@@ -14,7 +14,7 @@ import {ExamAdd} from "../exam-add/exam-add";
 })
 export class ExamList {
 
-  exams: Array<Exams>;
+  exam: Array<Exams>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
    public examsProvider: ExamsProvider, public ngZone: NgZone,
@@ -37,7 +37,7 @@ export class ExamList {
         snapshot.forEach(elemento => {
           let el = elemento.val();innerArray.push(el);
         })
-        this.exams = innerArray;
+        this.exam = innerArray;
       })
     })
   }
@@ -46,19 +46,17 @@ export class ExamList {
     this.navCtrl.push(ExamAdd, {'exams' : exams});
   }
 
+  insertExam(){
+    this.navCtrl.push(ExamAdd, {'exams': new Exams()});
+  }
+
   deleteExam(exams: Exams){
     this.examsProvider.delete(exams).then(
       sucess => console.log('Exame deletado')
-    )
-
-    .catch(error => console.log('Não foi possível excluir'));
+    ).catch(error => console.log('Não foi possível excluir'));
   }
 
-  cadexam(){
-    this.navCtrl.setRoot(ExamAdd);
-  }
-
-  perfil(){
+  home(){
     this.navCtrl.setRoot(Perfil);
   }
 

@@ -14,24 +14,23 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <ion-card>
     <ion-card-header>
       <img class="img-exame" src="assets/img/saude.png">
       <h2 class="txt-exame">
-       Meus Exames
+        Meus Exames
       </h2>
     </ion-card-header>
     <ion-card-content class="content-inicial">
       <hr/>
       <p><b>Registre as informações de seus exames de sangue.</b></p>
-      <button ion-button class="btn-add-exame" (click)="cadexam()" color="primary">
+      <button ion-button class="btn-add-exame" (click)="insertExam()" color="primary">
         + Inserir exame
       </button>
     </ion-card-content>
   </ion-card>
-
-  <ion-list [virtualScroll]="exams">
+  <ion-list [virtualScroll]="exam">
     <ion-item-sliding *virtualItem="let exams">
       <button ion-item (click)="updateExam(exams)">
         <exam-list-item [exams]="exams"></exam-list-item>
@@ -45,10 +44,9 @@
     </ion-item-sliding>
   </ion-list>
 </ion-content>
-
 <ion-footer>
   <ion-toolbar color="primary" class="footer-toolbar">
-    <button ion-button clear class="btn-footer" (click)="perfil()">
+    <button ion-button clear class="btn-footer" (click)="home()">
       <img src="assets/img/inicio.png" width="60" height="40">
     </button>
     <button ion-button clear class="btn-footer" (click)="hemocentros()">

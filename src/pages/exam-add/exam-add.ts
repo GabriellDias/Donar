@@ -46,7 +46,7 @@ export class ExamAdd {
     loader.present();
   }
 
-  perfil(){
+  home(){
     this.navCtrl.setRoot(Perfil);
   }
 

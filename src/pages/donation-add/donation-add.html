@@ -31,18 +31,25 @@
       <ion-datetime name="dtdonate" [(ngModel)]="donation.dtdonate" displayFormat="DD/MM/YYYY"></ion-datetime>
     </ion-item><br/>
 
-    <button class="btn-add-cad" ion-button (click)="saveDonation()">
-      Cadastrar
-    </button>
-    <button ion-button (click)="backPage()">
-      Cancelar
-    </button>
+    <ion-row>
+      <ion-col width-50>
+        <button class="btn-add-cad" ion-button (click)="saveDonation()">
+          Cadastrar
+        </button>
+      </ion-col>
+      <ion-col width-50>
+        <button ion-button (click)="backPage()">
+          Cancelar
+        </button>
+      </ion-col>
+    </ion-row>
+
   </ion-list>
 </ion-content>
 
 <ion-footer>
   <ion-toolbar color="primary" class="footer-toolbar">
-    <button ion-button clear class="btn-footer" (click)="perfil()">
+    <button ion-button clear class="btn-footer" (click)="home()">
       <img src="assets/img/inicio.png" width="60" height="40">
     </button>
     <button ion-button clear class="btn-footer" (click)="hemocentros()">

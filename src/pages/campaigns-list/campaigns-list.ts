@@ -8,7 +8,6 @@ import { Campaign } from "../../models/campaign";
 import {Hemocentros} from "../hemocentros/hemocentros";
 import {Perfil} from "../perfil/perfil";
 import {Information} from "../information/information";
-import {Campaigns} from "../campaigns/campaigns";
 
 @Component({
   selector: 'page-campaigns-list',
@@ -16,7 +15,7 @@ import {Campaigns} from "../campaigns/campaigns";
 })
 export class CampaignsList {
 
-  campaign: Array<Campaign>;
+  campaigns: Array<Campaign>;
 
   constructor(public navCtrl: NavController, public campaignProvider: CampaignProvider,
               public ngZone: NgZone, public toastCtrl: ToastController, public socialSharing: SocialSharing) {}
@@ -34,19 +33,19 @@ export class CampaignsList {
     this.campaignProvider.reference.on('child_removed', (snapshot) => {
       let campaignRemoved = snapshot.val();
       this.toastCtrl.create({
-        message: 'Campanha ' + campaignRemoved.title+ ' Removida!',
-        duration: 3000
+        message: 'Campanha Removida!',
+        duration: 2000
       }).present();
     })
 
     this.campaignProvider.reference.on('value', (snapshot) => {
       this.ngZone.run( () => {
         let innerArray = new Array();
-        snapshot.array.forEach(elemento => {
+        snapshot.forEach(elemento => {
           let el = elemento.val();
           innerArray.push(el);
         })
-        this.campaign = innerArray;
+        this.campaigns = innerArray;
       })
     })
   }
@@ -70,16 +69,12 @@ export class CampaignsList {
     this.socialSharing.shareViaInstagram("Sua doação pode salvar uma vida","assets/img/logo_branca.png");
   }
 
-  perfil(){
+  home(){
     this.navCtrl.setRoot(Perfil);
   }
 
   hemocentros(){
     this.navCtrl.setRoot(Hemocentros);
-  }
-
-  campaigns(){
-    this.navCtrl.setRoot(Campaigns);
   }
 
   information(){

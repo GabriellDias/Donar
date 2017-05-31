@@ -1,7 +1,7 @@
 page-campaigns-list {
 
   .title{
-    width: 140px;
+    width: 130px;
     height: 30px;
     margin: 0px auto;
     display: block;
@@ -13,6 +13,33 @@ page-campaigns-list {
     float: right;
   }
 
+  .txt-donation{
+    float: inherit;
+    margin-top: -30px;
+    margin-left: 40px
+  }
+
+  .img-donation{
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    margin-left: 20px
+  }
+
+  ion-card{
+    text-align: center;
+    vertical-align: middle
+  }
+
+  .btn-campaigns{
+    border-radius: 20px;
+    font-size: 12px;
+    display: block;
+    margin: 0px auto;
+    margin-bottom: 10px;
+    list-style: none;
+  }
+
   .footer-toolbar{
     text-align: center;
   }
@@ -20,6 +47,18 @@ page-campaigns-list {
   .btn-footer{
     text-align: center;
     padding: 0px 10px 0px 10px;
+  }
+
+  .txt-donation{
+    text-align: center;
+  }
+
+  .titlecampaing{
+    color: #ff0a2f;
+  }
+
+  .tipoblood{
+    color: #ff0a2f;
   }
 
 }

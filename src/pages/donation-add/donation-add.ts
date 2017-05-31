@@ -3,10 +3,10 @@ import { NavController, LoadingController, NavParams, ViewController } from 'ion
 import{ ListProvider } from "../../providers/list-provider";
 import{ DonationProvider } from "../../providers/donation-provider";
 import { Donation } from "../../models/donation";
-import {Perfil} from "../perfil/perfil";
-import {Hemocentros} from "../hemocentros/hemocentros";
-import {Information} from "../information/information";
-import {CampaignsList} from "../campaigns-list/campaigns-list";
+import { Perfil } from "../perfil/perfil";
+import { Hemocentros } from "../hemocentros/hemocentros";
+import { Information } from "../information/information";
+import { CampaignsList } from "../campaigns-list/campaigns-list";
 import { DonationList } from "../donation-list/donation-list";
 
 @Component({
@@ -47,7 +47,7 @@ export class DonationAdd {
     this.navCtrl.setRoot(DonationList);
   }
 
-  perfil(){
+  home(){
     this.navCtrl.setRoot(Perfil);
   }
 

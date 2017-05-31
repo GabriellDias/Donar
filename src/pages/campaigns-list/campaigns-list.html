@@ -4,7 +4,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title class="title">
-      Campanhas
+      <img src="assets/img/logo_branca.png"/>
     </ion-title>
     <ion-buttons end>
       <button ion-button icon-only>
@@ -14,8 +14,46 @@
   </ion-navbar>
 </ion-header>
 
+
 <ion-content>
-  <ion-list [virtualScroll]="campaign">
+
+  <ion-card>
+    <ion-card-header>
+      <b color="primary">Campanhas próximas a você</b>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+
+    <ion-card-content>
+      <p class="titlecampaing"><b>Campanha de Arrecadação de Sangue Hemocentro de Anápolis</b></p>
+      <p><b>Precisamos de Sangue do tipo <b class="tipoblood">AB+</b> venha fazer uma doação e salvar vidas.</b></p>
+    </ion-card-content>
+
+    <ion-row>
+
+      <button ion-button color="primary" class="btn-campaigns" (click)="acessEnd()">
+        <ion-icon name="pin">
+          Endereço
+        </ion-icon>
+      </button>
+
+      <button ion-button color="primary" class="btn-campaigns" (click)="acessTel()">
+        <ion-icon name="call">
+          Telefone
+        </ion-icon>
+      </button>
+
+
+      <button ion-button color="primary" class="btn-campaigns" (click)="acessSite()">
+        <ion-icon name="globe">
+          Site
+        </ion-icon>
+      </button>
+    </ion-row>
+  </ion-card>
+
+  <ion-list [virtualScroll]="campaigns">
     <ion-item-sliding *virtualItem="let campaign">
       <button ion-item >
         <campaign-list-item [campaign]="campaign"></campaign-list-item>
@@ -26,25 +64,7 @@
           <ion-icon name="trash"></ion-icon>
         </button>
       </ion-item-options>
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <button ion-button icon-only (click)="twitterShare()" color="twitter" clear>
-              <ion-icon class="share-icon" name="logo-twitter"></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col>
-            <button ion-button icon-only (click)="whatsappShare()" color="whatsapp" clear>
-              <ion-icon class="share-icon" name="logo-whatsapp"></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col>
-            <button ion-button icon-only (click)="instagramShare()" clear>
-              <ion-icon class="share-icon" name="logo-instagram"></ion-icon>
-            </button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+
     </ion-item-sliding>
   </ion-list>
 </ion-content>

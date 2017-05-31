@@ -9,7 +9,7 @@ import {PlaceProvider} from "../../providers/place-provider";
 })
 export class HemocentrosList {
 
-  place: Array<Place>;
+  places: Array<Place>;
 
   constructor(public navCtrl: NavController, public placeProvider: PlaceProvider,
               public ngZone: NgZone, public toastCtrl: ToastController) {
@@ -23,7 +23,7 @@ export class HemocentrosList {
           let el = elemento.val();
           innerArray.push(el);
         })
-        this.place = innerArray;
+        this.places = innerArray;
       })
     })
   }

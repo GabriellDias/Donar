@@ -16,7 +16,7 @@ import {CampaignsList} from "../campaigns-list/campaigns-list";
 })
 export class DonationList {
 
-  donation: Array<Donation>;
+  donations: Array<Donation>;
 
   constructor(public navCtrl: NavController, public donationProvider: DonationProvider,
               public ngZone: NgZone, public toastCtrl: ToastController) {
@@ -26,7 +26,7 @@ export class DonationList {
     this.donationProvider.reference.on('child_removed', (snapshot) => {
       let donationRemoved = snapshot.val();
       this.toastCtrl.create({
-        message: 'Doação Removida',
+        message: 'Doação Removida!',
         duration: 2000
       }).present();
     })
@@ -38,7 +38,7 @@ export class DonationList {
           let el = elemento.val();
           innerArray.push(el);
         })
-        this.donation = innerArray;
+        this.donations = innerArray;
       })
     })
   }
@@ -58,7 +58,7 @@ export class DonationList {
     .catch(error => console.log('Não Foi Possível Excluir!'));
   }
 
-  perfil(){
+  home(){
     this.navCtrl.setRoot(Perfil);
   }
 
