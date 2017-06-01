@@ -1,5 +1,5 @@
 import { Component, NgZone } from '@angular/core';
-import { NavController, ToastController } from 'ionic-angular';
+import { AlertController, NavController, ToastController } from 'ionic-angular';
 import { SocialSharing } from '@ionic-native/social-sharing';
 
 import {CampaignProvider} from "../../providers/campaign-provider";
@@ -17,7 +17,7 @@ export class CampaignsList {
 
   campaigns: Array<Campaign>;
 
-  constructor(public navCtrl: NavController, public campaignProvider: CampaignProvider,
+  constructor(public alertCtrl: AlertController, public navCtrl: NavController, public campaignProvider: CampaignProvider,
               public ngZone: NgZone, public toastCtrl: ToastController, public socialSharing: SocialSharing) {}
 
   ionViewDidLoad(){
@@ -34,7 +34,7 @@ export class CampaignsList {
       let campaignRemoved = snapshot.val();
       this.toastCtrl.create({
         message: 'Campanha Removida!',
-        duration: 2000
+        duration: 1500
       }).present();
     })
 
@@ -50,11 +50,37 @@ export class CampaignsList {
     })
   }
 
+  acessEnd(){
+    let alert = this.alertCtrl.create({
+      title: 'Endereço',
+      subTitle: 'Av. Brasil Norte, 3631 - Cidade Universitária, Anápolis - GO',
+      buttons: ['OK']
+    })
+    alert.present();
+  }
+
+  acessTel(){
+    let alert = this.alertCtrl.create({
+      title: 'Telefone',
+      subTitle: '(062) 99342-1158',
+      buttons: ['OK']
+    })
+    alert.present();
+  }
+
+  acessSite(){
+    let alert = this.alertCtrl.create({
+      title: 'Site',
+      subTitle: 'www.hemocentroanapolis.com.br',
+      buttons: ['OK']
+    })
+    alert.present();
+  }
+
   deleteCampaign(campaign: Campaign){
     this.campaignProvider.delete(campaign).then(
       sucess => console.log('Campanha deletada')
-    )
-      .catch(error => console.log('Não foi Possível Deletar a Campanha'));
+    ).catch(error => console.log('Não foi Possível Deletar a Campanha'));
   }
 
   twitterShare(){

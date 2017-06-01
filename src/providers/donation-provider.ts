@@ -5,6 +5,7 @@ import 'rxjs/add/operator/map';
 import firebase from "firebase";
 
 import {LoginProvider} from "../providers/login-provider";
+
 import {Donation} from "../models/donation";
 
 @Injectable()

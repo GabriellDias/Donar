@@ -14,7 +14,7 @@ import {ExamAdd} from "../exam-add/exam-add";
 })
 export class ExamList {
 
-  exam: Array<Exams>;
+  exams: Array<Exams>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
    public examsProvider: ExamsProvider, public ngZone: NgZone,
@@ -22,12 +22,11 @@ export class ExamList {
   }
 
   ionViewDidLoad() {
-
     this.examsProvider.reference.on('child_removed', (snapshot) => {
       let examRemoved = snapshot.val();
       this.toastCtrl.create({
-        message: 'Exame Removido',
-        duration: 2000
+        message: 'Exame Removido!',
+        duration: 1500
       }).present();
     })
 
@@ -38,7 +37,7 @@ export class ExamList {
           let el = elemento.val();
           innerArray.push(el);
         })
-        this.exam = innerArray;
+        this.exams = innerArray;
       })
     })
   }

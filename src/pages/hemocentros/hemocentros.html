@@ -16,44 +16,58 @@
 
 <ion-content>
 
-    <ion-card>
-        <ion-card-header>
-            <h2 class="txt-hemocentro">
-                Locais para <br> doações em:
-                <p>Anápolis - Goiás</p>
-            </h2>
-        </ion-card-header>
-    </ion-card>
-    <ion-card>
-        <ion-card-content class="infor-hemocentro">
-            <h1>NÍVEL BAIXO</h1>
-            <img src="assets/img/metade.png">
-            <h2>Estoque em <br>
-                <b class="tipoblood">50%</b> de AB+</h2>
-            <h3>Instituto Onco-Hematológico<br>de Anápolis</h3>
-        </ion-card-content>
+  <ion-card class="place">
+      <ion-row>
+        <ion-col>
+          <h2 class="txt">
+              Locais para <br/> doações em:
+          </h2>
+        </ion-col>
+        <ion-col>
+          <h2 class="txt">
+            <p>Anápolis - Goiás</p>
+          </h2>
+        </ion-col>
+      </ion-row>
+  </ion-card>
 
-        <button ion-button color="primary" class="btn-campaigns" (click)="endInst()">
+  <ion-card>
+    <ion-row>
+      <ion-col width-33 class="hemocentro box-left">
+          <h1>NÍVEL BAIXO</h1>
+          <img src="assets/img/metade.png">
+          <h2>Estoque em
+              <b class="blood">50%</b> <br/> de AB+</h2>
+      </ion-col>
+      <ion-col width-66 class="hemocentro box-right">
+        <h1>Instituto Onco-Hematológico <br/> de Anápolis</h1>
+        <button ion-button color="primary" class="btn-place" (click)="endInst()">
           <ion-icon name="pin">
             Endereço para doar
           </ion-icon>
         </button>
-    </ion-card>
-    <ion-card>
-        <ion-card-content class="infor-hemocentro">
-            <h1>NÍVEL CRÍTICO</h1>
-            <img src="assets/img/critico.png">
-            <h2>Estoque em <br>
-                <b class="tipoblood">25%</b> de A-</h2>
-            <h3>HUANA - Hospital de Urgências<br>de Anápolis</h3>
-        </ion-card-content>
+      </ion-col>
+    </ion-row>
+  </ion-card>
 
-        <button ion-button color="primary" class="btn-campaigns" (click)="endHosp()">
+  <ion-card>
+    <ion-row>
+      <ion-col width-30 class="hemocentro box-left">
+        <h1>NÍVEL CRÍTICO</h1>
+        <img src="assets/img/critico.png">
+        <h2>Estoque em
+            <b class="blood">25% </b> <br/> de A-</h2>
+      </ion-col>
+      <ion-col width-70 class="hemocentro box-right">
+        <h1>Hospital de Urgências <br/> de Anápolis</h1>
+        <button ion-button color="primary" class="btn-place" (click)="endHosp()">
           <ion-icon name="pin">
             Endereço para doar
           </ion-icon>
         </button>
-    </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-card>
 
 </ion-content>
 

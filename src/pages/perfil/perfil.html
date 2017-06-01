@@ -24,7 +24,7 @@
           </ion-avatar>
           <p>Érico Junior de Moraes</p>
           <p>Tipo de Sangue Ab+</p>
-          <p>Última Doação: 17/03/2017</p>
+          <p>Última Doação: 17/05/2017</p>
         </ion-item>
       </ion-list>
     </ion-card-header>
@@ -34,19 +34,18 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-card (click)="donation()">
+  <ion-card (click)="donation()" class="donation">
     <ion-card-header class="box">
       <h2 class="txt-donation">
-       <a (click)="donation()"> Minhas Doações
+      Minhas Doações
          <img src="assets/img/doacoes.png" class="img">
-       </a>
       </h2>
     </ion-card-header>
     <div class="bar"></div>
     <ion-card-content class="box exam">
       <p> Próxima doação a partir de:</p>
-      <p class="red"> 27/07/2017 </p>
-      <p class="red"> (57 dias) </p>
+      <p class="red"> 17/07/2017 </p>
+      <p class="red"> (46 dias) </p>
     </ion-card-content>
 
   </ion-card>
@@ -60,7 +59,7 @@
   </ion-card-header>
   <div class="bar"></div>
   <ion-card-content class="box">
-    <button ion-button class="btn hearth" (click)="health()">
+    <button ion-button class="hearth" (click)="health()">
       <ion-icon ios="ios-copy-outline" md="md-copy"> Meus Exames </ion-icon>
     </button>
   </ion-card-content>

@@ -27,7 +27,7 @@ export class DonationList {
       let donationRemoved = snapshot.val();
       this.toastCtrl.create({
         message: 'Doação Removida!',
-        duration: 2000
+        duration: 1500
       }).present();
     })
 

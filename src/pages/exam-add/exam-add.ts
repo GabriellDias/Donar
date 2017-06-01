@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import {NavController, NavParams, LoadingController, ViewController } from 'ionic-angular';
-import {Exams} from "../../models/exams";
-import {ExamsProvider} from "../../providers/exams-provider";
-import {Perfil} from "../perfil/perfil";
-import {Hemocentros} from "../hemocentros/hemocentros";
-import {Information} from "../information/information";
-import {CampaignsList} from "../campaigns-list/campaigns-list";
-import {ExamList} from "../exam-list/exam-list";
+import { NavController, NavParams, LoadingController, ViewController } from 'ionic-angular';
+import { ExamsProvider} from "../../providers/exams-provider";
+import { Exams} from "../../models/exams";
+import { Perfil} from "../perfil/perfil";
+import { Hemocentros} from "../hemocentros/hemocentros";
+import { Information} from "../information/information";
+import { CampaignsList } from "../campaigns-list/campaigns-list";
+import { ExamList } from "../exam-list/exam-list";
 
 @Component({
   selector: 'page-exam-add',
@@ -16,10 +16,10 @@ export class ExamAdd {
 
   exams: Exams;
 
-  constructor(public navCtrl: NavController, public loadCtrl: LoadingController,
-   public navParams: NavParams, public viewCtrl: ViewController, public examProvider: ExamsProvider) {
-     this.initialize();
-  }
+  constructor(public navCtrl: NavController,  public navParams: NavParams, public viewCtrl: ViewController,
+     public loadCtrl: LoadingController, public examProvider: ExamsProvider) {
+       this.initialize();
+     }
 
   private initialize(){
     this.exams = this.navParams.get('Exams');
@@ -34,16 +34,16 @@ export class ExamAdd {
     this.loadSend();
   }
 
-  backExam(){
-    this.navCtrl.setRoot(ExamList);
-  }
-
   loadSend(){
     let loader = this.loadCtrl.create({
       content: "Salvando...",
-      duration: 2000
+      dismissOnPageChange: true
     });
     loader.present();
+  }
+
+  backExam(){
+    this.navCtrl.setRoot(ExamList);
   }
 
   home(){

@@ -37,7 +37,7 @@ export class Hemocentros {
 
   endHosp() {
     let alert = this.alertCtrl.create({
-      title: 'HUANA - Hospital de Urgências de Anápolis',
+      title: 'Hospital de Urgências de Anápolis',
       subTitle: 'Av. Brasil Norte, 3631 - Cidade Universitária, Anápolis - GO',
       buttons: ['Voltar']
     })

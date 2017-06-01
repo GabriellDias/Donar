@@ -4,7 +4,6 @@ import 'rxjs/add/operator/map';
 import firebase from "firebase";
 
 import {Credencial} from "../models/credencial";
-import {User} from "../models/user";
 
 @Injectable()
 export class LoginProvider {

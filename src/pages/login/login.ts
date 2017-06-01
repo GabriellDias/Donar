@@ -43,24 +43,28 @@ export class Login {
   }
 
   btnDonarLogin(form){
+    let connectSubscription = this.network.type;
 
-      let disconnectSubscription = this.network.onDisconnect().subscribe(() => {
-        this.toastCtrl.create({
-          message: 'Sem Acesso à Internet',
-          showCloseButton: true,
-          closeButtonText: 'Ok',
-          position: 'middle'
-        }).present();
-      });
-
-      this.loginProvider.loginWithCredencial(this.credencial);
-      this.loading();
+        if (connectSubscription === "none") {
+          this.toastCtrl.create({
+            message: 'Sem Acesso à Internet',
+            showCloseButton: true,
+            closeButtonText: 'Ok',
+            position: 'middle'
+          }).present();
+          console.log("Sem Acesso à Internet");
+        }else
+          if(connectSubscription === "wifi" || connectSubscription === "cellular"){
+            this.loginProvider.loginWithCredencial(this.credencial);
+            this.loading();
+            console.log("Internet PORRA!");
+          }
   }
 
   loading() {
     let loader = this.loadingCtrl.create({
       spinner: 'crescent',
-      duration: 500
+      dismissOnPageChange: true
     });
     loader.present();
   }

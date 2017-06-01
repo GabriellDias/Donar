@@ -1,8 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import {Nav, Platform} from 'ionic-angular';
+import { Nav, Platform, ToastController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ScreenOrientation } from "@ionic-native/screen-orientation";
+import { Network } from "@ionic-native/network";
 
 import { LoginProvider } from "../providers/login-provider";
 
@@ -24,13 +25,14 @@ export class MyApp {
   pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,
-              public loginProvider: LoginProvider, public screenOrientation: ScreenOrientation) {
+              public loginProvider: LoginProvider, public screenOrientation: ScreenOrientation,
+            public network: Network, public toastCtrl: ToastController) {
 
     this.initializeApp();
 
     this.pages = [
-      { title: 'Alterar Dados', component: SignUpUser},
-      { title: 'Ajuda', component: Help},
+      /*{ title: 'Alterar Dados', component: SignUpUser},
+      { title: 'Ajuda', component: Help},*/
       { title: 'Contato', component: Contacts },
       { title: 'Sobre', component: About },
       { title: 'Sair', component: Logout},
@@ -41,9 +43,18 @@ export class MyApp {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.LANDSCAPE);
+      this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
     });
-  }
+
+    let disconnectSubscription = this.network.onDisconnect().subscribe(() => {
+      this.toastCtrl.create({
+        message: 'Perda de Conexão com à Internet!',
+        showCloseButton: true,
+        closeButtonText: 'Ok',
+        position: 'middle'
+      }).present();
+    });
+}
 
   openPage(page) {
     this.nav.setRoot(page.component);

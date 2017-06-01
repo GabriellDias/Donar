@@ -16,7 +16,6 @@
 
 <ion-content>
   <ion-list>
-
     <ion-item>
       <ion-label floating>Teste HIV:</ion-label>
       <ion-select name="hiv" [(ngModel)]="exams.hiv">
@@ -58,12 +57,12 @@
 
     <ion-row>
       <ion-col width-50>
-        <button class="btn-add-cad" ion-button (click)="saveExam()">
+        <button ion-button full class="btn" (click)="saveExam()">
           Cadastrar
         </button>
       </ion-col>
       <ion-col width-50>
-        <button class="btn-add-cad" ion-button (click)="backExam()">
+        <button ion-button full class="btn" (click)="backExam()">
           Cancelar
         </button>
       </ion-col>

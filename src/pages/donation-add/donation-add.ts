@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, LoadingController, NavParams, ViewController } from 'ionic-angular';
-import{ ListProvider } from "../../providers/list-provider";
 import{ DonationProvider } from "../../providers/donation-provider";
 import { Donation } from "../../models/donation";
 import { Perfil } from "../perfil/perfil";
@@ -38,7 +37,7 @@ export class DonationAdd {
   loadCad(){
     let loader = this.loadCtrl.create({
       content: "Salvando...",
-      duration: 2000
+      dismissOnPageChange: true
     });
     loader.present();
   }
@@ -64,6 +63,3 @@ export class DonationAdd {
   }
 
 }
-
-
-

@@ -30,7 +30,8 @@
       </button>
     </ion-card-content>
   </ion-card>
-  <ion-list [virtualScroll]="exam">
+
+  <ion-list [virtualScroll]="exams">
     <ion-item-sliding *virtualItem="let exams">
       <button ion-item (click)="updateExam(exams)">
         <exam-list-item [exams]="exams"></exam-list-item>
