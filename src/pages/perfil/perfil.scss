@@ -1,10 +1,5 @@
 page-perfil {
 
-  .publicity{
-    height: 120px;
-    padding: 0px;
-  }
-
   .container{
     width: 100%;
     height: 100%;
@@ -37,82 +32,76 @@ page-perfil {
     color: rgba(0, 0, 0, 0.4);
   }
 
-  .item ion-avatar ion-img, .item ion-avatar img {
-      width: 45px;
-      height: 45px;
-      overflow: hidden;
-    }
-
-    .title{
-        width: 130px;
-        height: 30px;
-        margin: 0px auto;
-        display: block;
-        vertical-align: middle;
-    }
-
-    .btn-search{
-        padding-left: 30px;
-        float: right;
-    }
-
-    .advertising{
+  .title{
+      width: 130px;
+      height: 30px;
       margin: 0px auto;
       display: block;
-    }
+      vertical-align: middle;
+  }
 
-    .img{
-        width: 60px;
-        height: 60px;
-        margin: 0px auto;
-        margin-top: 10px;
-    }
+  .btn-search{
+      padding-left: 30px;
+      float: right;
+  }
 
-    .box {
-        width: 48%;
-        float: left;
-        padding: 10px 5px;
-    }
+  .advertising{
+    margin: 0px auto;
+    display: block;
+  }
 
-    .bar{
-      border: 1px solid rgba(255, 0, 0, 0.4);
-      height: 100px;;
+  .img{
+      width: 60px;
+      height: 60px;
+      margin: 0px auto;
+      margin-top: 10px;
+  }
+
+  .box {
+      width: 48%;
       float: left;
-      margin: 10px 0px;
-    }
+      padding: 10px 5px;
+  }
 
-    .donation{
-      cursor: pointer;
-    }
+  .bar{
+    border: 1px solid rgba(255, 0, 0, 0.4);
+    height: 100px;;
+    float: left;
+    margin: 10px 0px;
+  }
 
-    .exam{
-      text-align: center;
-    }
+  .donation{
+    cursor: pointer;
+  }
 
-    .hearth{
-      margin: 30px auto;
-      display: block;
-      padding: 0px 12px;
-      font-size: 14px;
-      border-radius: 25px;
-    }
+  .exam{
+    text-align: center;
+  }
 
-    .footer-toolbar{
-      text-align: center;
-    }
+  .hearth{
+    margin: 30px auto;
+    display: block;
+    padding: 0px 12px;
+    font-size: 14px;
+    border-radius: 25px;
+  }
 
-    .btn-footer{
-      text-align: center;
-      padding: 0px 10px 0px 10px;
-    }
+  .footer-toolbar{
+    text-align: center;
+  }
 
-    .red{
-      color: #ff0a2f;
-    }
+  .btn-footer{
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+  }
 
-    a{
-      cursor: pointer;
-      color: #000000;
-    }
+  .red{
+    color: #ff0a2f;
+  }
+
+  a{
+    cursor: pointer;
+    color: #000000;
+  }
 
 }

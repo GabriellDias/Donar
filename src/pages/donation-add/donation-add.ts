@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
-import { NavController, LoadingController, NavParams, ViewController } from 'ionic-angular';
-import{ DonationProvider } from "../../providers/donation-provider";
+import { LoadingController, NavController, NavParams, ViewController } from 'ionic-angular';
+
+import { DonationProvider } from "../../providers/donation-provider";
+
 import { Donation } from "../../models/donation";
-import { Perfil } from "../perfil/perfil";
-import { Hemocentros } from "../hemocentros/hemocentros";
-import { Information } from "../information/information";
+
 import { CampaignsList } from "../campaigns-list/campaigns-list";
 import { DonationList } from "../donation-list/donation-list";
+import { Hemocentros } from "../hemocentros/hemocentros";
+import { Information } from "../information/information";
+import { Perfil } from "../perfil/perfil";
 
 @Component({
   selector: 'page-donation-add',
@@ -17,9 +20,9 @@ export class DonationAdd {
   donation: Donation;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController,
-              public loadCtrl: LoadingController, public donationProvider: DonationProvider) {
-                this.initialize();
-              }
+    public loadCtrl: LoadingController, public donationProvider: DonationProvider) {
+      this.initialize();
+    }
 
   private initialize(){
     this.donation = this.navParams.get('donation');

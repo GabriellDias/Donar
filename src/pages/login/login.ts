@@ -45,20 +45,21 @@ export class Login {
   btnDonarLogin(form){
     let connectSubscription = this.network.type;
 
-        if (connectSubscription === "none") {
+       /* if (connectSubscription === "none") {
           this.toastCtrl.create({
             message: 'Sem Acesso à Internet',
             showCloseButton: true,
             closeButtonText: 'Ok',
             position: 'middle'
           }).present();
-          console.log("Sem Acesso à Internet");
         }else
           if(connectSubscription === "wifi" || connectSubscription === "cellular"){
             this.loginProvider.loginWithCredencial(this.credencial);
             this.loading();
-            console.log("Internet PORRA!");
-          }
+          }*/
+
+    this.loginProvider.loginWithCredencial(this.credencial);
+    this.loading();
   }
 
   loading() {

@@ -1,14 +1,15 @@
 import { Component, NgZone } from '@angular/core';
-import {NavController, NavParams, ToastController} from 'ionic-angular';
+import { NavController, ToastController } from 'ionic-angular';
 
 import { DonationProvider } from "../../providers/donation-provider";
 
 import { Donation } from "../../models/donation";
-import {DonationAdd} from "../donation-add/donation-add";
-import {Perfil} from "../perfil/perfil";
-import {Hemocentros} from "../hemocentros/hemocentros";
-import {Information} from "../information/information";
-import {CampaignsList} from "../campaigns-list/campaigns-list";
+
+import { Perfil } from "../perfil/perfil";
+import { Hemocentros } from "../hemocentros/hemocentros";
+import { Information } from "../information/information";
+import { CampaignsList } from "../campaigns-list/campaigns-list";
+import { DonationAdd } from "../donation-add/donation-add";
 
 @Component({
   selector: 'page-donation-list',
@@ -18,9 +19,8 @@ export class DonationList {
 
   donations: Array<Donation>;
 
-  constructor(public navCtrl: NavController, public donationProvider: DonationProvider, public navParams: NavParams,
-              public ngZone: NgZone, public toastCtrl: ToastController) {
-  }
+  constructor(public navCtrl: NavController, public donationProvider: DonationProvider, public ngZone: NgZone,
+              public toastCtrl: ToastController) {}
 
   ionViewDidLoad() {
     this.donationProvider.reference.on('child_removed', (snapshot) => {

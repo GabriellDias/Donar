@@ -5,9 +5,10 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 import {CampaignProvider} from "../../providers/campaign-provider";
 
 import { Campaign } from "../../models/campaign";
-import {Hemocentros} from "../hemocentros/hemocentros";
-import {Perfil} from "../perfil/perfil";
-import {Information} from "../information/information";
+
+import { Hemocentros } from "../hemocentros/hemocentros";
+import { Perfil } from "../perfil/perfil";
+import { Information } from "../information/information";
 
 @Component({
   selector: 'page-campaigns-list',
@@ -29,14 +30,6 @@ export class CampaignsList {
      * child_removed - Ouvinte para qunado filho for deletado
      * child_moved - Ouviente para acompanhar mudanças na prioridade de um filho
      */
-
-    this.campaignProvider.reference.on('child_removed', (snapshot) => {
-      let campaignRemoved = snapshot.val();
-      this.toastCtrl.create({
-        message: 'Campanha Removida!',
-        duration: 1500
-      }).present();
-    })
 
     this.campaignProvider.reference.on('value', (snapshot) => {
       this.ngZone.run( () => {
@@ -75,12 +68,6 @@ export class CampaignsList {
       buttons: ['OK']
     })
     alert.present();
-  }
-
-  deleteCampaign(campaign: Campaign){
-    this.campaignProvider.delete(campaign).then(
-      sucess => console.log('Campanha deletada')
-    ).catch(error => console.log('Não foi Possível Deletar a Campanha'));
   }
 
   twitterShare(){

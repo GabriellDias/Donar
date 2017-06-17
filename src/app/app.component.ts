@@ -48,7 +48,7 @@ export class MyApp {
 
     let disconnectSubscription = this.network.onDisconnect().subscribe(() => {
       this.toastCtrl.create({
-        message: 'Perda de Conexão com à Internet!',
+        message: 'Sem Acesso à Internet',
         showCloseButton: true,
         closeButtonText: 'Ok',
         position: 'middle'

@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, LoadingController, ViewController } from 'ionic-angular';
-import { ExamsProvider} from "../../providers/exams-provider";
+import { LoadingController, NavController, NavParams, ViewController } from 'ionic-angular';
+
+import { ExamProvider} from "../../providers/exam-provider";
+
 import { Exams} from "../../models/exams";
-import { Perfil} from "../perfil/perfil";
-import { Hemocentros} from "../hemocentros/hemocentros";
-import { Information} from "../information/information";
+
 import { CampaignsList } from "../campaigns-list/campaigns-list";
 import { ExamList } from "../exam-list/exam-list";
+import { Hemocentros} from "../hemocentros/hemocentros";
+import { Information} from "../information/information";
+import { Perfil} from "../perfil/perfil";
 
 @Component({
   selector: 'page-exam-add',
@@ -17,12 +20,12 @@ export class ExamAdd {
   exams: Exams;
 
   constructor(public navCtrl: NavController,  public navParams: NavParams, public viewCtrl: ViewController,
-     public loadCtrl: LoadingController, public examProvider: ExamsProvider) {
-       this.initialize();
-     }
+    public loadCtrl: LoadingController, public examProvider: ExamProvider) {
+     this.initialize();
+    }
 
   private initialize(){
-    this.exams = this.navParams.get('Exams');
+    this.exams = this.navParams.get('exams');
     if(!this.exams){
       this.exams = new Exams();
     }

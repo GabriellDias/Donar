@@ -6,10 +6,10 @@ import firebase from "firebase";
 
 import {LoginProvider} from "../providers/login-provider";
 
-import { Campaign } from "../models/campaign";
+import {Exams} from "../models/exams";
 
 @Injectable()
-export class CampaignProvider {
+export class ExamProvider {
 
   reference;
 
@@ -18,22 +18,22 @@ export class CampaignProvider {
   }
 
   private initialize(){
-    this.reference = firebase.database().ref('/campaign/');
+    this.reference = firebase.database().ref('/exams/'+ this.loginProvider.currentUser.uid);
   }
 
-  save(campaign: Campaign){
+  save(exams: Exams){
     let id;
-    if(campaign.id != undefined){
-      id = campaign.id;
-    }else{
+    if(exams.id != undefined){
+      id = exams.id;
+    } else{
       id = this.reference.push().key;
-      campaign.id = id;
+      exams.id = id;
     }
-    this.reference.child(id).update(campaign);
+    this.reference.child(id).update(exams);
   }
 
-  delete(campaign: Campaign){
-    return this.reference.child(campaign.id).remove();
+  delete(exams: Exams){
+    return this.reference.child(exams.id).remove();
   }
 
 }

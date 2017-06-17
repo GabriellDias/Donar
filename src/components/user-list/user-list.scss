@@ -1,0 +1,47 @@
+user-list {
+
+  .input-wrapper{
+    margin: 0px auto;
+    text-align: justify;
+  }
+
+  .card{
+    width: 100%;
+    margin: 0px;
+    box-shadow: none;
+  }
+
+  .item ion-avatar ion-img, .item ion-avatar img {
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+  }
+
+  .publicity{
+    height: 120px;
+    padding: 0px;
+  }
+
+  .content-md hr {
+    background-color: #ff0a2f;
+    height: 2px;
+  }
+
+  .item p {
+    font-size: 13px;
+    color: #000000;
+    overflow: inherit;
+    margin: 0px;
+  }
+
+  .item p:nth-child(2){
+    color: #ff0a2f;
+  }
+
+  .item p:last-child{
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+}

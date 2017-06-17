@@ -1,6 +1,6 @@
 export class User{
-  uid: string;
-  img: string;
+  id: string;
+  picture: string;
   bloodGroup: string;
   city: string;
   donor: boolean;

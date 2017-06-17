@@ -1,10 +1,12 @@
 import {EventEmitter, Injectable} from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+
 import firebase from "firebase";
 
-import { User } from "../models/user";
 import {LoginProvider} from "./login-provider";
+
+import { User } from "../models/user";
 
 @Injectable()
 export class UserProvider {
@@ -24,7 +26,7 @@ export class UserProvider {
   }
 
   private initialize(){
-    this.reference = firebase.database().ref('user/'+ this.loginProvider.currentUser.uid);
+    this.reference = firebase.database().ref('/user/' + this.loginProvider.currentUser.uid);
   }
 
   private callbackSucessLogin(response){
@@ -36,18 +38,16 @@ export class UserProvider {
   }
 
   saveUserData(user: User) {
-  this.reference.set({
-    	name : user.firstName,
-      lastName : user.lastName,
-    	sex : user.sex,
-    	estate : user.state,
-    	city : user.city,
-    	bloodGroup : user.bloodGroup,
-    	isDonor : user.donor,
-    	rhFactor : user.rhFactor,
-    	lastDonation : user.lastDonation
-  }).then(result => this.callbackSucessLogin(result))
-    .catch(error => this.callbackErrorLogin(error))
-}
+    let id;
+    if (user.id != undefined) {
+      id = user.id;
+    } else {
+      id = this.reference.push().key;
+      user.id = id;
+    }
+    this.reference.child(id).update(user)
+      .then(result => this.callbackSucessLogin(result))
+      .catch(error => this.callbackErrorLogin(error));
+  }
 
 }

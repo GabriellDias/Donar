@@ -1,11 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { AdMob } from '@ionic-native/admob';
-import { Platform } from 'ionic-angular';
 
-import {LoginProvider} from "../../providers/login-provider";
+import { UserProvider } from "../../providers/user-provider";
 
-import {User} from "../../models/user";
+import { User } from "../../models/user";
 
 import { Information } from "../information/information";
 import { Hemocentros} from "../hemocentros/hemocentros";
@@ -19,18 +17,22 @@ import { ExamList } from "../exam-list/exam-list";
 })
 export class Perfil {
 
-  user: User;
+  user: Array<User>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loginProvider:LoginProvider,
-              private admob: AdMob, private platform: Platform) {
-    this.initialize();
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams, public userProvider: UserProvider,
+          public ngZone: NgZone) {}
 
-  private initialize(){
-    this.user = this.navParams.get('user');
-    if(!this.user) {
-      this.user = new User();
-    }
+  ionViewDidLoad(){
+   this.userProvider.reference.on('value', (snapshot) => {
+     this.ngZone.run( () => {
+       let innerArray = new Array();
+       snapshot.forEach(elemento => {
+         let el = elemento.val();
+         innerArray.push(el);
+       })
+       this.user = innerArray;
+     })
+   })
   }
 
   donation(){
@@ -52,5 +54,4 @@ export class Perfil {
   hemocentros(){
     this.navCtrl.setRoot(Hemocentros);
   }
-
 }

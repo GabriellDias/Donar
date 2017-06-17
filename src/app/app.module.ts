@@ -17,7 +17,7 @@ import { HemocentrosListItem } from "../components/hemocentros-list-item/hemocen
 
 import { CampaignProvider } from "../providers/campaign-provider";
 import { DonationProvider } from "../providers/donation-provider";
-import { ExamsProvider } from "../providers/exams-provider";
+import { ExamProvider } from "../providers/exam-provider";
 import firebase from "firebase";
 import { LoginProvider } from "../providers/login-provider";
 import { PasswordProvider } from "../providers/password-provider";
@@ -42,6 +42,7 @@ import { Perfil } from "../pages/perfil/perfil";
 import { ResetPassword } from "../pages/reset-password/reset-password";
 import { SignUp } from "../pages/sign-up/sign-up";
 import { SignUpUser } from "../pages/sign-up-user/signup-user";
+import { UserList } from "../components/user-list/user-list";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAaV8rJnn-CISeGW8qcUGzRLfcrsSaOkJc",
@@ -76,7 +77,8 @@ const firebaseConfig = {
     Perfil,
     ResetPassword,
     SignUp,
-    SignUpUser
+    SignUpUser,
+    UserList
   ],
   imports: [
     BrowserModule,
@@ -107,13 +109,14 @@ const firebaseConfig = {
     Perfil,
     ResetPassword,
     SignUp,
-    SignUpUser
+    SignUpUser,
+    UserList
   ],
   providers: [
     AdMob,
     CampaignProvider,
     DonationProvider,
-    ExamsProvider,
+    ExamProvider,
     Facebook,
     LoginProvider,
     Network,

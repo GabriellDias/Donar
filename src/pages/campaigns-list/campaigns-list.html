@@ -22,40 +22,41 @@
       <b color="primary">Campanhas próximas a você</b>
     </ion-card-header>
   </ion-card>
+  <!--
+    <ion-card>
 
-  <ion-card>
+      <ion-card-content>
+        <p class="titlecampaing"><b>Campanha de Arrecadação de Sangue Hemocentro de Anápolis</b></p>
+        <p><b>Precisamos de Sangue do tipo <b class="tipoblood">AB+</b> venha fazer uma doação e salvar vidas.</b></p>
+      </ion-card-content>
 
-    <ion-card-content>
-      <p class="titlecampaing"><b>Campanha de Arrecadação de Sangue Hemocentro de Anápolis</b></p>
-      <p><b>Precisamos de Sangue do tipo <b class="tipoblood">AB+</b> venha fazer uma doação e salvar vidas.</b></p>
-    </ion-card-content>
+      <ion-row>
 
-    <ion-row>
+        <button ion-button color="primary" class="btn-campaigns" (click)="acessEnd()">
+          <ion-icon name="pin">
+            Endereço
+          </ion-icon>
+        </button>
 
-      <button ion-button color="primary" class="btn-campaigns" (click)="acessEnd()">
-        <ion-icon name="pin">
-          Endereço
-        </ion-icon>
-      </button>
-
-      <button ion-button color="primary" class="btn-campaigns" (click)="acessTel()">
-        <ion-icon name="call">
-          Telefone
-        </ion-icon>
-      </button>
+        <button ion-button color="primary" class="btn-campaigns" (click)="acessTel()">
+          <ion-icon name="call">
+            Telefone
+          </ion-icon>
+        </button>
 
 
-      <button ion-button color="primary" class="btn-campaigns" (click)="acessSite()">
-        <ion-icon name="globe">
-          Site
-        </ion-icon>
-      </button>
-    </ion-row>
-  </ion-card>
+        <button ion-button color="primary" class="btn-campaigns" (click)="acessSite()">
+          <ion-icon name="globe">
+            Site
+          </ion-icon>
+        </button>
+      </ion-row>
+    </ion-card>
+    -->
 
   <ion-list [virtualScroll]="campaigns">
     <ion-item-sliding *virtualItem="let campaign">
-      <button ion-item >
+      <button ion-item>
         <campaign-list-item [campaign]="campaign"></campaign-list-item>
       </button>
 
